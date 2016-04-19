@@ -91,6 +91,21 @@ class BEActions {
         }
     }
     
+    //Delete
+    func removeLeagueSync(league: League)
+    {
+        let dataStore = backendless.data.of(League.ofClass())
+        
+        dataStore.remove(
+            league,
+            response: { (result: AnyObject!) -> Void in
+                print("league has been deleted: \(result)")
+            },
+            error: { (fault: Fault!) -> Void in
+                print("Server reported an error (2): \(fault)")
+        })
+    }
+    
     
     // MARK: Game - Read
 

@@ -20,7 +20,11 @@ class UpdateLeagueUIViewController: UIViewController, BackendlessDataDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         beAction.delegate = self
-        
+       
+        self.updatedNumberOfLeagueTeams.text = self.leagueToUpdate.numberOfTeams?.stringValue
+        self.updateLeagueName.text = String(self.leagueToUpdate.name!)
+        self.startDatePicker.setDate(self.leagueToUpdate.startDate, animated: true)
+        self.finishDatePicker.setDate(self.leagueToUpdate.finishDate, animated: true)
     }
     
     func BackendlessDataDelegateDataIsSaved(result: AnyObject!) {
@@ -34,7 +38,6 @@ class UpdateLeagueUIViewController: UIViewController, BackendlessDataDelegate {
         print("fServer reported an error: \(fault)")
         
     }
-
     
     // MARK: Actions
     @IBAction func UpdateLeagueAction(sender: UIButton) {

@@ -66,6 +66,7 @@ class LeaguesTableViewController: UITableViewController, BackendlessDataDelegate
 
         cell = tableView.dequeueReusableCellWithIdentifier("leagueCell", forIndexPath: indexPath)
         if let leagueTableCell = cell as? LeaguesTableViewCell {
+            
             leagueTableCell.leagueName.text = String(self.leagues[indexPath.row].name!)
             leagueTableCell.numberOfTeams.text = String(self.leagues[indexPath.row].numberOfTeams!)
             let formater = NSDateFormatter()
@@ -87,6 +88,14 @@ class LeaguesTableViewController: UITableViewController, BackendlessDataDelegate
         print("This league Name is[] " + String(self.selectedLeague.name))
         
         
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            backendActions.removeLeagueSync(self.leagues[indexPath.row])
+            self.leagues.removeAtIndex(indexPath.row)
+            self.tableView.reloadData()
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
