@@ -1,0 +1,33 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/hyalkaf/Desktop/My Files/UofC/Nabil Database Project/SLMS/build/Debug-iphonesimulator/Pods_SLMS.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "Pods-SLMS-umbrella.h",
+          'external-contents': "/Users/hyalkaf/Desktop/My Files/UofC/Nabil Database Project/SLMS/Pods/Target Support Files/Pods-SLMS/Pods-SLMS-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "Pods_SLMS-Swift.h",
+          'external-contents': "/Users/hyalkaf/Desktop/My Files/UofC/Nabil Database Project/SLMS/build/Debug-iphonesimulator/Pods_SLMS.framework/Headers/Pods_SLMS-Swift.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/hyalkaf/Desktop/My Files/UofC/Nabil Database Project/SLMS/build/Debug-iphonesimulator/Pods_SLMS.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/hyalkaf/Desktop/My Files/UofC/Nabil Database Project/SLMS/build/Pods.build/Debug-iphonesimulator/Pods-SLMS.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}
