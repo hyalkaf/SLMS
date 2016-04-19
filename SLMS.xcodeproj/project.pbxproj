@@ -7,15 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6057EF3E1CC5C2BC00AD564D /* AddLeagueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6057EF3D1CC5C2BC00AD564D /* AddLeagueViewController.swift */; };
+		79BF6DFC3E2F77558978AF57 /* Pods_SLMS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 217DCF4D16CBC6D086DC928F /* Pods_SLMS.framework */; };
 		BD2599EB1CC3E8FD000C612A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2599EA1CC3E8FD000C612A /* AppDelegate.swift */; };
 		BD2599ED1CC3E8FD000C612A /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2599EC1CC3E8FD000C612A /* FirstViewController.swift */; };
 		BD2599EF1CC3E8FD000C612A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2599EE1CC3E8FD000C612A /* SecondViewController.swift */; };
 		BD2599F21CC3E8FD000C612A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD2599F01CC3E8FD000C612A /* Main.storyboard */; };
 		BD2599F41CC3E8FD000C612A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD2599F31CC3E8FD000C612A /* Assets.xcassets */; };
 		BD2599F71CC3E8FD000C612A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD2599F51CC3E8FD000C612A /* LaunchScreen.storyboard */; };
+		BD259A001CC3EC7B000C612A /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2599FF1CC3EC7B000C612A /* League.swift */; };
+		BD259A021CC3EE2C000C612A /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD259A011CC3EE2C000C612A /* Player.swift */; };
+		BD259A041CC3EE3E000C612A /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD259A031CC3EE3E000C612A /* Person.swift */; };
+		BD259A061CC3EF70000C612A /* Coach.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD259A051CC3EF70000C612A /* Coach.swift */; };
+		BD259A0A1CC3F06B000C612A /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD259A091CC3F06B000C612A /* Team.swift */; };
+		BD259A0C1CC3F1D6000C612A /* Organizers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD259A0B1CC3F1D6000C612A /* Organizers.swift */; };
+		BD259A0E1CC3F3E2000C612A /* LeaguesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD259A0D1CC3F3E2000C612A /* LeaguesTableViewController.swift */; };
+		BD259A121CC3F4D8000C612A /* LeaguesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD259A111CC3F4D8000C612A /* LeaguesTableViewCell.swift */; };
+		BD259A161CC3F6FD000C612A /* BEActios.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD259A151CC3F6FD000C612A /* BEActios.swift */; };
+		BD259A181CC406F1000C612A /* LeagueDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD259A171CC406F1000C612A /* LeagueDetailTableViewController.swift */; };
+		BD259A1B1CC40B05000C612A /* LeagueDetalCellOnceSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD259A1A1CC40B05000C612A /* LeagueDetalCellOnceSelected.swift */; };
+		BD259A1D1CC40B75000C612A /* TeamNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD259A1C1CC40B75000C612A /* TeamNameTableViewCell.swift */; };
+		BD259A1F1CC40B9A000C612A /* OrganizerNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD259A1E1CC40B9A000C612A /* OrganizerNameTableViewCell.swift */; };
+		BD259A211CC42AD6000C612A /* PlayerNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD259A201CC42AD6000C612A /* PlayerNameTableViewCell.swift */; };
+		BD259A231CC42B74000C612A /* TeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD259A221CC42B74000C612A /* TeamTableViewController.swift */; };
+		BD259A251CC43451000C612A /* CoachNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD259A241CC43451000C612A /* CoachNameTableViewCell.swift */; };
+		BD259A2A1CC43E23000C612A /* PlayerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD259A291CC43E23000C612A /* PlayerDetailsViewController.swift */; };
+		BD259A2C1CC44299000C612A /* CoachDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD259A2B1CC44299000C612A /* CoachDetailsViewController.swift */; };
+		BD259A301CC44658000C612A /* CaptainNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD259A2F1CC44658000C612A /* CaptainNameTableViewCell.swift */; };
+		BD259A321CC44811000C612A /* OrganizerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD259A311CC44811000C612A /* OrganizerDetailsViewController.swift */; };
+		BD259A341CC44C0E000C612A /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD259A331CC44C0E000C612A /* Game.swift */; };
+		BD259A361CC44C8E000C612A /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD259A351CC44C8E000C612A /* Field.swift */; };
+		BD259A381CC44DA8000C612A /* GameStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD259A371CC44DA8000C612A /* GameStat.swift */; };
+		BD259A3C1CC44ED0000C612A /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD259A3B1CC44ED0000C612A /* Card.swift */; };
+		BD259A3E1CC44EFD000C612A /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD259A3D1CC44EFD000C612A /* Goal.swift */; };
+		BD259A401CC44F4C000C612A /* Referee.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD259A3F1CC44F4C000C612A /* Referee.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		217DCF4D16CBC6D086DC928F /* Pods_SLMS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SLMS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6057EF3D1CC5C2BC00AD564D /* AddLeagueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLeagueViewController.swift; sourceTree = "<group>"; };
 		BD2599E71CC3E8FD000C612A /* SLMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SLMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD2599EA1CC3E8FD000C612A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD2599EC1CC3E8FD000C612A /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +54,34 @@
 		BD2599F31CC3E8FD000C612A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD2599F61CC3E8FD000C612A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD2599F81CC3E8FD000C612A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD2599FF1CC3EC7B000C612A /* League.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
+		BD259A011CC3EE2C000C612A /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		BD259A031CC3EE3E000C612A /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		BD259A051CC3EF70000C612A /* Coach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coach.swift; sourceTree = "<group>"; };
+		BD259A091CC3F06B000C612A /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		BD259A0B1CC3F1D6000C612A /* Organizers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Organizers.swift; sourceTree = "<group>"; };
+		BD259A0D1CC3F3E2000C612A /* LeaguesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaguesTableViewController.swift; sourceTree = "<group>"; };
+		BD259A111CC3F4D8000C612A /* LeaguesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaguesTableViewCell.swift; sourceTree = "<group>"; };
+		BD259A151CC3F6FD000C612A /* BEActios.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BEActios.swift; sourceTree = "<group>"; };
+		BD259A171CC406F1000C612A /* LeagueDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeagueDetailTableViewController.swift; sourceTree = "<group>"; };
+		BD259A1A1CC40B05000C612A /* LeagueDetalCellOnceSelected.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeagueDetalCellOnceSelected.swift; sourceTree = "<group>"; };
+		BD259A1C1CC40B75000C612A /* TeamNameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamNameTableViewCell.swift; sourceTree = "<group>"; };
+		BD259A1E1CC40B9A000C612A /* OrganizerNameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizerNameTableViewCell.swift; sourceTree = "<group>"; };
+		BD259A201CC42AD6000C612A /* PlayerNameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerNameTableViewCell.swift; sourceTree = "<group>"; };
+		BD259A221CC42B74000C612A /* TeamTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamTableViewController.swift; sourceTree = "<group>"; };
+		BD259A241CC43451000C612A /* CoachNameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoachNameTableViewCell.swift; sourceTree = "<group>"; };
+		BD259A291CC43E23000C612A /* PlayerDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerDetailsViewController.swift; sourceTree = "<group>"; };
+		BD259A2B1CC44299000C612A /* CoachDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoachDetailsViewController.swift; sourceTree = "<group>"; };
+		BD259A2F1CC44658000C612A /* CaptainNameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptainNameTableViewCell.swift; sourceTree = "<group>"; };
+		BD259A311CC44811000C612A /* OrganizerDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizerDetailsViewController.swift; sourceTree = "<group>"; };
+		BD259A331CC44C0E000C612A /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		BD259A351CC44C8E000C612A /* Field.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
+		BD259A371CC44DA8000C612A /* GameStat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStat.swift; sourceTree = "<group>"; };
+		BD259A3B1CC44ED0000C612A /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		BD259A3D1CC44EFD000C612A /* Goal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
+		BD259A3F1CC44F4C000C612A /* Referee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Referee.swift; sourceTree = "<group>"; };
+		BE331924FCF1183291FAFCD0 /* Pods-SLMS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SLMS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SLMS/Pods-SLMS.debug.xcconfig"; sourceTree = "<group>"; };
+		BFAF879C3DF5627182CD3C58 /* Pods-SLMS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SLMS.release.xcconfig"; path = "Pods/Target Support Files/Pods-SLMS/Pods-SLMS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +89,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79BF6DFC3E2F77558978AF57 /* Pods_SLMS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14E9A72FE471A80FC5366B5B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BE331924FCF1183291FAFCD0 /* Pods-SLMS.debug.xcconfig */,
+				BFAF879C3DF5627182CD3C58 /* Pods-SLMS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7A3329A5414A7ACC8C982C3D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				217DCF4D16CBC6D086DC928F /* Pods_SLMS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BD2599DE1CC3E8FD000C612A = {
 			isa = PBXGroup;
 			children = (
 				BD2599E91CC3E8FD000C612A /* SLMS */,
 				BD2599E81CC3E8FD000C612A /* Products */,
+				14E9A72FE471A80FC5366B5B /* Pods */,
+				7A3329A5414A7ACC8C982C3D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +134,7 @@
 		BD2599E91CC3E8FD000C612A /* SLMS */ = {
 			isa = PBXGroup;
 			children = (
+				BD2599FE1CC3EBC5000C612A /* DBModels */,
 				BD2599EA1CC3E8FD000C612A /* AppDelegate.swift */,
 				BD2599EC1CC3E8FD000C612A /* FirstViewController.swift */,
 				BD2599EE1CC3E8FD000C612A /* SecondViewController.swift */,
@@ -63,8 +142,58 @@
 				BD2599F31CC3E8FD000C612A /* Assets.xcassets */,
 				BD2599F51CC3E8FD000C612A /* LaunchScreen.storyboard */,
 				BD2599F81CC3E8FD000C612A /* Info.plist */,
+				BD259A281CC43DE0000C612A /* ViewControllers */,
+				BD259A191CC40AA1000C612A /* TableCells */,
 			);
 			path = SLMS;
+			sourceTree = "<group>";
+		};
+		BD2599FE1CC3EBC5000C612A /* DBModels */ = {
+			isa = PBXGroup;
+			children = (
+				BD259A151CC3F6FD000C612A /* BEActios.swift */,
+				BD2599FF1CC3EC7B000C612A /* League.swift */,
+				BD259A011CC3EE2C000C612A /* Player.swift */,
+				BD259A031CC3EE3E000C612A /* Person.swift */,
+				BD259A051CC3EF70000C612A /* Coach.swift */,
+				BD259A091CC3F06B000C612A /* Team.swift */,
+				BD259A0B1CC3F1D6000C612A /* Organizers.swift */,
+				BD259A331CC44C0E000C612A /* Game.swift */,
+				BD259A351CC44C8E000C612A /* Field.swift */,
+				BD259A371CC44DA8000C612A /* GameStat.swift */,
+				BD259A3B1CC44ED0000C612A /* Card.swift */,
+				BD259A3D1CC44EFD000C612A /* Goal.swift */,
+				BD259A3F1CC44F4C000C612A /* Referee.swift */,
+			);
+			name = DBModels;
+			sourceTree = "<group>";
+		};
+		BD259A191CC40AA1000C612A /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				BD259A111CC3F4D8000C612A /* LeaguesTableViewCell.swift */,
+				BD259A1A1CC40B05000C612A /* LeagueDetalCellOnceSelected.swift */,
+				BD259A1C1CC40B75000C612A /* TeamNameTableViewCell.swift */,
+				BD259A1E1CC40B9A000C612A /* OrganizerNameTableViewCell.swift */,
+				BD259A201CC42AD6000C612A /* PlayerNameTableViewCell.swift */,
+				BD259A241CC43451000C612A /* CoachNameTableViewCell.swift */,
+				BD259A2F1CC44658000C612A /* CaptainNameTableViewCell.swift */,
+			);
+			name = TableCells;
+			sourceTree = "<group>";
+		};
+		BD259A281CC43DE0000C612A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BD259A0D1CC3F3E2000C612A /* LeaguesTableViewController.swift */,
+				BD259A171CC406F1000C612A /* LeagueDetailTableViewController.swift */,
+				BD259A221CC42B74000C612A /* TeamTableViewController.swift */,
+				BD259A291CC43E23000C612A /* PlayerDetailsViewController.swift */,
+				BD259A2B1CC44299000C612A /* CoachDetailsViewController.swift */,
+				BD259A311CC44811000C612A /* OrganizerDetailsViewController.swift */,
+				6057EF3D1CC5C2BC00AD564D /* AddLeagueViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +203,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BD2599FB1CC3E8FD000C612A /* Build configuration list for PBXNativeTarget "SLMS" */;
 			buildPhases = (
+				188300010F0BD4E231DE28DA /* Check Pods Manifest.lock */,
 				BD2599E31CC3E8FD000C612A /* Sources */,
 				BD2599E41CC3E8FD000C612A /* Frameworks */,
 				BD2599E51CC3E8FD000C612A /* Resources */,
+				9D19A2EEE5525E69C3FDEBE0 /* Embed Pods Frameworks */,
+				09BE3F5AB090D24AB5F41387 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -133,14 +265,89 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		09BE3F5AB090D24AB5F41387 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SLMS/Pods-SLMS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		188300010F0BD4E231DE28DA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9D19A2EEE5525E69C3FDEBE0 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SLMS/Pods-SLMS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BD2599E31CC3E8FD000C612A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD259A0A1CC3F06B000C612A /* Team.swift in Sources */,
+				BD259A1D1CC40B75000C612A /* TeamNameTableViewCell.swift in Sources */,
+				BD259A0C1CC3F1D6000C612A /* Organizers.swift in Sources */,
+				BD259A231CC42B74000C612A /* TeamTableViewController.swift in Sources */,
+				BD259A041CC3EE3E000C612A /* Person.swift in Sources */,
+				BD259A0E1CC3F3E2000C612A /* LeaguesTableViewController.swift in Sources */,
+				BD259A161CC3F6FD000C612A /* BEActios.swift in Sources */,
+				BD259A181CC406F1000C612A /* LeagueDetailTableViewController.swift in Sources */,
 				BD2599EF1CC3E8FD000C612A /* SecondViewController.swift in Sources */,
+				BD259A251CC43451000C612A /* CoachNameTableViewCell.swift in Sources */,
+				BD259A3C1CC44ED0000C612A /* Card.swift in Sources */,
+				6057EF3E1CC5C2BC00AD564D /* AddLeagueViewController.swift in Sources */,
+				BD259A1F1CC40B9A000C612A /* OrganizerNameTableViewCell.swift in Sources */,
+				BD259A401CC44F4C000C612A /* Referee.swift in Sources */,
 				BD2599EB1CC3E8FD000C612A /* AppDelegate.swift in Sources */,
+				BD259A301CC44658000C612A /* CaptainNameTableViewCell.swift in Sources */,
+				BD259A321CC44811000C612A /* OrganizerDetailsViewController.swift in Sources */,
+				BD259A001CC3EC7B000C612A /* League.swift in Sources */,
+				BD259A211CC42AD6000C612A /* PlayerNameTableViewCell.swift in Sources */,
+				BD259A341CC44C0E000C612A /* Game.swift in Sources */,
+				BD259A2A1CC43E23000C612A /* PlayerDetailsViewController.swift in Sources */,
+				BD259A021CC3EE2C000C612A /* Player.swift in Sources */,
+				BD259A3E1CC44EFD000C612A /* Goal.swift in Sources */,
+				BD259A2C1CC44299000C612A /* CoachDetailsViewController.swift in Sources */,
+				BD259A361CC44C8E000C612A /* Field.swift in Sources */,
+				BD259A1B1CC40B05000C612A /* LeagueDetalCellOnceSelected.swift in Sources */,
 				BD2599ED1CC3E8FD000C612A /* FirstViewController.swift in Sources */,
+				BD259A061CC3EF70000C612A /* Coach.swift in Sources */,
+				BD259A121CC3F4D8000C612A /* LeaguesTableViewCell.swift in Sources */,
+				BD259A381CC44DA8000C612A /* GameStat.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +456,7 @@
 		};
 		BD2599FC1CC3E8FD000C612A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE331924FCF1183291FAFCD0 /* Pods-SLMS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SLMS/Info.plist;
@@ -260,6 +468,7 @@
 		};
 		BD2599FD1CC3E8FD000C612A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFAF879C3DF5627182CD3C58 /* Pods-SLMS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SLMS/Info.plist;
@@ -288,6 +497,7 @@
 				BD2599FD1CC3E8FD000C612A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
