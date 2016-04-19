@@ -8,25 +8,31 @@
 
 import UIKit
 
-class LeagueDetailTableViewController: UITableViewController {
+class LeagueDetailTableViewController: UITableViewController, BackendlessDataDelegate {
 
     var backendless = Backendless.sharedInstance()
-
+    var backendlessActions: BEActions = BEActions()
     
     var league: League = League()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        backendlessActions.delegate = self
         //Laod all games for this league
         
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
-        self.league.loadOrganizers()
-        self.league.loadTeams()
+        if(self.league.objectId != nil){
+            self.league = backendlessActions.getLeagueByIdSync(String(self.league.objectId!))!
+            self.league.loadOrganizers()
+            self.league.loadTeams()
+            self.tableView.reloadData()
+        }
+     
     }
+
+    
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
@@ -160,6 +166,14 @@ class LeagueDetailTableViewController: UITableViewController {
             
             if let destination  = segue.destinationViewController as? OrganizerDetailsViewController {
                 destination.organizer = (self.league.organizers?.objectAtIndex(selectedIndex!) as! Organizers)
+            }
+        }
+        
+        // Pass league to update view
+        if segue.identifier == "UpdateLeague" {
+            
+            if let destination  = segue.destinationViewController as? UpdateLeagueUIViewController {
+                destination.leagueToUpdate = self.league;
             }
         }
     }

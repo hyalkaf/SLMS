@@ -93,7 +93,95 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vyh-zi-Ifa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1692" y="-900"/>
+            <point key="canvasLocation" x="1634" y="-1056"/>
+        </scene>
+        <!--Update LeagueUI View Controller-->
+        <scene sceneID="9Gb-Bp-Gey">
+            <objects>
+                <viewController id="LCM-f6-0pJ" customClass="UpdateLeagueUIViewController" customModule="SLMS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RHO-Bu-sit"/>
+                        <viewControllerLayoutGuide type="bottom" id="0an-D8-p1U"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8lt-9S-tFE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j68-Gq-MhA">
+                                <rect key="frame" x="20" y="242" width="78" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRw-MC-2ez">
+                                <rect key="frame" x="20" y="72" width="45" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type Name of league here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="We8-pp-LQT">
+                                <rect key="frame" x="20" y="104" width="191" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number of teams" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1f-cV-iHb">
+                                <rect key="frame" x="20" y="150" width="133" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="How many team in this league?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T2T-TV-9yR">
+                                <rect key="frame" x="20" y="188" width="221" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Vrk-60-Xoy">
+                                <rect key="frame" x="20" y="278" width="374" height="44"/>
+                                <date key="date" timeIntervalSinceReferenceDate="482721393.45405698">
+                                    <!--2016-04-19 01:16:33 +0000-->
+                                </date>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Finish Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SG6-e2-BFO">
+                                <rect key="frame" x="20" y="345" width="85" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="AQz-C9-74m">
+                                <rect key="frame" x="20" y="374" width="374" height="50"/>
+                                <date key="date" timeIntervalSinceReferenceDate="482721586.21306002">
+                                    <!--2016-04-19 01:19:46 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xa5-lm-KzK">
+                                <rect key="frame" x="427" y="526" width="153" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ec3-pp-f6a"/>
+                                    <constraint firstAttribute="width" constant="153" id="QcC-lW-YT1"/>
+                                </constraints>
+                                <state key="normal" title="Update This League"/>
+                                <connections>
+                                    <action selector="UpdateLeagueAction:" destination="LCM-f6-0pJ" eventType="touchUpInside" id="cTJ-Ue-re3"/>
+                                    <action selector="addToLeague:" destination="5hb-PW-U1Q" eventType="touchUpInside" id="v89-zJ-Xhv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xa5-lm-KzK" firstAttribute="trailing" secondItem="8lt-9S-tFE" secondAttribute="trailingMargin" id="5oT-CS-Ejw"/>
+                            <constraint firstItem="0an-D8-p1U" firstAttribute="top" secondItem="xa5-lm-KzK" secondAttribute="bottom" id="a2o-3h-LAY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="finishDatePicker" destination="AQz-C9-74m" id="jfv-n8-gQo"/>
+                        <outlet property="startDatePicker" destination="Vrk-60-Xoy" id="eh6-dp-HUx"/>
+                        <outlet property="updateLeagueName" destination="We8-pp-LQT" id="RkE-Qs-vmi"/>
+                        <outlet property="updatedNumberOfLeagueTeams" destination="T2T-TV-9yR" id="oog-vk-pOt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7HN-8w-mXN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2387" y="-1328"/>
         </scene>
         <!--Leagues Table View Controller-->
         <scene sceneID="NES-DL-c5T">
@@ -190,7 +278,7 @@
             </objects>
             <point key="canvasLocation" x="1598" y="-252"/>
         </scene>
-        <!--League Detail Table View Controller-->
+        <!--Title-->
         <scene sceneID="KHl-VE-nNf">
             <objects>
                 <tableViewController id="ht3-Qb-JP3" customClass="LeagueDetailTableViewController" customModule="SLMS" customModuleProvider="target" sceneMemberID="viewController">
@@ -297,6 +385,15 @@
                             <outlet property="delegate" destination="ht3-Qb-JP3" id="hiX-1T-TyB"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Title" id="iBy-Xn-0sK">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="dLn-gm-OZ5">
+                            <connections>
+                                <segue destination="LCM-f6-0pJ" kind="show" identifier="UpdateLeague" id="5ML-Wi-mrR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l0c-14-vhD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
