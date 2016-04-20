@@ -20,5 +20,6 @@ class Player : NSObject
     
     var position: NSString?
     var number: NSNumber?
+    var hasTeam: Bool = false
     var personalInfo: Person?
 }

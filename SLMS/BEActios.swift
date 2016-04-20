@@ -26,7 +26,8 @@ import Foundation
     
     optional func AllLeaguesReceivedForUser(leagues: [League])
     optional func AllLeaguesReceived(leagues: [League])
-    
+    optional func AllTeamsReceived(teams: [Team])//AllPlayersReceived
+    optional func AllPlayersReceived(players: [Player])
 }
 
 
@@ -105,8 +106,7 @@ class BEActions {
                 print("Server reported an error (2): \(fault)")
         })
     }
-    
-    
+ 
     // MARK: Game - Read
 
     func getGameByIdSync(Id: String) ->Game?
@@ -199,4 +199,54 @@ class BEActions {
             self.delegate?.BackendlessDataDelegateError!(error)
         }
     }
+    
+    
+    // 
+    func getAllTeamsAsync()
+    {
+        let query = BackendlessDataQuery()
+        let queryOptions = QueryOptions()
+        queryOptions.pageSize = 100;
+        query.queryOptions = queryOptions
+
+        let dataStore = backendless.persistenceService.of(Team.ofClass()) as IDataStore
+        dataStore.find(query,
+            response: { (retrievedCollection) -> Void in
+            let teams = retrievedCollection.data as? [Team];
+            print("Successfully retrieved teams " + String(teams?.count))
+            for team in teams! {
+                print("league = \(team.name)")
+            }
+                
+                self.delegate?.AllTeamsReceived!(teams!)
+            })
+            { (fault) -> Void in
+                print("Server reported an error: \(fault)")
+            }
+    }
+    
+    
+    //Player
+    func getAllPlayersAsync()
+    {
+        let query = BackendlessDataQuery()
+        let queryOptions = QueryOptions()
+        queryOptions.pageSize = 100;
+        query.queryOptions = queryOptions
+        
+        let dataStore = backendless.persistenceService.of(Player.ofClass()) as IDataStore
+        dataStore.find(query,
+                       response: { (retrievedCollection) -> Void in
+                        let players = retrievedCollection.data as? [Player];
+                        print("Successfully retrieved players " + String(players?.count))
+                        for player in players! {
+                            print("name = \(player.personalInfo?.fname)")
+                        }
+                        self.delegate?.AllPlayersReceived!(players!)
+            })
+        { (fault) -> Void in
+            print("Server reported an error: \(fault)")
+        }
+    }
+    
 }

@@ -12,10 +12,16 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var backendless = Backendless.sharedInstance()
 
+    let APP_ID = "F947B349-B9B4-284A-FF63-F527C196DF00"
+    let SECRET_KEY = "EBEB3869-72ED-1AF6-FF89-324E25BDAD00"
+    let VERSION_NUM = "v1"
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        backendless.initApp(APP_ID, secret:SECRET_KEY, version:VERSION_NUM)
+        
         return true
     }
 
