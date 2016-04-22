@@ -5,4 +5,5 @@ use_frameworks!
 
 target ’SLMS’ do	
 pod 'Backendless-ios-SDK', '~>3.0.0'
+pod 'Onboard'
 end

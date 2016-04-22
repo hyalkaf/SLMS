@@ -11,8 +11,6 @@
 		6057EF401CC5F09500AD564D /* UpdateLeagueUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6057EF3F1CC5F09500AD564D /* UpdateLeagueUIViewController.swift */; };
 		79BF6DFC3E2F77558978AF57 /* Pods_SLMS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 217DCF4D16CBC6D086DC928F /* Pods_SLMS.framework */; };
 		BD2599EB1CC3E8FD000C612A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2599EA1CC3E8FD000C612A /* AppDelegate.swift */; };
-		BD2599ED1CC3E8FD000C612A /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2599EC1CC3E8FD000C612A /* FirstViewController.swift */; };
-		BD2599EF1CC3E8FD000C612A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2599EE1CC3E8FD000C612A /* SecondViewController.swift */; };
 		BD2599F21CC3E8FD000C612A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD2599F01CC3E8FD000C612A /* Main.storyboard */; };
 		BD2599F41CC3E8FD000C612A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD2599F31CC3E8FD000C612A /* Assets.xcassets */; };
 		BD2599F71CC3E8FD000C612A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD2599F51CC3E8FD000C612A /* LaunchScreen.storyboard */; };
@@ -42,6 +40,25 @@
 		BD259A3C1CC44ED0000C612A /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD259A3B1CC44ED0000C612A /* Card.swift */; };
 		BD259A3E1CC44EFD000C612A /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD259A3D1CC44EFD000C612A /* Goal.swift */; };
 		BD259A401CC44F4C000C612A /* Referee.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD259A3F1CC44F4C000C612A /* Referee.swift */; };
+		BDBF01491CC9D8AF00970726 /* AddNewFieldUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF01481CC9D8AF00970726 /* AddNewFieldUIViewController.swift */; };
+		BDBF014B1CC9EF9A00970726 /* DatePickerDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF014A1CC9EF9A00970726 /* DatePickerDialog.swift */; };
+		BDBF014D1CC9F64800970726 /* GameCellUITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF014C1CC9F64800970726 /* GameCellUITableViewCell.swift */; };
+		BDBF01511CCA12D700970726 /* UpdateGameStatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF01501CCA12D700970726 /* UpdateGameStatTableViewController.swift */; };
+		BDBF01531CCA1CAF00970726 /* AddGoalUITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF01521CCA1CAF00970726 /* AddGoalUITableViewController.swift */; };
+		BDBF01551CCA1CC400970726 /* AddCardUITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF01541CCA1CC400970726 /* AddCardUITableViewController.swift */; };
+		BDFC79371CC7F5D3007D6784 /* btnRegister.png in Resources */ = {isa = PBXBuildFile; fileRef = BDFC79361CC7F5D3007D6784 /* btnRegister.png */; };
+		BDFC793C1CC7F5E2007D6784 /* btnSignin.png in Resources */ = {isa = PBXBuildFile; fileRef = BDFC79381CC7F5E2007D6784 /* btnSignin.png */; };
+		BDFC793D1CC7F5E2007D6784 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDFC79391CC7F5E2007D6784 /* Default-568h@2x.png */; };
+		BDFC793E1CC7F5E2007D6784 /* Museo500-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BDFC793A1CC7F5E2007D6784 /* Museo500-Regular.otf */; };
+		BDFC793F1CC7F5E2007D6784 /* test.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BDFC793B1CC7F5E2007D6784 /* test.mp4 */; };
+		BDFC79411CC7FCC1007D6784 /* backgroundImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BDFC79401CC7FCC1007D6784 /* backgroundImage.jpg */; };
+		BDFC79431CC7FE29007D6784 /* CreateAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDFC79421CC7FE29007D6784 /* CreateAccountViewController.xib */; };
+		BDFC79451CC7FE2E007D6784 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFC79441CC7FE2E007D6784 /* CreateAccountViewController.swift */; };
+		BDFC79471CC96F37007D6784 /* PopulateLeagueUITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFC79461CC96F37007D6784 /* PopulateLeagueUITableViewController.swift */; };
+		BDFC79491CC9C75C007D6784 /* gameTimeUITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFC79481CC9C75C007D6784 /* gameTimeUITableViewCell.swift */; };
+		BDFC794B1CC9C831007D6784 /* AddGameUITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFC794A1CC9C831007D6784 /* AddGameUITableViewController.swift */; };
+		BDFC794D1CC9CD8E007D6784 /* FieldsUITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFC794C1CC9CD8E007D6784 /* FieldsUITableViewController.swift */; };
+		BDFC794F1CC9D196007D6784 /* FieldCellUITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFC794E1CC9D196007D6784 /* FieldCellUITableViewCell.swift */; };
 		C302DEC41CC70A3500699CEB /* TeamsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C302DEC31CC70A3500699CEB /* TeamsListTableViewController.swift */; };
 		C302DEC61CC7117900699CEB /* AddTeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C302DEC51CC7117900699CEB /* AddTeamTableViewController.swift */; };
 		C302DEC81CC734E700699CEB /* teamNameInputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C302DEC71CC734E700699CEB /* teamNameInputTableViewCell.swift */; };
@@ -53,8 +70,6 @@
 		6057EF3F1CC5F09500AD564D /* UpdateLeagueUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateLeagueUIViewController.swift; sourceTree = "<group>"; };
 		BD2599E71CC3E8FD000C612A /* SLMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SLMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD2599EA1CC3E8FD000C612A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BD2599EC1CC3E8FD000C612A /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		BD2599EE1CC3E8FD000C612A /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		BD2599F11CC3E8FD000C612A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BD2599F31CC3E8FD000C612A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD2599F61CC3E8FD000C612A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -85,6 +100,25 @@
 		BD259A3B1CC44ED0000C612A /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		BD259A3D1CC44EFD000C612A /* Goal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 		BD259A3F1CC44F4C000C612A /* Referee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Referee.swift; sourceTree = "<group>"; };
+		BDBF01481CC9D8AF00970726 /* AddNewFieldUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewFieldUIViewController.swift; sourceTree = "<group>"; };
+		BDBF014A1CC9EF9A00970726 /* DatePickerDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerDialog.swift; sourceTree = "<group>"; };
+		BDBF014C1CC9F64800970726 /* GameCellUITableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCellUITableViewCell.swift; sourceTree = "<group>"; };
+		BDBF01501CCA12D700970726 /* UpdateGameStatTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateGameStatTableViewController.swift; sourceTree = "<group>"; };
+		BDBF01521CCA1CAF00970726 /* AddGoalUITableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGoalUITableViewController.swift; sourceTree = "<group>"; };
+		BDBF01541CCA1CC400970726 /* AddCardUITableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCardUITableViewController.swift; sourceTree = "<group>"; };
+		BDFC79361CC7F5D3007D6784 /* btnRegister.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnRegister.png; sourceTree = "<group>"; };
+		BDFC79381CC7F5E2007D6784 /* btnSignin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnSignin.png; sourceTree = "<group>"; };
+		BDFC79391CC7F5E2007D6784 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		BDFC793A1CC7F5E2007D6784 /* Museo500-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Museo500-Regular.otf"; sourceTree = "<group>"; };
+		BDFC793B1CC7F5E2007D6784 /* test.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.mp4; sourceTree = "<group>"; };
+		BDFC79401CC7FCC1007D6784 /* backgroundImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundImage.jpg; sourceTree = "<group>"; };
+		BDFC79421CC7FE29007D6784 /* CreateAccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateAccountViewController.xib; sourceTree = "<group>"; };
+		BDFC79441CC7FE2E007D6784 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		BDFC79461CC96F37007D6784 /* PopulateLeagueUITableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopulateLeagueUITableViewController.swift; sourceTree = "<group>"; };
+		BDFC79481CC9C75C007D6784 /* gameTimeUITableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gameTimeUITableViewCell.swift; sourceTree = "<group>"; };
+		BDFC794A1CC9C831007D6784 /* AddGameUITableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGameUITableViewController.swift; sourceTree = "<group>"; };
+		BDFC794C1CC9CD8E007D6784 /* FieldsUITableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldsUITableViewController.swift; sourceTree = "<group>"; };
+		BDFC794E1CC9D196007D6784 /* FieldCellUITableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldCellUITableViewCell.swift; sourceTree = "<group>"; };
 		BE331924FCF1183291FAFCD0 /* Pods-SLMS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SLMS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SLMS/Pods-SLMS.debug.xcconfig"; sourceTree = "<group>"; };
 		BFAF879C3DF5627182CD3C58 /* Pods-SLMS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SLMS.release.xcconfig"; path = "Pods/Target Support Files/Pods-SLMS/Pods-SLMS.release.xcconfig"; sourceTree = "<group>"; };
 		C302DEC31CC70A3500699CEB /* TeamsListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamsListTableViewController.swift; sourceTree = "<group>"; };
@@ -142,11 +176,11 @@
 		BD2599E91CC3E8FD000C612A /* SLMS */ = {
 			isa = PBXGroup;
 			children = (
+				BDFC79351CC7F5C2007D6784 /* Resources */,
 				BD2599FE1CC3EBC5000C612A /* DBModels */,
 				BD2599EA1CC3E8FD000C612A /* AppDelegate.swift */,
-				BD2599EC1CC3E8FD000C612A /* FirstViewController.swift */,
-				BD2599EE1CC3E8FD000C612A /* SecondViewController.swift */,
 				BD2599F01CC3E8FD000C612A /* Main.storyboard */,
+				BDFC79421CC7FE29007D6784 /* CreateAccountViewController.xib */,
 				BD2599F31CC3E8FD000C612A /* Assets.xcassets */,
 				BD2599F51CC3E8FD000C612A /* LaunchScreen.storyboard */,
 				BD2599F81CC3E8FD000C612A /* Info.plist */,
@@ -187,6 +221,9 @@
 				BD259A241CC43451000C612A /* CoachNameTableViewCell.swift */,
 				BD259A2F1CC44658000C612A /* CaptainNameTableViewCell.swift */,
 				C302DEC71CC734E700699CEB /* teamNameInputTableViewCell.swift */,
+				BDFC79481CC9C75C007D6784 /* gameTimeUITableViewCell.swift */,
+				BDFC794E1CC9D196007D6784 /* FieldCellUITableViewCell.swift */,
+				BDBF014C1CC9F64800970726 /* GameCellUITableViewCell.swift */,
 			);
 			name = TableCells;
 			sourceTree = "<group>";
@@ -194,18 +231,40 @@
 		BD259A281CC43DE0000C612A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				BDFC79441CC7FE2E007D6784 /* CreateAccountViewController.swift */,
 				BD259A0D1CC3F3E2000C612A /* LeaguesTableViewController.swift */,
 				BD259A171CC406F1000C612A /* LeagueDetailTableViewController.swift */,
+				6057EF3D1CC5C2BC00AD564D /* AddLeagueViewController.swift */,
 				BD259A221CC42B74000C612A /* TeamTableViewController.swift */,
 				BD259A291CC43E23000C612A /* PlayerDetailsViewController.swift */,
 				BD259A2B1CC44299000C612A /* CoachDetailsViewController.swift */,
 				BD259A311CC44811000C612A /* OrganizerDetailsViewController.swift */,
-				6057EF3D1CC5C2BC00AD564D /* AddLeagueViewController.swift */,
 				C302DEC51CC7117900699CEB /* AddTeamTableViewController.swift */,
 				6057EF3F1CC5F09500AD564D /* UpdateLeagueUIViewController.swift */,
 				C302DEC31CC70A3500699CEB /* TeamsListTableViewController.swift */,
+				BDFC79461CC96F37007D6784 /* PopulateLeagueUITableViewController.swift */,
+				BDFC794A1CC9C831007D6784 /* AddGameUITableViewController.swift */,
+				BDFC794C1CC9CD8E007D6784 /* FieldsUITableViewController.swift */,
+				BDBF01481CC9D8AF00970726 /* AddNewFieldUIViewController.swift */,
+				BDBF01501CCA12D700970726 /* UpdateGameStatTableViewController.swift */,
+				BDBF01521CCA1CAF00970726 /* AddGoalUITableViewController.swift */,
+				BDBF01541CCA1CC400970726 /* AddCardUITableViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BDFC79351CC7F5C2007D6784 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BDBF014A1CC9EF9A00970726 /* DatePickerDialog.swift */,
+				BDFC79401CC7FCC1007D6784 /* backgroundImage.jpg */,
+				BDFC79381CC7F5E2007D6784 /* btnSignin.png */,
+				BDFC79391CC7F5E2007D6784 /* Default-568h@2x.png */,
+				BDFC793A1CC7F5E2007D6784 /* Museo500-Regular.otf */,
+				BDFC793B1CC7F5E2007D6784 /* test.mp4 */,
+				BDFC79361CC7F5D3007D6784 /* btnRegister.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,9 +328,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDFC793C1CC7F5E2007D6784 /* btnSignin.png in Resources */,
 				BD2599F71CC3E8FD000C612A /* LaunchScreen.storyboard in Resources */,
+				BDFC79431CC7FE29007D6784 /* CreateAccountViewController.xib in Resources */,
 				BD2599F41CC3E8FD000C612A /* Assets.xcassets in Resources */,
 				BD2599F21CC3E8FD000C612A /* Main.storyboard in Resources */,
+				BDFC793E1CC7F5E2007D6784 /* Museo500-Regular.otf in Resources */,
+				BDFC79371CC7F5D3007D6784 /* btnRegister.png in Resources */,
+				BDFC79411CC7FCC1007D6784 /* backgroundImage.jpg in Resources */,
+				BDFC793D1CC7F5E2007D6784 /* Default-568h@2x.png in Resources */,
+				BDFC793F1CC7F5E2007D6784 /* test.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,36 +397,46 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD259A0A1CC3F06B000C612A /* Team.swift in Sources */,
+				BDFC794B1CC9C831007D6784 /* AddGameUITableViewController.swift in Sources */,
 				BD259A1D1CC40B75000C612A /* TeamNameTableViewCell.swift in Sources */,
 				C302DEC41CC70A3500699CEB /* TeamsListTableViewController.swift in Sources */,
+				BDBF01511CCA12D700970726 /* UpdateGameStatTableViewController.swift in Sources */,
+				BDBF01531CCA1CAF00970726 /* AddGoalUITableViewController.swift in Sources */,
+				BDFC794D1CC9CD8E007D6784 /* FieldsUITableViewController.swift in Sources */,
+				BDFC79451CC7FE2E007D6784 /* CreateAccountViewController.swift in Sources */,
 				BD259A0C1CC3F1D6000C612A /* Organizers.swift in Sources */,
 				6057EF401CC5F09500AD564D /* UpdateLeagueUIViewController.swift in Sources */,
 				BD259A231CC42B74000C612A /* TeamTableViewController.swift in Sources */,
 				C302DEC81CC734E700699CEB /* teamNameInputTableViewCell.swift in Sources */,
 				BD259A041CC3EE3E000C612A /* Person.swift in Sources */,
+				BDBF01551CCA1CC400970726 /* AddCardUITableViewController.swift in Sources */,
 				BD259A0E1CC3F3E2000C612A /* LeaguesTableViewController.swift in Sources */,
+				BDFC79471CC96F37007D6784 /* PopulateLeagueUITableViewController.swift in Sources */,
 				BD259A161CC3F6FD000C612A /* BEActios.swift in Sources */,
 				BD259A181CC406F1000C612A /* LeagueDetailTableViewController.swift in Sources */,
-				BD2599EF1CC3E8FD000C612A /* SecondViewController.swift in Sources */,
 				BD259A251CC43451000C612A /* CoachNameTableViewCell.swift in Sources */,
+				BDFC794F1CC9D196007D6784 /* FieldCellUITableViewCell.swift in Sources */,
 				BD259A3C1CC44ED0000C612A /* Card.swift in Sources */,
 				C302DEC61CC7117900699CEB /* AddTeamTableViewController.swift in Sources */,
 				6057EF3E1CC5C2BC00AD564D /* AddLeagueViewController.swift in Sources */,
 				BD259A1F1CC40B9A000C612A /* OrganizerNameTableViewCell.swift in Sources */,
+				BDBF014D1CC9F64800970726 /* GameCellUITableViewCell.swift in Sources */,
 				BD259A401CC44F4C000C612A /* Referee.swift in Sources */,
 				BD2599EB1CC3E8FD000C612A /* AppDelegate.swift in Sources */,
+				BDFC79491CC9C75C007D6784 /* gameTimeUITableViewCell.swift in Sources */,
 				BD259A301CC44658000C612A /* CaptainNameTableViewCell.swift in Sources */,
 				BD259A321CC44811000C612A /* OrganizerDetailsViewController.swift in Sources */,
 				BD259A001CC3EC7B000C612A /* League.swift in Sources */,
 				BD259A211CC42AD6000C612A /* PlayerNameTableViewCell.swift in Sources */,
 				BD259A341CC44C0E000C612A /* Game.swift in Sources */,
+				BDBF014B1CC9EF9A00970726 /* DatePickerDialog.swift in Sources */,
 				BD259A2A1CC43E23000C612A /* PlayerDetailsViewController.swift in Sources */,
 				BD259A021CC3EE2C000C612A /* Player.swift in Sources */,
 				BD259A3E1CC44EFD000C612A /* Goal.swift in Sources */,
 				BD259A2C1CC44299000C612A /* CoachDetailsViewController.swift in Sources */,
 				BD259A361CC44C8E000C612A /* Field.swift in Sources */,
 				BD259A1B1CC40B05000C612A /* LeagueDetalCellOnceSelected.swift in Sources */,
-				BD2599ED1CC3E8FD000C612A /* FirstViewController.swift in Sources */,
+				BDBF01491CC9D8AF00970726 /* AddNewFieldUIViewController.swift in Sources */,
 				BD259A061CC3EF70000C612A /* Coach.swift in Sources */,
 				BD259A121CC3F4D8000C612A /* LeaguesTableViewCell.swift in Sources */,
 				BD259A381CC44DA8000C612A /* GameStat.swift in Sources */,

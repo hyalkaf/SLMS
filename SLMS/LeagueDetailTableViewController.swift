@@ -46,7 +46,7 @@ class LeagueDetailTableViewController: UITableViewController, BackendlessDataDel
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 4
+        return 5
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -59,8 +59,19 @@ class LeagueDetailTableViewController: UITableViewController, BackendlessDataDel
         if(section == 1){
             return (self.league.organizers?.count)!
         }
+        
         if(section == 2){
             return (self.league.teams?.count)!
+        }
+        
+        if section == 3
+        {
+            return (self.league.teams?.count)!
+        }
+        
+        if section == 4
+        {
+            return (self.league.games?.count)!
         }
         
         return 0
@@ -86,15 +97,20 @@ class LeagueDetailTableViewController: UITableViewController, BackendlessDataDel
             return "Team rankings"
         }
         
+        if section == 4
+        {
+            return "League Games"
+        }
+        
         return ""
     }
     
     
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        if(indexPath.section == 0)
+        if(indexPath.section == 0 || indexPath.section == 4)
         {
-            return 200
+            return 170
         }else{
             return 70
         }
@@ -122,7 +138,6 @@ class LeagueDetailTableViewController: UITableViewController, BackendlessDataDel
             return cell
         }
         
-        //print("IndexPath row " + String(indexPath.row))
         
         if(indexPath.section == 1){
             cell = tableView.dequeueReusableCellWithIdentifier("organizerCell", forIndexPath: indexPath)
@@ -145,6 +160,36 @@ class LeagueDetailTableViewController: UITableViewController, BackendlessDataDel
                 leagueTableCell.teamName.text = String(team.name!)
             }
             return cell
+        }
+        
+        if(indexPath.section == 3){
+            cell = tableView.dequeueReusableCellWithIdentifier("teamCell", forIndexPath: indexPath)
+            let team = (self.league.teams?.objectAtIndex(indexPath.row) as! Team)
+            
+            if let leagueTableCell = cell as? TeamNameTableViewCell {
+                
+                leagueTableCell.teamName.text = String(team.name!)
+                return cell
+            }
+        }
+        
+        if(indexPath.section == 4){
+            cell = tableView.dequeueReusableCellWithIdentifier("LeagueGame", forIndexPath: indexPath)
+            if let leagueTableCell = cell as? GameCellUITableViewCell {
+                
+                let game = (self.league.games?.objectAtIndex(indexPath.row) as! Game)
+                
+                leagueTableCell.homeTeam.text = String(game.homeTeam!.name!)
+                leagueTableCell.awayTeam.text = String(game.awayTeam!.name!)
+                leagueTableCell.referee.text = String(((game.referee!.personalInfo?.fname)! as String))
+                
+                leagueTableCell.field.text = String(((game.field!.name)! as String))
+                
+                leagueTableCell.gameDate.text = "\(game.gameDate)"
+                leagueTableCell.gameResult.text = "Score  " + " - : -"
+                
+                return leagueTableCell
+            }
         }
 
         return cell
@@ -174,6 +219,14 @@ class LeagueDetailTableViewController: UITableViewController, BackendlessDataDel
             
             if let destination  = segue.destinationViewController as? UpdateLeagueUIViewController {
                 destination.leagueToUpdate = self.league;
+            }
+        }
+        
+        if segue.identifier == "updateLeagueGame" {
+            let selectedIndex = self.tableView.indexPathForCell(sender as! GameCellUITableViewCell)?.row
+           
+            if let destination  = segue.destinationViewController as? UpdateGameStatTableViewController {
+                destination.game = self.league.games?.objectAtIndex(selectedIndex!) as! Game;
             }
         }
     }

@@ -16,6 +16,7 @@ class AddTeamTableViewController: UITableViewController,BackendlessDataDelegate 
     var selectedPlayers = [Player]()
     var checked = [Bool]()
     var captianChecked = [Bool]()
+    var captainCheckedObjectId : NSString = "-1"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,7 +68,6 @@ class AddTeamTableViewController: UITableViewController,BackendlessDataDelegate 
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        //print("section " + String(section))
         if(section == 0){
             return 1
         }
@@ -84,12 +84,7 @@ class AddTeamTableViewController: UITableViewController,BackendlessDataDelegate 
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        if(indexPath.section == 0)
-        {
-            return 70
-        }else{
-            return 70
-        }
+       return 70
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -121,11 +116,13 @@ class AddTeamTableViewController: UITableViewController,BackendlessDataDelegate 
             cell = tableView.dequeueReusableCellWithIdentifier("choosePlayerForTeamIdentifier", forIndexPath: indexPath)
             cell.textLabel?.text = String(self.selectedPlayers[indexPath.row].personalInfo!.fname)
             
-            if !self.captianChecked[indexPath.row] {
-                cell.accessoryType = .None
-            } else if self.captianChecked[indexPath.row]{
+            if self.selectedPlayers[indexPath.row].objectId == self.captainCheckedObjectId
+            {
                 cell.accessoryType = .Checkmark
+            } else {
+                cell.accessoryType = .None
             }
+            
             
             return cell
         }
@@ -143,6 +140,7 @@ class AddTeamTableViewController: UITableViewController,BackendlessDataDelegate 
                     cell.accessoryType = .None
                     self.checked[indexPath.row] = false
                     updateCaptainOptions(indexPath, add: false)
+                    
                 }else{
                     cell.accessoryType = .Checkmark
                     self.checked[indexPath.row] = true
@@ -150,38 +148,30 @@ class AddTeamTableViewController: UITableViewController,BackendlessDataDelegate 
                 }
             }
             
-            if indexPath.row == 2
+            if indexPath.section == 2
             {
-                if cell.accessoryType == .Checkmark
+                if cell.accessoryType == .None
                 {
-                    cell.accessoryType = .None
-                    //self.captianChecked[indexPath.row] = false
-                }else{
-                    resetCaptainChecks()
-                    cell.accessoryType = .Checkmark
-                    //self.captianChecked[indexPath.row] = true
+                    self.captainCheckedObjectId = self.selectedPlayers[indexPath.row].objectId!
                 }
             }
         }
+        
         tableView.reloadData()
     }
     
-    func resetCaptainChecks()
-    {
-//        for i in 0...(self.captianChecked.count - 1){
-//            self.captianChecked[i] = false
-//        }
-    }
     
     func updateCaptainOptions(indexPath: NSIndexPath, add: Bool)
     {
-        if add {
+        if add
+        {
             self.selectedPlayers.append(self.PlayersList[indexPath.row])
             self.captianChecked.append(false)
-        } else {
-
+        }
+        else
+        {
             let itemToRemove = self.PlayersList[indexPath.row]
-            let playerCout = self.selectedPlayers.count - 1
+            let playerCout = self.selectedPlayers.count
             
             for i in 0...playerCout{
                 if self.selectedPlayers[i].objectId == itemToRemove.objectId{

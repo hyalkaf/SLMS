@@ -35,6 +35,8 @@ class League : NSObject
     var teams: NSMutableArray? = NSMutableArray()
     var organizers: NSMutableArray? = NSMutableArray()
     var games: NSMutableArray? = NSMutableArray()
+    var referees: NSMutableArray? = NSMutableArray()
+    var fields: NSMutableArray? = NSMutableArray()
 
     
     func addToTeams(team: Team)
@@ -59,8 +61,10 @@ class League : NSObject
         if(self.teams != nil)
         {
             Backendless.sharedInstance().persistenceService.load(self, relations: ["teams"])
+            return self.teams!
         }
-        return self.teams!
+        
+        return NSMutableArray()
     }
     
     func freeTeams()
@@ -145,6 +149,79 @@ class League : NSObject
         
         self.games!.removeAllObjects()
         self.games = nil
+    }
+    
+    func addToReferees(referee: Referee)
+    {
+        if(self.referees == nil)
+        {
+            self.referees = NSMutableArray()
+        }
+        self.referees?.addObject(referee)
+    }
+    
+    func removeFromReferees(referee: Referee)
+    {
+        self.referees?.removeObject(referee)
+        if(self.referees?.count <= 0){
+            self.referees = nil
+        }
+    }
+    
+    func loadReferees() -> NSMutableArray
+    {
+        if(self.referees != nil)
+        {
+            Backendless.sharedInstance().persistenceService.load(self, relations: ["referees"])
+        }
+        return self.referees!
+    }
+    
+    func freeReferees()
+    {
+        if(self.referees == nil){
+            return
+        }
+        
+        self.referees!.removeAllObjects()
+        self.referees = nil
+    }
+    
+    
+    func addToFields(field: Field)
+    {
+        if(self.fields == nil)
+        {
+            self.fields = NSMutableArray()
+        }
+        self.fields?.addObject(field)
+    }
+    
+    func removeFromFields(field: Field)
+    {
+        self.fields?.removeObject(field)
+        if(self.fields?.count <= 0){
+            self.fields = nil
+        }
+    }
+    
+    func loadFields() -> NSMutableArray
+    {
+        if(self.fields != nil)
+        {
+            Backendless.sharedInstance().persistenceService.load(self, relations: ["fields"])
+        }
+        return self.fields!
+    }
+    
+    func freeFields()
+    {
+        if(self.fields == nil){
+            return
+        }
+        
+        self.fields!.removeAllObjects()
+        self.fields = nil
     }
 }
 

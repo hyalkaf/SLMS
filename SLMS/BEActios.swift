@@ -27,7 +27,11 @@ import Foundation
     optional func AllLeaguesReceivedForUser(leagues: [League])
     optional func AllLeaguesReceived(leagues: [League])
     optional func AllTeamsReceived(teams: [Team])//AllPlayersReceived
+    optional func AllCoachesReceived(coaches: [Coach])
     optional func AllPlayersReceived(players: [Player])
+    optional func AllRefsReceived(referees: [Referee])
+    optional func AllOrganizerRecieved(organizers: [Organizers])
+    optional func AllFieldsRecieved(fields: [Field])
 }
 
 
@@ -54,7 +58,7 @@ class BEActions {
         }
     }
     
-  
+    
     
     func getAllLeaguesAsync()
     {
@@ -67,11 +71,17 @@ class BEActions {
         dataStore.find(query,
             response: { (retrievedCollection) -> Void in
                 let leagues = retrievedCollection.data as? [League];
-                print("Successfully retrieved leagues " + String(leagues?.count))
-                for league in leagues! {
-                    print("league = \(league.name)")
+                
+                if leagues != nil
+                {
+                    print("Successfully retrieved leagues " + String(leagues?.count))
+                    for league in leagues! {
+                        print("league = \(league.name)")
+                    }
+                    self.delegate?.AllLeaguesReceived!(leagues!)
+                } else {
+                    print("Leagues Retreived are nil, try again")
                 }
-                self.delegate?.AllLeaguesReceived!(leagues!)
             })
             { (fault) -> Void in
                 print("Server reported an error: \(fault)")
@@ -92,7 +102,6 @@ class BEActions {
         }
     }
     
-    //Delete
     func removeLeagueSync(league: League)
     {
         let dataStore = backendless.data.of(League.ofClass())
@@ -140,6 +149,36 @@ class BEActions {
     
     
     // MARK: Team - Read
+    
+    func getAllTeamsAsync()
+    {
+        let query = BackendlessDataQuery()
+        let queryOptions = QueryOptions()
+        queryOptions.pageSize = 100;
+        query.queryOptions = queryOptions
+        
+        let dataStore = backendless.persistenceService.of(Team.ofClass()) as IDataStore
+        dataStore.find(query,
+            response: { (retrievedCollection) -> Void in
+                let teams = retrievedCollection.data as? [Team];
+                
+                if teams != nil
+                {
+                    print("Successfully retrieved teams " + String(teams?.count))
+                    for team in teams! {
+                        print("team = \(team.name)")
+                    }
+                    self.delegate?.AllTeamsReceived!(teams!)
+                } else {
+                    print("Teams Retreived are nil, try again")
+                }
+            })
+            { (fault) -> Void in
+                print("Server reported an error: \(fault)")
+        }
+    }
+    
+    
     func getTeamByIdSync(Id: String) ->Team?
     {
         let dataStore = backendless.data.of(Team.ofClass())
@@ -200,31 +239,7 @@ class BEActions {
         }
     }
     
-    
-    // 
-    func getAllTeamsAsync()
-    {
-        let query = BackendlessDataQuery()
-        let queryOptions = QueryOptions()
-        queryOptions.pageSize = 100;
-        query.queryOptions = queryOptions
 
-        let dataStore = backendless.persistenceService.of(Team.ofClass()) as IDataStore
-        dataStore.find(query,
-            response: { (retrievedCollection) -> Void in
-            let teams = retrievedCollection.data as? [Team];
-            print("Successfully retrieved teams " + String(teams?.count))
-            for team in teams! {
-                print("league = \(team.name)")
-            }
-                
-                self.delegate?.AllTeamsReceived!(teams!)
-            })
-            { (fault) -> Void in
-                print("Server reported an error: \(fault)")
-            }
-    }
-    
     
     //Player
     func getAllPlayersAsync()
@@ -249,4 +264,196 @@ class BEActions {
         }
     }
     
+    func savePlayerAsync(player: Player)
+    {
+        var error: Fault?
+        let result = backendless.data.save(player, error: &error) as? Player
+        if error == nil {
+            print("player has been saved: \(result)")
+            self.delegate?.BackendlessDataDelegateDataIsSaved!(result)
+        }
+        else {
+            print("fServer reported an error: \(error)")
+            self.delegate?.BackendlessDataDelegateError!(error)
+        }
+    }
+    
+    
+    
+    //Coach
+    func getAllCoachesAsync()
+    {
+        let query = BackendlessDataQuery()
+        let queryOptions = QueryOptions()
+        queryOptions.pageSize = 100;
+        query.queryOptions = queryOptions
+        
+        let dataStore = backendless.persistenceService.of(Coach.ofClass()) as IDataStore
+        dataStore.find(query,
+            response: { (retrievedCollection) -> Void in
+                let coaches = retrievedCollection.data as? [Coach];
+                print("Successfully retrieved coaches " + String(coaches?.count))
+                for coach in coaches! {
+                    print("Coach = \(coach.objectId)")
+                }
+                
+                //self.delegate?.AllCoachesReceived!(coaches!)
+            })
+            { (fault) -> Void in
+                print("Server reported an error: \(fault)")
+        }
+    }
+    
+    
+    func saveCoachAsync(coach: Coach)
+    {
+        var error: Fault?
+        let result = backendless.data.save(coach, error: &error) as? Coach
+        if error == nil {
+            print("coach has been saved: \(result)")
+            self.delegate?.BackendlessDataDelegateDataIsSaved!(result)
+        }
+        else {
+            print("fServer reported an error: \(error)")
+            self.delegate?.BackendlessDataDelegateError!(error)
+        }
+    }
+    
+    
+    //Referee
+    func getAllRefsAsync()
+    {
+        let query = BackendlessDataQuery()
+        let queryOptions = QueryOptions()
+        queryOptions.pageSize = 100;
+        query.queryOptions = queryOptions
+        
+        let dataStore = backendless.persistenceService.of(Referee.ofClass()) as IDataStore
+        dataStore.find(query,
+            response: { (retrievedCollection) -> Void in
+                let referees = retrievedCollection.data as? [Referee];
+                if referees != nil
+                {
+                    print("Successfully retrieved Refs " + String(referees?.count))
+                    for referee in referees! {
+                        print("Coach = \(referee.objectId)")
+                    }
+                    self.delegate?.AllRefsReceived!(referees!)
+                } else{
+                    print("referees Retreived are nil, try again")
+                }
+                
+            })
+            { (fault) -> Void in
+                print("Server reported an error: \(fault)")
+        }
+    }
+    
+    func saveRefereeAsync(referee: Referee)
+    {
+        var error: Fault?
+        let result = backendless.data.save(referee, error: &error) as? Referee
+        if error == nil {
+            print("Referee has been saved: \(result)")
+            self.delegate?.BackendlessDataDelegateDataIsSaved!(result)
+        }
+        else {
+            print("fServer reported an error: \(error)")
+            self.delegate?.BackendlessDataDelegateError!(error)
+        }
+    }
+    
+
+    
+    //organizer
+    func saveOrganizerAsync(organizer: Organizers)
+    {
+        var error: Fault?
+        let result = backendless.data.save(organizer, error: &error) as? Organizers
+        if error == nil {
+            print("Organizer has been saved: \(result)")
+            self.delegate?.BackendlessDataDelegateDataIsSaved!(result)
+        }
+        else {
+            print("fServer reported an error: \(error)")
+            self.delegate?.BackendlessDataDelegateError!(error)
+        }
+    }
+    
+    
+    func getAllOrganizersAsync()
+    {
+        let query = BackendlessDataQuery()
+        let queryOptions = QueryOptions()
+        queryOptions.pageSize = 100;
+        query.queryOptions = queryOptions
+        
+        let dataStore = backendless.persistenceService.of(Organizers.ofClass()) as IDataStore
+        dataStore.find(query,
+            response: { (retrievedCollection) -> Void in
+                
+                let organizers = retrievedCollection.data as? [Organizers];
+                
+                if organizers != nil
+                {
+                    print("Successfully retrieved coaches " + String(organizers?.count))
+                    for organizer in organizers! {
+                        print("Coach = \(organizer.objectId)")
+                    }
+                    self.delegate?.AllOrganizerRecieved!(organizers!)
+                } else {
+                    print("Organizers Retreived are nil, try again")
+                }
+                
+            })
+            { (fault) -> Void in
+                print("Server reported an error: \(fault)")
+        }
+    }
+    
+    //Fields
+    
+    func saveFieldAsync(field: Field)
+    {
+        var error: Fault?
+        let result = backendless.data.save(field, error: &error) as? Field
+        if error == nil {
+            print("field has been saved: \(result)")
+            self.delegate?.BackendlessDataDelegateDataIsSaved!(result)
+        }
+        else {
+            print("fServer reported an error: \(error)")
+            self.delegate?.BackendlessDataDelegateError!(error)
+        }
+    }
+    
+    func getAllFieldsAsync()
+    {
+        let query = BackendlessDataQuery()
+        let queryOptions = QueryOptions()
+        queryOptions.pageSize = 100;
+        query.queryOptions = queryOptions
+        
+        let dataStore = backendless.persistenceService.of(Field.ofClass()) as IDataStore
+        dataStore.find(query,
+            response: { (retrievedCollection) -> Void in
+                
+                let fields = retrievedCollection.data as? [Field];
+                
+                if fields != nil
+                {
+                    print("Successfully retrieved fields " + String(fields?.count))
+                    for field in fields! {
+                        print("Coach = \(field.objectId)")
+                    }
+                    self.delegate?.AllFieldsRecieved!(fields!)
+                } else {
+                    print("fields Retreived are nil, try again")
+                }
+                
+            })
+            { (fault) -> Void in
+                print("Server reported an error: \(fault)")
+        }
+    }
 }

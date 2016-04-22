@@ -10,6 +10,8 @@ import UIKit
 
 class LeaguesTableViewController: UITableViewController, BackendlessDataDelegate{
 
+    @IBOutlet weak var addLeagueBtn: UIBarButtonItem!
+    
     var backendless = Backendless.sharedInstance()
     var leagues: [League] = []
     var selectedLeague: League = League()
@@ -20,6 +22,18 @@ class LeaguesTableViewController: UITableViewController, BackendlessDataDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let currentUser = backendless.userService.currentUser
+        
+        if currentUser != nil{
+            let role = currentUser.getProperty("role") as! String
+            if role != "Organizer"
+            {
+                self.addLeagueBtn.title = ""
+                self.addLeagueBtn.style = UIBarButtonItemStyle.Plain
+                self.addLeagueBtn.enabled = false
+            }
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -57,6 +71,7 @@ class LeaguesTableViewController: UITableViewController, BackendlessDataDelegate
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         //print("Calling tableVIew");
         let cell: UITableViewCell
+   
 
         cell = tableView.dequeueReusableCellWithIdentifier("leagueCell", forIndexPath: indexPath)
         if let leagueTableCell = cell as? LeaguesTableViewCell {
@@ -70,6 +85,10 @@ class LeaguesTableViewController: UITableViewController, BackendlessDataDelegate
             leagueTableCell.startDate.text = String(formater.stringFromDate(self.leagues[indexPath.row].startDate))
             
             leagueTableCell.finishDate.text = String(formater.stringFromDate(self.leagues[indexPath.row].finishDate))
+            
+            leagueTableCell.contentView.layer.borderWidth = 3
+            cell.contentView.layer.borderColor = UIColor.blackColor().CGColor
+            
         }
     
         return cell
@@ -100,7 +119,6 @@ class LeaguesTableViewController: UITableViewController, BackendlessDataDelegate
             print(String(selectedIndex));
             if let destination  = segue.destinationViewController as? LeagueDetailTableViewController {
                 destination.league = self.leagues[selectedIndex!]
-                print("This league Name is[] " + String(self.selectedLeague.name))
             }
         }
     }

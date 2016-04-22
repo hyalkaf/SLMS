@@ -21,7 +21,6 @@ class AddLeagueViewController: UIViewController, BackendlessDataDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         beAction.delegate = self
-        
     }
     
     func BackendlessDataDelegateDataIsSaved(result: AnyObject!) {

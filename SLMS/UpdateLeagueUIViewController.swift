@@ -32,6 +32,10 @@ class UpdateLeagueUIViewController: UIViewController, BackendlessDataDelegate {
         self.navigationController?.popViewControllerAnimated(true);
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.leagueToUpdate = beAction.getLeagueByIdSync(String(self.leagueToUpdate.objectId!))!
+    }
     
     func BackendlessDataDelegateError(fault: Fault!) {
         // If data wasn't saved to database
@@ -67,5 +71,31 @@ class UpdateLeagueUIViewController: UIViewController, BackendlessDataDelegate {
             
         }
 
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+
+        if segue.identifier == "populateLeague" {
+            
+            if let destination  = segue.destinationViewController as? PopulateLeagueUITableViewController {
+                destination.selectedLeague = self.leagueToUpdate
+            }
+        }
+        
+        
+        if segue.identifier == "addNewField" {
+            
+            if let destination  = segue.destinationViewController as? FieldsUITableViewController {
+                destination.league = self.leagueToUpdate
+            }
+        }
+        
+        if segue.identifier == "addGameToLeague" {
+            
+            if let destination  = segue.destinationViewController as? AddGameUITableViewController {
+                destination.league = self.leagueToUpdate
+            }
+        }
+        
     }
 }

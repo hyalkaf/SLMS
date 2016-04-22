@@ -24,4 +24,5 @@ class Game : NSObject
     var field: Field?
     var gameStats: GameStat?
     var referee: Referee?
+    var isPlayed: Bool = false
 }

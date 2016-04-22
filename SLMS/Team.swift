@@ -21,6 +21,7 @@ class Team : NSObject
     var players: NSMutableArray? = NSMutableArray()
     var captain: Player?
     var coach: Coach?
+    var enrolledInLeague: Bool = false
     
     func addToPlayers(player: Player)
     {
