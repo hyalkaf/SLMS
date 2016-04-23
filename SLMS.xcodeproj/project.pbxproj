@@ -40,6 +40,8 @@
 		BD259A3C1CC44ED0000C612A /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD259A3B1CC44ED0000C612A /* Card.swift */; };
 		BD259A3E1CC44EFD000C612A /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD259A3D1CC44EFD000C612A /* Goal.swift */; };
 		BD259A401CC44F4C000C612A /* Referee.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD259A3F1CC44F4C000C612A /* Referee.swift */; };
+		BD4A89761CCAD3DB00DA715F /* TeamDetailsUITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4A89751CCAD3DB00DA715F /* TeamDetailsUITableViewController.swift */; };
+		BD4A89781CCAD3F900DA715F /* EditTeamUITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4A89771CCAD3F900DA715F /* EditTeamUITableViewController.swift */; };
 		BDBF01491CC9D8AF00970726 /* AddNewFieldUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF01481CC9D8AF00970726 /* AddNewFieldUIViewController.swift */; };
 		BDBF014B1CC9EF9A00970726 /* DatePickerDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF014A1CC9EF9A00970726 /* DatePickerDialog.swift */; };
 		BDBF014D1CC9F64800970726 /* GameCellUITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF014C1CC9F64800970726 /* GameCellUITableViewCell.swift */; };
@@ -100,6 +102,8 @@
 		BD259A3B1CC44ED0000C612A /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		BD259A3D1CC44EFD000C612A /* Goal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 		BD259A3F1CC44F4C000C612A /* Referee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Referee.swift; sourceTree = "<group>"; };
+		BD4A89751CCAD3DB00DA715F /* TeamDetailsUITableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamDetailsUITableViewController.swift; sourceTree = "<group>"; };
+		BD4A89771CCAD3F900DA715F /* EditTeamUITableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTeamUITableViewController.swift; sourceTree = "<group>"; };
 		BDBF01481CC9D8AF00970726 /* AddNewFieldUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewFieldUIViewController.swift; sourceTree = "<group>"; };
 		BDBF014A1CC9EF9A00970726 /* DatePickerDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerDialog.swift; sourceTree = "<group>"; };
 		BDBF014C1CC9F64800970726 /* GameCellUITableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCellUITableViewCell.swift; sourceTree = "<group>"; };
@@ -249,6 +253,8 @@
 				BDBF01501CCA12D700970726 /* UpdateGameStatTableViewController.swift */,
 				BDBF01521CCA1CAF00970726 /* AddGoalUITableViewController.swift */,
 				BDBF01541CCA1CC400970726 /* AddCardUITableViewController.swift */,
+				BD4A89751CCAD3DB00DA715F /* TeamDetailsUITableViewController.swift */,
+				BD4A89771CCAD3F900DA715F /* EditTeamUITableViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -402,12 +408,14 @@
 				C302DEC41CC70A3500699CEB /* TeamsListTableViewController.swift in Sources */,
 				BDBF01511CCA12D700970726 /* UpdateGameStatTableViewController.swift in Sources */,
 				BDBF01531CCA1CAF00970726 /* AddGoalUITableViewController.swift in Sources */,
+				BD4A89781CCAD3F900DA715F /* EditTeamUITableViewController.swift in Sources */,
 				BDFC794D1CC9CD8E007D6784 /* FieldsUITableViewController.swift in Sources */,
 				BDFC79451CC7FE2E007D6784 /* CreateAccountViewController.swift in Sources */,
 				BD259A0C1CC3F1D6000C612A /* Organizers.swift in Sources */,
 				6057EF401CC5F09500AD564D /* UpdateLeagueUIViewController.swift in Sources */,
 				BD259A231CC42B74000C612A /* TeamTableViewController.swift in Sources */,
 				C302DEC81CC734E700699CEB /* teamNameInputTableViewCell.swift in Sources */,
+				BD4A89761CCAD3DB00DA715F /* TeamDetailsUITableViewController.swift in Sources */,
 				BD259A041CC3EE3E000C612A /* Person.swift in Sources */,
 				BDBF01551CCA1CC400970726 /* AddCardUITableViewController.swift in Sources */,
 				BD259A0E1CC3F3E2000C612A /* LeaguesTableViewController.swift in Sources */,

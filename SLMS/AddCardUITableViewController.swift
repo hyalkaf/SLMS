@@ -257,12 +257,10 @@ class AddCardUITableViewController: UITableViewController, BackendlessDataDelega
         if self.game.gameStats == nil{
             self.game.gameStats = GameStat()
         }
-        self.game.gameStats?.score = "- : -"
+
         self.game.gameStats!.addToCards(card)
         self.game.isPlayed = true
         self.backendActions.saveGameSync(self.game)
         self.navigationController?.popViewControllerAnimated(true);
     }
-    
-
 }

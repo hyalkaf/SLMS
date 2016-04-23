@@ -57,4 +57,15 @@ class TeamsListTableViewController: UITableViewController, BackendlessDataDelega
         return cell
     }
     
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "showTeamDetails" {
+            let selectedIndex = self.tableView.indexPathForCell(sender as! UITableViewCell)?.row
+            
+            if let destination  = segue.destinationViewController as? TeamDetailsUITableViewController {
+                destination.team = self.teams[selectedIndex!]
+            }
+        }
+    }
 }

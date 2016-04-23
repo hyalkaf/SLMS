@@ -85,7 +85,7 @@ class UpdateLeagueUIViewController: UIViewController, BackendlessDataDelegate {
         
         if segue.identifier == "addNewField" {
             
-            if let destination  = segue.destinationViewController as? FieldsUITableViewController {
+            if let destination  = segue.destinationViewController as? AddNewFieldUIViewController {
                 destination.league = self.leagueToUpdate
             }
         }

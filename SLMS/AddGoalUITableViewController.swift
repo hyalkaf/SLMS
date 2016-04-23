@@ -197,7 +197,7 @@ class AddGoalUITableViewController: UITableViewController, BackendlessDataDelega
         if self.game.gameStats == nil{
             self.game.gameStats = GameStat()
         }
-        self.game.gameStats?.score = "- : -"
+
         self.game.gameStats!.addToGoals(goal)
         self.game.isPlayed = true
         self.backendActions.saveGameSync(self.game)

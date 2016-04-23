@@ -746,6 +746,32 @@
                                 </tableViewCellContentView>
                                 <animations/>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SaveGame" rowHeight="100" id="5vq-0g-cpx">
+                                <rect key="frame" x="0.0" y="322" width="600" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5vq-0g-cpx" id="ASi-zb-Zex">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="99"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUP-c5-b28">
+                                            <rect key="frame" x="8" y="8" width="584" height="83"/>
+                                            <animations/>
+                                            <state key="normal" title="Save Game"/>
+                                            <connections>
+                                                <action selector="SaveGameScore:" destination="y52-cF-6ad" eventType="touchUpInside" id="lQG-x4-AOU"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="HUP-c5-b28" secondAttribute="bottom" id="GkD-vV-3pk"/>
+                                        <constraint firstItem="HUP-c5-b28" firstAttribute="top" secondItem="ASi-zb-Zex" secondAttribute="topMargin" id="H0b-21-L9z"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="HUP-c5-b28" secondAttribute="trailing" id="HB6-8k-Oy6"/>
+                                        <constraint firstItem="HUP-c5-b28" firstAttribute="leading" secondItem="ASi-zb-Zex" secondAttribute="leadingMargin" id="HFk-Yf-4JG"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="y52-cF-6ad" id="dPZ-Qj-bhg"/>
@@ -753,7 +779,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Update Game" id="3rg-Fq-IL4">
-                        <barButtonItem key="leftBarButtonItem" title="Save Game" id="qnL-ul-uHJ"/>
                         <rightBarButtonItems>
                             <barButtonItem title="Add Goal" id="FD6-An-4jp">
                                 <connections>
@@ -1275,6 +1300,9 @@
                                     <animations/>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <segue destination="fzd-nH-6Ms" kind="show" identifier="showTeamDetails" id="dwi-nu-Iu3"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -1292,7 +1320,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zHC-Dp-IqP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1701" y="1808"/>
+            <point key="canvasLocation" x="1615" y="2508"/>
         </scene>
         <!--Populate League-->
         <scene sceneID="Df1-WK-8EW">
@@ -1410,7 +1438,7 @@
             </objects>
             <point key="canvasLocation" x="4350" y="-1212"/>
         </scene>
-        <!--Add Team Table View Controller-->
+        <!--Add New Team-->
         <scene sceneID="Cnn-Bn-yPP">
             <objects>
                 <tableViewController id="8ry-8J-Tbu" customClass="AddTeamTableViewController" customModule="SLMS" customModuleProvider="target" sceneMemberID="viewController">
@@ -1456,16 +1484,159 @@
                                 </tableViewCellContentView>
                                 <animations/>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="teamNameCell" id="rNg-Ep-3al">
+                                <rect key="frame" x="0.0" y="180" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rNg-Ep-3al" id="b45-ir-5XF">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="8ry-8J-Tbu" id="q14-9b-rEB"/>
                             <outlet property="delegate" destination="8ry-8J-Tbu" id="8WD-oM-fF0"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Add New Team" id="mp6-fw-dqP">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="JXj-6p-Mml">
+                            <connections>
+                                <action selector="SaveNewTeam:" destination="8ry-8J-Tbu" id="kxc-w2-M0B"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q4u-n0-YAk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2577" y="1822"/>
+            <point key="canvasLocation" x="2703" y="2120"/>
+        </scene>
+        <!--Team Details-->
+        <scene sceneID="0Rg-OE-146">
+            <objects>
+                <tableViewController id="fzd-nH-6Ms" customClass="TeamDetailsUITableViewController" customModule="SLMS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="3Zw-2g-PTj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="coachNameCell" id="UI8-WY-5hh">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UI8-WY-5hh" id="Kqd-a3-Ukr">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="captainNameCell" id="2Dd-20-h36" customClass="captainNameCell">
+                                <rect key="frame" x="0.0" y="136" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2Dd-20-h36" id="Bar-tD-FnV">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="playerNameCell" id="cMX-j5-776" customClass="playerNameCell">
+                                <rect key="frame" x="0.0" y="180" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cMX-j5-776" id="qix-es-ki5">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="fzd-nH-6Ms" id="QdK-s5-ryo"/>
+                            <outlet property="delegate" destination="fzd-nH-6Ms" id="krC-If-tfA"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Team Details" id="ujK-rR-nli">
+                        <barButtonItem key="rightBarButtonItem" title="Edit Team" id="CUc-Jh-fkL">
+                            <connections>
+                                <segue destination="q9W-Wh-fDI" kind="show" identifier="editTeamSegue" id="OqJ-i0-hCR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SB4-lV-na3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2703" y="2777"/>
+        </scene>
+        <!--Edit Team-->
+        <scene sceneID="qIa-yc-fP8">
+            <objects>
+                <tableViewController id="q9W-Wh-fDI" customClass="EditTeamUITableViewController" customModule="SLMS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="hTC-cV-JSE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="teamNameInput" id="CAL-ud-gLh">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CAL-ud-gLh" id="snl-gS-DbX">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="teamCoachCell" id="3fx-rf-cms">
+                                <rect key="frame" x="0.0" y="136" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3fx-rf-cms" id="et2-LT-w3Q">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="teamCaptainCell" id="u2C-zn-2xt">
+                                <rect key="frame" x="0.0" y="180" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="u2C-zn-2xt" id="fSr-ZV-Sur">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="teamPlayersCell" id="SEh-fl-Cdd">
+                                <rect key="frame" x="0.0" y="224" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SEh-fl-Cdd" id="1Yh-dy-Sw7">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="q9W-Wh-fDI" id="zM4-la-kdV"/>
+                            <outlet property="delegate" destination="q9W-Wh-fDI" id="72q-QP-zQJ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Edit Team" id="mjl-Io-zPM">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="fYR-9c-7gL">
+                            <connections>
+                                <action selector="SaveTeam:" destination="q9W-Wh-fDI" id="g5S-hF-DAO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iWL-Da-ZGp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3489" y="2777"/>
         </scene>
         <!--Teams-->
         <scene sceneID="Uab-v5-4Rl">
@@ -1485,7 +1656,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yll-vX-D4J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="763" y="1366"/>
+            <point key="canvasLocation" x="317" y="1448"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

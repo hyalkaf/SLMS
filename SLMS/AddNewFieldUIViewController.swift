@@ -25,8 +25,10 @@ class AddNewFieldUIViewController: UIViewController, BackendlessDataDelegate {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        backendActions.delegate = self
-        self.league = backendActions.getLeagueByIdSync(String(self.league.objectId!))!
+        self.backendActions.delegate = self
+        let objectID = self.league.objectId!
+        let le = self.backendActions.getLeagueByIdSync(String(objectID))
+        self.league = le!
     }
     
     func BackendlessDataDelegateDataIsSaved(result: AnyObject!) {

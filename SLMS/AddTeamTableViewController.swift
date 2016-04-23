@@ -8,15 +8,23 @@
 
 import UIKit
 
-class AddTeamTableViewController: UITableViewController,BackendlessDataDelegate {
+class AddTeamTableViewController: UITableViewController,BackendlessDataDelegate, UITextFieldDelegate {
     
+    var backendless = Backendless.sharedInstance()
+
     var beAction: BEActions = BEActions();
     var team: Team = Team();
     var PlayersList = [Player]()
     var selectedPlayers = [Player]()
+    
     var checked = [Bool]()
     var captianChecked = [Bool]()
     var captainCheckedObjectId : NSString = "-1"
+    
+    var teamName = UITextField()
+    var teamNameText = "Team Name"
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -93,7 +101,16 @@ class AddTeamTableViewController: UITableViewController,BackendlessDataDelegate 
         
         if indexPath.section == 0
         {
-            cell = tableView.dequeueReusableCellWithIdentifier("teamNameInputIdentifier", forIndexPath: indexPath)
+            cell = tableView.dequeueReusableCellWithIdentifier("teamNameCell", forIndexPath: indexPath)
+            let cgrect = CGRect(x: 10.0, y: 10.0, width: 400, height: 70.0)
+            self.teamName = UITextField(frame: cgrect)
+            self.teamName.placeholder = self.teamNameText
+            self.teamName.backgroundColor = UIColor.grayColor()
+            
+            cell.contentView.addSubview(self.teamName)
+            
+            self.teamName.delegate = self
+            
             return cell
         }
         
@@ -181,5 +198,68 @@ class AddTeamTableViewController: UITableViewController,BackendlessDataDelegate 
                 }
             }
         }
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        if textField == self.teamName
+        {
+            if textField.text != nil && textField.text != ""
+            {
+                self.teamNameText = textField.text!
+                print("First Text field " + self.teamNameText)
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    
+    func foundCoachWithEamil(coach: Coach) {
+        
+        let newTeam = Team()
+        
+        //Add Players
+        let playerCount = self.selectedPlayers.count;
+        if playerCount > 0 {
+            for i in 1...playerCount{
+            
+                newTeam.addToPlayers(self.selectedPlayers[i-1])
+                self.selectedPlayers[i-1].hasTeam = true
+                if self.selectedPlayers[i-1].objectId == self.captainCheckedObjectId
+                {
+                    //Add Captain
+                    newTeam.captain = (self.selectedPlayers[i-1])
+                }
+            }
+        }
+        
+        //Add coach
+        newTeam.coach = coach
+        newTeam.name = teamNameText
+        
+        beAction.saveTeamSync(newTeam)
+    }
+    
+    @IBAction func SaveNewTeam(sender: AnyObject) {
+        
+        let user = backendless.userService.currentUser
+        if( user != nil)
+        {
+            let userRole = user.getProperty("role") as! String
+            if userRole == "Coach"
+            {
+                //load coach wth this email
+                self.beAction.getCoachWithEmail(user.email)
+            }
+        }
+
+        //self.beAction.getCoachWithEmail("ljsdn@email.comn")
+    }
+    
+    func BackendlessDataDelegateDataIsSaved(result: AnyObject!) {
+        self.navigationController?.popViewControllerAnimated(true);
+    }
+    
+    func BackendlessDataDelegateError(fault: Fault!) {
+        print("Error Saving The Goal")
     }
 }

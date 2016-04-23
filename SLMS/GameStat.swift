@@ -17,7 +17,9 @@ class GameStat : NSObject
     var objectId: NSString?
     var ownerId: NSString?
     
-    var score: NSString?
+    var awayTeamScore: NSNumber?
+    var homeTeamScore: NSNumber?
+    
     var cards: NSMutableArray? = NSMutableArray()
     var goals: NSMutableArray? = NSMutableArray()
     

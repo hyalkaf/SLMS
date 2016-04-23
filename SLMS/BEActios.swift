@@ -32,6 +32,9 @@ import Foundation
     optional func AllRefsReceived(referees: [Referee])
     optional func AllOrganizerRecieved(organizers: [Organizers])
     optional func AllFieldsRecieved(fields: [Field])
+    
+    optional func foundCoachWithEamil(coach: Coach)
+    
 }
 
 
@@ -297,7 +300,7 @@ class BEActions {
                     print("Coach = \(coach.objectId)")
                 }
                 
-                //self.delegate?.AllCoachesReceived!(coaches!)
+                self.delegate?.AllCoachesReceived!(coaches!)
             })
             { (fault) -> Void in
                 print("Server reported an error: \(fault)")
@@ -319,6 +322,32 @@ class BEActions {
         }
     }
     
+    func getCoachWithEmail(email: String)
+    {
+        let query = BackendlessDataQuery()
+        let queryOptions = QueryOptions()
+        queryOptions.pageSize = 100;
+        query.queryOptions = queryOptions
+        
+        let dataStore = backendless.persistenceService.of(Coach.ofClass()) as IDataStore
+        dataStore.find(query,
+            response: { (retrievedCollection) -> Void in
+                let coaches = retrievedCollection.data as? [Coach];
+                print("Successfully retrieved coaches " + String(coaches?.count))
+                for coach in coaches! {
+                    print("Coach = \(coach.objectId)")
+                    if coach.personalInfo?.email == email
+                    {
+                        print("found the coach with email " + email)
+                        self.delegate?.foundCoachWithEamil!(coach)
+                        break
+                    }
+                }
+            })
+            { (fault) -> Void in
+                print("Server reported an error: \(fault)")
+        }
+    }
     
     //Referee
     func getAllRefsAsync()
