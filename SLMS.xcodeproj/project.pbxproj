@@ -195,6 +195,7 @@
 				BD259A0D1CC3F3E2000C612A /* LeaguesTableViewController.swift */,
 				BD259A171CC406F1000C612A /* LeagueDetailTableViewController.swift */,
 				BDFC79461CC96F37007D6784 /* PopulateLeagueUITableViewController.swift */,
+				6057EF3F1CC5F09500AD564D /* UpdateLeagueUIViewController.swift */,
 			);
 			name = League;
 			sourceTree = "<group>";
@@ -283,7 +284,6 @@
 				BD259A291CC43E23000C612A /* PlayerDetailsViewController.swift */,
 				BD259A2B1CC44299000C612A /* CoachDetailsViewController.swift */,
 				BD259A311CC44811000C612A /* OrganizerDetailsViewController.swift */,
-				6057EF3F1CC5F09500AD564D /* UpdateLeagueUIViewController.swift */,
 				BDFC794C1CC9CD8E007D6784 /* FieldsUITableViewController.swift */,
 				BDBF01481CC9D8AF00970726 /* AddNewFieldUIViewController.swift */,
 				BD4A897B1CCC0B0500DA715F /* LoginViewController.swift */,

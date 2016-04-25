@@ -41,6 +41,12 @@ class UpdateLeagueUIViewController: UIViewController, BackendlessDataDelegate {
         // If data wasn't saved to database
         print("fServer reported an error: \(fault)")
         
+        let alert = UIAlertController(title: "Error happened while updating the league", message: "\(fault)", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
+        // show the alert
+        self.presentViewController(alert, animated: true, completion: nil)
+        
     }
     
     // MARK: Actions
@@ -50,24 +56,30 @@ class UpdateLeagueUIViewController: UIViewController, BackendlessDataDelegate {
         if (updateLeagueName.hasText() &&
             updatedNumberOfLeagueTeams.hasText())
         {
-            
-            // Assign UI fields to the league
-            leagueToUpdate.name = updateLeagueName.text;
-            leagueToUpdate.numberOfTeams = Int(updatedNumberOfLeagueTeams.text!);
-            leagueToUpdate.startDate = startDatePicker.date;
-            leagueToUpdate.finishDate = finishDatePicker.date;
-            // TODO: add organizers, games and teams
-            
             // Save league to the datebase
             if (leagueToUpdate.objectId != nil)
             {
-                beAction.saveLeagueSync(leagueToUpdate);
+                if let league = beAction.getLeagueByIdSync(String(leagueToUpdate.objectId!))
+                {
+                    // Assign UI fields to the league
+                    league.name = updateLeagueName.text;
+                    league.numberOfTeams = Int(updatedNumberOfLeagueTeams.text!);
+                    league.startDate = startDatePicker.date;
+                    league.finishDate = finishDatePicker.date;
+                    
+                    beAction.saveLeagueSync(league);
+                }
             }
-            
         }
-            // Display message to user
+            
         else
         {
+            
+            let alert = UIAlertController(title: "", message: "make sure to update league name and number of teams", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
+            // show the alert
+            self.presentViewController(alert, animated: true, completion: nil)
             
         }
 
@@ -96,6 +108,5 @@ class UpdateLeagueUIViewController: UIViewController, BackendlessDataDelegate {
                 destination.league = self.leagueToUpdate
             }
         }
-        
     }
 }

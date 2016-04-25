@@ -128,6 +128,14 @@ class BEActions {
     {
         let dataStore = backendless.data.of(League.ofClass())
         
+        for team in league.teams!
+        {
+            let team1 = team as! Team
+            team1.enrolledInLeague = false
+            saveTeamSync(team1)
+        }
+        
+        
         dataStore.remove(
             league,
             response: { (result: AnyObject!) -> Void in

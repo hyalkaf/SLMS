@@ -58,6 +58,20 @@ class LeaguesTableViewController: UITableViewController, BackendlessDataDelegate
         self.tableView.reloadData()
     }
     
+    func BackendlessDataDelegateDataIsSaved(result: AnyObject!) {
+        
+    }
+    
+    func BackendlessDataDelegateError(fault: Fault!) {
+        print("Error happened while removing the league")
+        // create the alert
+        let alert = UIAlertController(title: "Error happened while removing the league", message: "\(fault)", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
+        // show the alert
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+
     // MARK: - Table view data source
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
