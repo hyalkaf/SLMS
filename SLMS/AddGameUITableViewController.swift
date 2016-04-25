@@ -44,7 +44,14 @@ class AddGameUITableViewController: UITableViewController, BackendlessDataDelega
     }
     
     func BackendlessDataDelegateError(fault: Fault!) {
-        print("Error happened while saving the league")
+        print("")
+        // create the alert
+        let alert = UIAlertController(title: "Error happened while adding the game", message: "\(fault)", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
+        // show the alert
+        self.presentViewController(alert, animated: true, completion: nil)
+        
     }
     
     
@@ -106,8 +113,6 @@ class AddGameUITableViewController: UITableViewController, BackendlessDataDelega
         
         return 0
     }
-    
-    
     
     
     @IBAction func addGame(sender: AnyObject) {

@@ -115,6 +115,13 @@ class PopulateLeagueUITableViewController: UITableViewController, BackendlessDat
     
     func BackendlessDataDelegateError(fault: Fault!) {
         print("Error happened while saving the league")
+        // create the alert
+        let alert = UIAlertController(title: "Error happened while populating the league", message: "\(fault)", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
+        // show the alert
+        self.presentViewController(alert, animated: true, completion: nil)
+        
     }
     
     @IBAction func populateLeague(sender: AnyObject) {
@@ -124,6 +131,9 @@ class PopulateLeagueUITableViewController: UITableViewController, BackendlessDat
         if newLeague?.teams != nil{
             for team in newLeague!.teams! {
                 newLeague!.removeFromTeams(team as! Team)
+                var team1 = team as! Team
+                team1.enrolledInLeague = false
+                backendActions.saveTeamSync(team1)
             }
         }
         
@@ -143,6 +153,7 @@ class PopulateLeagueUITableViewController: UITableViewController, BackendlessDat
         
         for team in self.selectedTeams
         {
+            team.enrolledInLeague = true
             newLeague!.addToTeams(team)
             
         }

@@ -73,7 +73,7 @@ class LeagueDetailTableViewController: UITableViewController, BackendlessDataDel
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 7
+        return 4
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -92,22 +92,9 @@ class LeagueDetailTableViewController: UITableViewController, BackendlessDataDel
         
         if section == 3
         {
-            //return (self.league.teams?.count)!
-            return 0
-        }
-        
-        if section == 4
-        {
             return (self.league.games?.count)!
         }
-        if section == 5
-        {
-            return (self.league.referees?.count)!
-        }
-        if section == 6
-        {
-            return (self.league.fields?.count)!
-        }
+        
         
         return 0
     }
@@ -127,26 +114,11 @@ class LeagueDetailTableViewController: UITableViewController, BackendlessDataDel
             return "League Teams"
         }
         
-        if section == 3 
-        {
-            //return "Team rankings"
-            return ""
-        }
-        
-        if section == 4
+        if section == 3
         {
             return "League Games"
         }
         
-        if section == 5
-        {
-            return "League Referees"
-        }
-        
-        if section == 6
-        {
-            return "League Fields"
-        }
         
         return ""
     }
@@ -154,28 +126,17 @@ class LeagueDetailTableViewController: UITableViewController, BackendlessDataDel
 
     override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         
-        // This changes the header background
-        //view.tintColor = UIColor.darkGrayColor()
-        // Gets the header view as a UITableViewHeaderFooterView and changes the text colour
         var headerView: UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView
-        
         headerView.textLabel!.textColor = UIColor(colorLiteralRed: 179.0, green: 0.0, blue: 0.0, alpha: 0.7)
-        
         headerView.textLabel?.font = UIFont.boldSystemFontOfSize(20)
-        
     }
     
     override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        if section == 3
-        {
-            return 0
-        }
-        
         return 70
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        if(indexPath.section == 0 || indexPath.section == 4)
+        if(indexPath.section == 0 || indexPath.section == 3)
         {
             return 170
         }else{
@@ -219,9 +180,10 @@ class LeagueDetailTableViewController: UITableViewController, BackendlessDataDel
             cell = tableView.dequeueReusableCellWithIdentifier("organizerCell", forIndexPath: indexPath)
             if let leagueTableCell = cell as? OrganizerNameTableViewCell {
                 
-                let organizers = (self.league.organizers?.objectAtIndex(row) as! Organizers)
-                
-                leagueTableCell.organizerName.text = String(organizers.personalInfo!.fname)
+                if let organizers = self.league.organizers?.objectAtIndex(row) as? Organizers {
+                    leagueTableCell.organizerName.text = String(organizers.personalInfo!.fname)
+                }
+
             }
             return cell
         }
@@ -229,86 +191,51 @@ class LeagueDetailTableViewController: UITableViewController, BackendlessDataDel
         
         else if(indexPath.section == 2){
             cell = tableView.dequeueReusableCellWithIdentifier("teamCell", forIndexPath: indexPath)
-            let team = (self.league.teams?.objectAtIndex(row) as! Team)
-            
-            if let leagueTableCell = cell as? TeamNameTableViewCell {
-                
-                leagueTableCell.teamName.text = String(team.name!)
-            }
-            return cell
-        }
         
-        else if(section == 3)
-        {
-            cell = tableView.dequeueReusableCellWithIdentifier("teamCell", forIndexPath: indexPath)
-            let team = (self.league.teams?.objectAtIndex(row) as! Team)
-            
-            if let leagueTableCell = cell as? TeamNameTableViewCell {
-                
-                leagueTableCell.teamName.text = String(team.name!)
+            if let team = self.league.teams?.objectAtIndex(row) as? Team {
+                if let leagueTableCell = cell as? TeamNameTableViewCell {
+                    
+                    leagueTableCell.teamName.text = String(team.name!)
+                }
                 return cell
             }
         }
         
         
-        else if(section == 4)
+        else if(section == 3)
         {
             print("index path section == " + String(indexPath.section) + " row == " + String(indexPath.row))
             
             cell = tableView.dequeueReusableCellWithIdentifier("LeagueGame", forIndexPath: indexPath)
             if let leagueTableCell = cell as? GameCellUITableViewCell {
                 
-                let game = (self.league.games?.objectAtIndex(row) as! Game)
                 
-                leagueTableCell.homeTeam.text = String(game.homeTeam!.name!)
-                leagueTableCell.awayTeam.text = String(game.awayTeam!.name!)
-                leagueTableCell.referee.text = String(((game.referee!.personalInfo?.fname)! as String))
-                
-                leagueTableCell.field.text = String(((game.field!.name)! as String))
-                
-                leagueTableCell.gameDate.text = "\(game.gameDate)"
-                
-                if (game.gameStats?.homeTeamScore != nil && game.gameStats?.homeTeamScore != nil)
-                {
-                    leagueTableCell.gameResult.text = "Score  " + String(game.gameStats!.homeTeamScore!) + " : " + String(game.gameStats!.awayTeamScore!);
+                if let game = self.league.games?.objectAtIndex(row) as? Game {
+                    leagueTableCell.homeTeam.text = String(game.homeTeam!.name!)
+                    leagueTableCell.awayTeam.text = String(game.awayTeam!.name!)
+                    leagueTableCell.referee.text = String(((game.referee!.personalInfo?.fname)! as String))
+                    
+                    leagueTableCell.field.text = String(((game.field!.name)! as String))
+                    
+                    leagueTableCell.gameDate.text = "\(game.gameDate)"
+                    
+                    if (game.gameStats?.homeTeamScore != nil && game.gameStats?.homeTeamScore != nil)
+                    {
+                        leagueTableCell.gameResult.text = "Score  " + String(game.gameStats!.homeTeamScore!) + " : " + String(game.gameStats!.awayTeamScore!);
+                    }
+                    
+                    return leagueTableCell
                 }
-                
-                return leagueTableCell
             }
         }
-        
-        else if(section == 5)
-        {
-            cell = tableView.dequeueReusableCellWithIdentifier("teamCell", forIndexPath: indexPath)
-            let referee = (self.league.referees?.objectAtIndex(row) as! Referee).personalInfo!
-            
-            if let leagueTableCell = cell as? TeamNameTableViewCell {
-                
-                leagueTableCell.teamName.text = String(referee.fname)
-                return cell
-            }
-        }
-        
-        
-        else if(section == 6)
-        {
-            cell = tableView.dequeueReusableCellWithIdentifier("teamCell", forIndexPath: indexPath)
-            let field = (self.league.fields?.objectAtIndex(row) as! Field)
-            
-            if let leagueTableCell = cell as? TeamNameTableViewCell {
-                
-                leagueTableCell.teamName.text = String(field.name!)
-                return cell
-            }
-        }
-
+    
         return cell
     }
     
     
     override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
         
-        if indexPath.section == 4
+        if indexPath.section == 3
         {
             if self.isReferee{
                 return indexPath

@@ -188,6 +188,17 @@
 			name = Game;
 			sourceTree = "<group>";
 		};
+		BD2230321CCDE4C900B094F1 /* League */ = {
+			isa = PBXGroup;
+			children = (
+				6057EF3D1CC5C2BC00AD564D /* AddLeagueViewController.swift */,
+				BD259A0D1CC3F3E2000C612A /* LeaguesTableViewController.swift */,
+				BD259A171CC406F1000C612A /* LeagueDetailTableViewController.swift */,
+				BDFC79461CC96F37007D6784 /* PopulateLeagueUITableViewController.swift */,
+			);
+			name = League;
+			sourceTree = "<group>";
+		};
 		BD2599DE1CC3E8FD000C612A = {
 			isa = PBXGroup;
 			children = (
@@ -265,17 +276,14 @@
 		BD259A281CC43DE0000C612A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				BD2230321CCDE4C900B094F1 /* League */,
 				BD2230311CCDD11B00B094F1 /* Game */,
 				BD2230301CCDBC2C00B094F1 /* Team */,
 				BDFC79441CC7FE2E007D6784 /* CreateAccountViewController.swift */,
-				BD259A0D1CC3F3E2000C612A /* LeaguesTableViewController.swift */,
-				BD259A171CC406F1000C612A /* LeagueDetailTableViewController.swift */,
-				6057EF3D1CC5C2BC00AD564D /* AddLeagueViewController.swift */,
 				BD259A291CC43E23000C612A /* PlayerDetailsViewController.swift */,
 				BD259A2B1CC44299000C612A /* CoachDetailsViewController.swift */,
 				BD259A311CC44811000C612A /* OrganizerDetailsViewController.swift */,
 				6057EF3F1CC5F09500AD564D /* UpdateLeagueUIViewController.swift */,
-				BDFC79461CC96F37007D6784 /* PopulateLeagueUITableViewController.swift */,
 				BDFC794C1CC9CD8E007D6784 /* FieldsUITableViewController.swift */,
 				BDBF01481CC9D8AF00970726 /* AddNewFieldUIViewController.swift */,
 				BD4A897B1CCC0B0500DA715F /* LoginViewController.swift */,
