@@ -21,6 +21,9 @@ class AddLeagueViewController: UIViewController, BackendlessDataDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         beAction.delegate = self
+        //finishDatePicker.setValue(UIColor.whiteColor(), forKey: "textColor")
+        //startDatePicker.setValue(UIColor.whiteColor(), forKey: "textColor")
+        self.title = "Add League"
     }
     
     func BackendlessDataDelegateDataIsSaved(result: AnyObject!) {
@@ -41,18 +44,26 @@ class AddLeagueViewController: UIViewController, BackendlessDataDelegate{
             numberOfTeams.hasText())
         {
             // Initialize new league
-            var league: League = League()
+            let league: League = League()
             
             // Assign UI fields to the league
             league.name = leagueName.text;
             league.numberOfTeams = Int(numberOfTeams.text!);
             league.startDate = startDatePicker.date;
             league.finishDate = finishDatePicker.date;
-            // TODO: add organizers, games and teams
             
-            // Save league to the datebase
-            beAction.saveLeagueSync(league);
-
+            
+            if leagueName.text == "" {
+                // create the alert
+                let alert = UIAlertController(title: "Error", message: "League has to have a name", preferredStyle: UIAlertControllerStyle.Alert)
+                
+                alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
+                // show the alert
+                self.presentViewController(alert, animated: true, completion: nil)
+            } else {
+                // Save league to the datebase
+                beAction.saveLeagueSync(league);
+            }
         }
         // Display message to user
         else

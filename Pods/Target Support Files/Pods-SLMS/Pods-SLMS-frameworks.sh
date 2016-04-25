@@ -85,7 +85,13 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-SLMS/Onboard.framework"
+  install_framework "Pods-SLMS/PureLayout.framework"
+  install_framework "Pods-SLMS/SwiftyButton.framework"
+  install_framework "Pods-SLMS/TextFieldEffects.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-SLMS/Onboard.framework"
+  install_framework "Pods-SLMS/PureLayout.framework"
+  install_framework "Pods-SLMS/SwiftyButton.framework"
+  install_framework "Pods-SLMS/TextFieldEffects.framework"
 fi

@@ -23,16 +23,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         backendless.initApp(APP_ID, secret:SECRET_KEY, version:VERSION_NUM)
         
-        if(backendless.userService.currentUser == nil)
-        {
-            createTutorialSlides()
-        }
-        
         return true
     }
 
 
-    
+    /*
     
     func createTutorialSlides ()
     {
@@ -83,6 +78,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = onboardingVC;
     }
 
+    */
 
     
     func applicationWillResignActive(application: UIApplication) {

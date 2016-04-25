@@ -23,8 +23,8 @@ class UpdateLeagueUIViewController: UIViewController, BackendlessDataDelegate {
        
         self.updatedNumberOfLeagueTeams.text = self.leagueToUpdate.numberOfTeams?.stringValue
         self.updateLeagueName.text = String(self.leagueToUpdate.name!)
-        self.startDatePicker.setDate(self.leagueToUpdate.startDate, animated: true)
-        self.finishDatePicker.setDate(self.leagueToUpdate.finishDate, animated: true)
+//        self.startDatePicker.setDate(self.leagueToUpdate.startDate, animated: true)
+//        self.finishDatePicker.setDate(self.leagueToUpdate.finishDate, animated: true)
     }
     
     func BackendlessDataDelegateDataIsSaved(result: AnyObject!) {

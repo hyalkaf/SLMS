@@ -198,6 +198,24 @@ class AddGameUITableViewController: UITableViewController, BackendlessDataDelega
     }
     
     
+    override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        
+        // This changes the header background
+        //view.tintColor = UIColor.darkGrayColor()
+        // Gets the header view as a UITableViewHeaderFooterView and changes the text colour
+        var headerView: UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView
+        
+        headerView.textLabel!.textColor = UIColor(colorLiteralRed: 179.0, green: 0.0, blue: 0.0, alpha: 0.7)
+        
+        headerView.textLabel?.font = UIFont.boldSystemFontOfSize(20)
+        
+    }
+    
+    
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 70
+    }
+    
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         if let cell = tableView.cellForRowAtIndexPath(indexPath){

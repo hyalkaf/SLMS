@@ -1,13 +1,35 @@
 PODS:
   - Backendless-ios-SDK (3.0.15)
   - Onboard (2.1.9)
+  - PureLayout (3.0.1)
+  - SwiftyButton (0.4.0):
+    - SwiftyButton/CustomContent (= 0.4.0)
+  - SwiftyButton/CustomContent (0.4.0):
+    - PureLayout (~> 3.0)
+  - TextFieldEffects (1.1.0)
 
 DEPENDENCIES:
   - Backendless-ios-SDK (~> 3.0.0)
   - Onboard
+  - SwiftyButton
+  - TextFieldEffects (from `https://github.com/raulriera/TextFieldEffects.git`, commit
+    `57d31255e0a09c9bf214e20c91df387283d54ec2`)
+
+EXTERNAL SOURCES:
+  TextFieldEffects:
+    :commit: 57d31255e0a09c9bf214e20c91df387283d54ec2
+    :git: https://github.com/raulriera/TextFieldEffects.git
+
+CHECKOUT OPTIONS:
+  TextFieldEffects:
+    :commit: 57d31255e0a09c9bf214e20c91df387283d54ec2
+    :git: https://github.com/raulriera/TextFieldEffects.git
 
 SPEC CHECKSUMS:
   Backendless-ios-SDK: bc74c1cf20bf4d77705ab9c4c0177623d26515b1
   Onboard: 4d92c763ed15f939071dec12e87ed9e8dc036746
+  PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
+  SwiftyButton: fffcc0d82b2b5f9ec1681f20ee9c67bed0d5c73b
+  TextFieldEffects: 8e43fea8836e97be80fc4db27a1596c9e98a26ba
 
 COCOAPODS: 0.39.0

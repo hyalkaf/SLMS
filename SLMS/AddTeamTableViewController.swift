@@ -91,6 +91,24 @@ class AddTeamTableViewController: UITableViewController,BackendlessDataDelegate,
         return 0
     }
     
+    override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        
+        // This changes the header background
+        //view.tintColor = UIColor.darkGrayColor()
+        // Gets the header view as a UITableViewHeaderFooterView and changes the text colour
+        var headerView: UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView
+        
+        headerView.textLabel!.textColor = UIColor(colorLiteralRed: 179.0, green: 0.0, blue: 0.0, alpha: 0.7)
+        
+        headerView.textLabel?.font = UIFont.boldSystemFontOfSize(20)
+        
+    }
+    
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 70
+    }
+    
+    
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
        return 70
     }
@@ -98,6 +116,8 @@ class AddTeamTableViewController: UITableViewController,BackendlessDataDelegate,
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         var cell: UITableViewCell = UITableViewCell()
+        cell.contentView.layer.borderWidth = 3
+        cell.contentView.layer.borderColor = UIColor.darkGrayColor().CGColor
         
         if indexPath.section == 0
         {
@@ -105,7 +125,8 @@ class AddTeamTableViewController: UITableViewController,BackendlessDataDelegate,
             let cgrect = CGRect(x: 10.0, y: 10.0, width: 400, height: 70.0)
             self.teamName = UITextField(frame: cgrect)
             self.teamName.placeholder = self.teamNameText
-            self.teamName.backgroundColor = UIColor.grayColor()
+            self.teamName.backgroundColor = UIColor.whiteColor()
+            self.teamName.textColor = UIColor.blackColor()
             
             cell.contentView.addSubview(self.teamName)
             
@@ -216,6 +237,7 @@ class AddTeamTableViewController: UITableViewController,BackendlessDataDelegate,
     func foundCoachWithEamil(coach: Coach) {
         
         let newTeam = Team()
+        var capainFound = false
         
         //Add Players
         let playerCount = self.selectedPlayers.count;
@@ -228,31 +250,54 @@ class AddTeamTableViewController: UITableViewController,BackendlessDataDelegate,
                 {
                     //Add Captain
                     newTeam.captain = (self.selectedPlayers[i-1])
+                    capainFound = true
                 }
             }
         }
         
-        //Add coach
-        newTeam.coach = coach
-        newTeam.name = teamNameText
+        if playerCount <= 0 && capainFound == false
+        {
+            // create the alert
+            let alert = UIAlertController(title: "Team Creation Error", message: "You need to select players and captain", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
+            // show the alert
+             self.presentViewController(alert, animated: true, completion: nil)
+        }
         
-        beAction.saveTeamSync(newTeam)
+        else{
+            //Add coach
+            newTeam.coach = coach
+            newTeam.name = self.teamNameText
+            
+            self.beAction.saveTeamSync(newTeam)
+        }
     }
     
     @IBAction func SaveNewTeam(sender: AnyObject) {
         
-        let user = backendless.userService.currentUser
-        if( user != nil)
+        if self.selectedPlayers.count > 0 && self.captainCheckedObjectId != "-1"
         {
-            let userRole = user.getProperty("role") as! String
-            if userRole == "Coach"
+            let user = backendless.userService.currentUser
+            if( user != nil)
             {
-                //load coach wth this email
-                self.beAction.getCoachWithEmail(user.email)
+                let userRole = user.getProperty("role") as! String
+                if userRole == "Coach"
+                {
+                    //load coach wth this email
+                    self.beAction.getCoachWithEmail(user.email)
+                }
             }
+        } else{
+            // create the alert
+            let alert = UIAlertController(title: "Team Creation Error", message: "You need to select players and captain", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
+            // show the alert
+            self.presentViewController(alert, animated: true, completion: nil)
+            
         }
-
-        //self.beAction.getCoachWithEmail("ljsdn@email.comn")
+        
     }
     
     func BackendlessDataDelegateDataIsSaved(result: AnyObject!) {

@@ -18,6 +18,7 @@ class CreateAccountViewController: UIViewController, BackendlessDataDelegate {
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var phone: UITextField!
     
+    var validUser = false
     
     var KeepUserLoggedIn = true
     var backendless = Backendless.sharedInstance()
@@ -55,12 +56,22 @@ class CreateAccountViewController: UIViewController, BackendlessDataDelegate {
             catchblock: { (exception) -> Void in
                 print("Login - Server reported an error: \(exception as! Fault)")
         })
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewControllerWithIdentifier("league")
-            as! UITabBarController
-        self.presentViewController(controller, animated: true, completion: nil)
+
+        self.validUser = true
     }
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        if identifier == "showUserProfile"
+        {
+            if self.validUser == true
+            {
+                return true
+            }
+        }
+        
+        return false
+    }
+    
     
     
     
@@ -124,4 +135,7 @@ class CreateAccountViewController: UIViewController, BackendlessDataDelegate {
         )
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        print("prepare for segue is called  with identidier == " )
+    }
 }

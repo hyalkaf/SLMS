@@ -11,9 +11,26 @@ class TeamDetailsUITableViewController: UITableViewController {
     var backendless = Backendless.sharedInstance()
     let backendActions = BEActions()
 
+    @IBOutlet weak var editTeamBtn: UIBarButtonItem!
+    
+    
     var team: Team = Team()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let currentUser = backendless.userService.currentUser
+        
+        if currentUser != nil{
+            let role = currentUser.getProperty("role") as! String
+            if role != "Coach"
+            {
+                self.editTeamBtn.title = ""
+                self.editTeamBtn.style = UIBarButtonItemStyle.Plain
+                self.editTeamBtn.enabled = false
+            }
+        }
+        
+        self.title = team.name! as String
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -85,11 +102,31 @@ class TeamDetailsUITableViewController: UITableViewController {
         return 0
     }
     
+    override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        
+        // This changes the header background
+        //view.tintColor = UIColor.darkGrayColor()
+        // Gets the header view as a UITableViewHeaderFooterView and changes the text colour
+        var headerView: UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView
+        
+        headerView.textLabel!.textColor = UIColor(colorLiteralRed: 179.0, green: 0.0, blue: 0.0, alpha: 0.7)
+        
+        headerView.textLabel?.font = UIFont.boldSystemFontOfSize(20)
+        
+    }
+    
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 70
+    }
+    
     
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell: UITableViewCell = UITableViewCell()
+        cell.contentView.layer.borderWidth = 3
+        cell.contentView.layer.borderColor = UIColor.darkGrayColor().CGColor
+        
         
         if(indexPath.section == 0){
             cell = tableView.dequeueReusableCellWithIdentifier("coachNameCell", forIndexPath: indexPath)
@@ -99,7 +136,7 @@ class TeamDetailsUITableViewController: UITableViewController {
             return cell
         }
         
-        if(indexPath.section == 1){
+        else if(indexPath.section == 1){
             cell = tableView.dequeueReusableCellWithIdentifier("captainNameCell", forIndexPath: indexPath)
             let captain = self.team.captain!.personalInfo!
             cell.textLabel!.text = String(captain.fname)
@@ -107,7 +144,7 @@ class TeamDetailsUITableViewController: UITableViewController {
             return cell
         }
         
-        if(indexPath.section == 2){
+        else if(indexPath.section == 2){
             let player = self.team.players?.objectAtIndex(indexPath.row) as! Player
             cell = tableView.dequeueReusableCellWithIdentifier("playerNameCell", forIndexPath: indexPath)
             cell.textLabel!.text = String(player.personalInfo!.fname)

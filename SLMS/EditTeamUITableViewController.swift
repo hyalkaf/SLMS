@@ -20,7 +20,10 @@ class EditTeamUITableViewController: UITableViewController, BackendlessDataDeleg
     var captainCheckedObjectId : NSString = "-1"
     var chosenCaptain = Player()
 
+    var TeamIsLoaded = false
+    
     var teamName = UITextField()
+    
     var teamNameText = ""
     
     override func viewDidLoad() {
@@ -28,14 +31,20 @@ class EditTeamUITableViewController: UITableViewController, BackendlessDataDeleg
     }
     
     override func viewWillAppear(animated: Bool) {
-        print("SElF")
+        
         let objectID = self.team.objectId!
         self.team = self.backendActions.getTeamByIdSync(String(objectID))!
-        self.teamNameText = String(self.team.name)
-        self.captainCheckedObjectId = (self.team.captain?.objectId)!
-        self.chosenCaptain = self.team.captain!
+        self.teamNameText = String(self.team.name!)
+        if (self.team.captain?.objectId != nil)
+        {
+            self.captainCheckedObjectId = (self.team.captain?.objectId)!
+            self.chosenCaptain = self.team.captain!
+        }
+
         backendActions.delegate = self
         backendActions.getAllPlayersAsync()
+        
+        self.teamName.textColor = UIColor.blackColor()
      }
     
     func AllPlayersReceived(players: [Player]) {
@@ -65,6 +74,7 @@ class EditTeamUITableViewController: UITableViewController, BackendlessDataDeleg
             }
         }
         
+        self.TeamIsLoaded = true
         self.tableView.reloadData()
     }
     
@@ -142,14 +152,16 @@ class EditTeamUITableViewController: UITableViewController, BackendlessDataDeleg
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell: UITableViewCell = UITableViewCell()
+        cell.contentView.layer.borderWidth = 3
+        cell.contentView.layer.borderColor = UIColor.darkGrayColor().CGColor
         
         if(indexPath.section == 0){
             cell = tableView.dequeueReusableCellWithIdentifier("teamNameInput", forIndexPath: indexPath)
             let cgrect = CGRect(x: 10.0, y: 10.0, width: 400, height: 70.0)
             self.teamName = UITextField(frame: cgrect)
             self.teamName.placeholder = self.teamNameText
-            self.teamName.backgroundColor = UIColor.grayColor()
-            self.teamName.textColor = UIColor.whiteColor()
+            self.teamName.backgroundColor = UIColor.whiteColor()
+            self.teamName.textColor = UIColor.blackColor()
             
             cell.contentView.addSubview(self.teamName)
             
@@ -172,16 +184,17 @@ class EditTeamUITableViewController: UITableViewController, BackendlessDataDeleg
             cell = tableView.dequeueReusableCellWithIdentifier("teamCaptainCell", forIndexPath: indexPath)
             if indexPath.row == 0
             {
-                let captain = self.team.captain?.personalInfo!
-                cell.textLabel!.text = String(captain!.fname)
-                
-                if captainCheckedObjectId == self.team.captain?.objectId
-                {
-                    cell.accessoryType = .Checkmark
-                } else {
-                    cell.accessoryType = .None
+                if self.team.captain != nil{
+                    let captain = self.team.captain?.personalInfo!
+                    cell.textLabel!.text = String(captain!.fname)
+                    
+                    if captainCheckedObjectId == self.team.captain?.objectId
+                    {
+                        cell.accessoryType = .Checkmark
+                    } else {
+                        cell.accessoryType = .None
+                    }
                 }
-                
                 
             } else {
                 let captain = self.selectedPlayers[indexPath.row - 1]
@@ -275,6 +288,24 @@ class EditTeamUITableViewController: UITableViewController, BackendlessDataDeleg
     }
     
 
+    override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        
+        // This changes the header background
+        //view.tintColor = UIColor.darkGrayColor()
+        // Gets the header view as a UITableViewHeaderFooterView and changes the text colour
+        var headerView: UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView
+        
+        headerView.textLabel!.textColor = UIColor(colorLiteralRed: 179.0, green: 0.0, blue: 0.0, alpha: 0.7)
+        
+        headerView.textLabel?.font = UIFont.boldSystemFontOfSize(20)
+        
+    }
+    
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 70
+    }
+    
+    
 
     func textFieldDidEndEditing(textField: UITextField) {
         if textField == self.teamName

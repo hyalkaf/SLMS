@@ -32,7 +32,8 @@ import Foundation
     optional func AllRefsReceived(referees: [Referee])
     optional func AllOrganizerRecieved(organizers: [Organizers])
     optional func AllFieldsRecieved(fields: [Field])
-    
+    optional func LeagueReceived(league: League)
+
     optional func foundCoachWithEamil(coach: Coach)
     
 }
@@ -47,6 +48,24 @@ class BEActions {
 
     // MARK: League - Read
     
+    func getLeagueByIdASync(Id: String) ->League?
+    {
+        let dataStore = backendless.data.of(League.ofClass())
+    
+        dataStore.findID(
+            Id,
+            response: { (result: AnyObject!) -> Void in
+                let foundLeague = result as! League
+                print("League has been found: \(foundLeague.objectId)")
+                self.delegate?.LeagueReceived!(foundLeague)
+            },
+            error: { (fault: Fault!) -> Void in
+                print("Server reported an error (2): \(fault)")
+        })
+        
+        return nil
+    }
+    
     func getLeagueByIdSync(Id: String) ->League?
     {
         let dataStore = backendless.data.of(League.ofClass())
@@ -60,7 +79,6 @@ class BEActions {
             return nil;
         }
     }
-    
     
     
     func getAllLeaguesAsync()
@@ -90,6 +108,7 @@ class BEActions {
                 print("Server reported an error: \(fault)")
         }
     }
+    
     
     func saveLeagueSync(league: League)
     {

@@ -14,10 +14,40 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>PureLayout.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwiftyButton.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>TextFieldEffects.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>C4D34502C28F0E84E7575D9450F05DF5</key>
+		<key>3A4E3B1DFBEF75510101B932256F6202</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9749A27F76202B0335809E70944A2070</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A1765B7F5A79FCB50B8B6F0E56E2985D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CFEB1EA05C3BEB412631DB81FBA8464F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

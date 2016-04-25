@@ -46,18 +46,22 @@ class PopulateLeagueUITableViewController: UITableViewController, BackendlessDat
     func AllRefsReceived(referees: [Referee]) {
         
         let playerCount = referees.count;
-        
-        for i in 1...playerCount{
-            if self.refereeIsEnrolledInThisLeague(referees[i - 1]) == true {
-                self.selectedRefereesChecked.append(true)
-                self.selectedReferees.append(referees[i - 1])
+        if playerCount > 0
+        {
+            for i in 1...playerCount{
+                if self.refereeIsEnrolledInThisLeague(referees[i - 1]) == true {
+                    self.selectedRefereesChecked.append(true)
+                    self.selectedReferees.append(referees[i - 1])
+                    
+                } else {
+                    self.selectedRefereesChecked.append(false)
+                }
                 
-            } else {
-                self.selectedRefereesChecked.append(false)
+                self.referees.append(referees[i - 1])
             }
-            
-            self.referees.append(referees[i - 1])
         }
+        
+    
         self.tableView.reloadData()
     }
     
@@ -381,5 +385,22 @@ class PopulateLeagueUITableViewController: UITableViewController, BackendlessDat
         }
         
         return false
+    }
+    
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 70
+    }
+    
+    override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        
+        // This changes the header background
+        //view.tintColor = UIColor.darkGrayColor()
+        // Gets the header view as a UITableViewHeaderFooterView and changes the text colour
+        var headerView: UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView
+        
+        headerView.textLabel!.textColor = UIColor(colorLiteralRed: 179.0, green: 0.0, blue: 0.0, alpha: 0.7)
+        
+        headerView.textLabel?.font = UIFont.boldSystemFontOfSize(20)
+        
     }
 }

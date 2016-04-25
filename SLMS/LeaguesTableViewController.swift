@@ -34,6 +34,9 @@ class LeaguesTableViewController: UITableViewController, BackendlessDataDelegate
                 self.addLeagueBtn.enabled = false
             }
         }
+        
+        self.title = "All Leagues"
+        self.tableView.separatorStyle = .None
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -61,13 +64,14 @@ class LeaguesTableViewController: UITableViewController, BackendlessDataDelegate
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 100
+        return 150
     }
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.leagues.count
     }
 
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         //print("Calling tableVIew");
         let cell: UITableViewCell
@@ -87,7 +91,9 @@ class LeaguesTableViewController: UITableViewController, BackendlessDataDelegate
             leagueTableCell.finishDate.text = String(formater.stringFromDate(self.leagues[indexPath.row].finishDate))
             
             leagueTableCell.contentView.layer.borderWidth = 3
-            cell.contentView.layer.borderColor = UIColor.blackColor().CGColor
+            cell.contentView.layer.borderColor = UIColor.darkGrayColor().CGColor
+            
+            cell.accessoryType = .DisclosureIndicator
             
         }
     

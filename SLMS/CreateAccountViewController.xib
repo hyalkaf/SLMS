@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateAccountViewController" customModule="SLMS" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner">
             <connections>
                 <outlet property="address" destination="wBV-Xt-bVB" id="v5Q-7c-vtY"/>
                 <outlet property="firstName" destination="Ziq-gS-PRB" id="z1m-2L-HQM"/>
@@ -29,86 +29,161 @@
                     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Njz-TZ-Naa">
-                    <rect key="frame" x="30" y="30" width="540" height="472"/>
+                    <rect key="frame" x="30" y="30" width="540" height="520"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qo4-WS-YFD">
-                            <rect key="frame" x="0.0" y="0.0" width="540" height="45"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Creat Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="32o-FX-abf">
+                            <rect key="frame" x="0.0" y="0.0" width="540" height="44"/>
                             <animations/>
-                            <color key="backgroundColor" red="1" green="0.97637898489932884" blue="0.98335255872483207" alpha="1" colorSpace="calibratedRGB"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="37"/>
-                            <color key="textColor" red="0.10801174496644295" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <color key="highlightedColor" red="0.74908242449664431" green="0.1843137255" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lQ5-gb-VHw">
-                            <rect key="frame" x="0.0" y="61" width="540" height="45"/>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lQ5-gb-VHw" customClass="KaedeTextField" customModule="TextFieldEffects">
+                            <rect key="frame" x="0.0" y="60" width="540" height="43"/>
                             <animations/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="backgroundColor" red="0.81235977559999994" green="0.81235977559999994" blue="0.81235977559999994" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="0.10801174500000001" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                             <textInputTraits key="textInputTraits"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
+                                    <color key="value" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                    <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </textField>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="first name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ziq-gS-PRB">
-                            <rect key="frame" x="0.0" y="122" width="540" height="45"/>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="first name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ziq-gS-PRB" customClass="KaedeTextField" customModule="TextFieldEffects">
+                            <rect key="frame" x="0.0" y="119" width="540" height="44"/>
                             <animations/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="backgroundColor" red="0.81235977559999994" green="0.81235977559999994" blue="0.81235977559999994" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="0.10801174500000001" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                             <textInputTraits key="textInputTraits"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
+                                    <color key="value" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                    <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </textField>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SB1-R9-CRI">
-                            <rect key="frame" x="0.0" y="183" width="540" height="45"/>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SB1-R9-CRI" customClass="KaedeTextField" customModule="TextFieldEffects">
+                            <rect key="frame" x="0.0" y="179" width="540" height="43"/>
                             <animations/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="backgroundColor" red="0.81235977559999994" green="0.81235977559999994" blue="0.81235977559999994" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                             <textInputTraits key="textInputTraits"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                    <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
+                                    <color key="value" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </textField>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wBV-Xt-bVB">
-                            <rect key="frame" x="0.0" y="244" width="540" height="45"/>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wBV-Xt-bVB" customClass="KaedeTextField" customModule="TextFieldEffects">
+                            <rect key="frame" x="0.0" y="238" width="540" height="44"/>
                             <animations/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="backgroundColor" red="0.81235977559999994" green="0.81235977559999994" blue="0.81235977559999994" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                             <textInputTraits key="textInputTraits"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                    <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
+                                    <color key="value" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </textField>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DhX-TL-dw9">
-                            <rect key="frame" x="0.0" y="305" width="540" height="45"/>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DhX-TL-dw9" customClass="KaedeTextField" customModule="TextFieldEffects">
+                            <rect key="frame" x="0.0" y="298" width="540" height="43"/>
                             <animations/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="backgroundColor" red="0.81235977559999994" green="0.81235977559999994" blue="0.81235977559999994" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                             <textInputTraits key="textInputTraits"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                    <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
+                                    <color key="value" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </textField>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q6z-Ah-0zp">
-                            <rect key="frame" x="0.0" y="366" width="540" height="45"/>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q6z-Ah-0zp" customClass="KaedeTextField" customModule="TextFieldEffects">
+                            <rect key="frame" x="0.0" y="357" width="540" height="44"/>
                             <animations/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="backgroundColor" red="0.81235977559999994" green="0.81235977559999994" blue="0.81235977559999994" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                             <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
+                                    <color key="value" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                    <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </textField>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Role" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vvu-p9-ktr">
-                            <rect key="frame" x="0.0" y="427" width="540" height="45"/>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Role" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vvu-p9-ktr" customClass="KaedeTextField" customModule="TextFieldEffects">
+                            <rect key="frame" x="0.0" y="417" width="540" height="43"/>
                             <animations/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                             <textInputTraits key="textInputTraits"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                    <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
+                                    <color key="value" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YOB-Mc-z97" customClass="SwiftyButton" customModule="SwiftyButton">
+                            <rect key="frame" x="0.0" y="476" width="540" height="44"/>
+                            <animations/>
+                            <color key="backgroundColor" red="1" green="0.97637898489999997" blue="0.98335255870000005" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="Sign Up">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                    <color key="value" red="0.74908242449999995" green="0.1843137255" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
+                                    <color key="value" red="0.74908242449999995" green="0.1843137255" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                    <color key="value" red="0.74908242449999995" green="0.1843137255" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="SignUp:" destination="-1" eventType="touchUpInside" id="QR2-Jg-w3x"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <animations/>
                 </stackView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="95t-If-uyK">
-                    <rect key="frame" x="515" y="540" width="55" height="30"/>
-                    <animations/>
-                    <color key="backgroundColor" red="0.1764705882" green="0.1843137255" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="30" id="B4r-SR-3q5"/>
-                        <constraint firstAttribute="width" constant="55" id="UmA-dV-ce9"/>
-                    </constraints>
-                    <state key="normal" title="Sign Up"/>
-                    <connections>
-                        <action selector="SignUp:" destination="-1" eventType="touchUpInside" id="Jf3-9H-VDA"/>
-                    </connections>
-                </button>
             </subviews>
             <animations/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.81235977564102568" green="0.81235977564102568" blue="0.81235977564102568" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="feE-0z-7p5" secondAttribute="bottom" id="4pm-pl-t0C"/>
-                <constraint firstItem="Njz-TZ-Naa" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="4qe-LZ-tJO"/>
-                <constraint firstAttribute="bottom" secondItem="95t-If-uyK" secondAttribute="bottom" constant="30" id="Bna-LB-nZI"/>
-                <constraint firstItem="Njz-TZ-Naa" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="CCq-uF-HG7"/>
                 <constraint firstItem="feE-0z-7p5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ENq-0X-TUw"/>
-                <constraint firstAttribute="trailing" secondItem="Njz-TZ-Naa" secondAttribute="trailing" constant="30" id="Ewp-3n-q3N"/>
+                <constraint firstItem="Njz-TZ-Naa" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="K95-hx-T67"/>
+                <constraint firstAttribute="trailing" secondItem="Njz-TZ-Naa" secondAttribute="trailing" constant="30" id="KIO-va-Qph"/>
                 <constraint firstAttribute="trailing" secondItem="feE-0z-7p5" secondAttribute="trailing" id="S8k-k4-B2Y"/>
-                <constraint firstAttribute="trailing" secondItem="95t-If-uyK" secondAttribute="trailing" constant="30" id="jd1-vq-fQi"/>
+                <constraint firstAttribute="bottom" secondItem="Njz-TZ-Naa" secondAttribute="bottom" constant="50" id="SR7-AA-gZf"/>
+                <constraint firstItem="Njz-TZ-Naa" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="smm-aT-brr"/>
                 <constraint firstItem="feE-0z-7p5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ucG-ID-nix"/>
             </constraints>
         </view>

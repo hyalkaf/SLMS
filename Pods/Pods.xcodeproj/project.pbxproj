@@ -7,231 +7,337 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		092D1759BB12361577794A64D581E3BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		45B28CDACD362CEF2CA6012BA0015DB6 /* OnboardingViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E2226DC217FDB15235A8F4C1B96C1956 /* OnboardingViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		651705BE6AD16FBEFBAFE2621679E677 /* Pods-SLMS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DA5B52EE158C24CAF50F37502BB3E86D /* Pods-SLMS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		68601DD8D1367CD635712B9FF4797A9A /* Onboard-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E0891B794B9C7907845220F4351F8DF /* Onboard-dummy.m */; };
-		86BA959299BECF7B0314ECC08EC0614F /* OnboardingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE9EB850D18DDA7774D1400B3955FE2 /* OnboardingViewController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		8E55107B59A92876B44B690F74B121E7 /* Onboard-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D072BE8CAAADD43CB52BD3A2D27FDCFE /* Onboard-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9C07FA6F0515E6A868A018F341EEB811 /* Pods-SLMS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D9938E91A3D62D761605B74A0CA965F2 /* Pods-SLMS-dummy.m */; };
-		C6E011EAC995523734C90C4B3362D037 /* OnboardingContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE8152618C70E3AB0BAE1EC689FE13F /* OnboardingContentViewController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		E06A2409618B7A40B1EB114F7A703602 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		EF4066B0EEC6CF4D847A4C6810886BDA /* OnboardingContentViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 18164DA33F15B274CD77734C71B3A1EF /* OnboardingContentViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00C6D684D928D3DF2028C860518EFF55 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9F38EAA3B4422A6081D262F2102D51 /* NSArray+PureLayout.m */; };
+		06CB067DCC7B12413506079EDAAE8535 /* ALView+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = E69C6BFCF078C707CA6D91DF92FCCA57 /* ALView+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0CFAD1D2AFB3E532C35998D3147F09C1 /* MadokaTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F301402FD41F03CFAC4355D64B9D801F /* MadokaTextField.swift */; };
+		16D44A2F35E17EFDC5C041782FA8FD2B /* YoshikoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B70800ECA068180BB29E8BCA7289B7 /* YoshikoTextField.swift */; };
+		16DB70D373A452BC458524D86D3704A7 /* TextFieldsEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE1C56BDD03E0B5B204F9AB6DB741C3 /* TextFieldsEffects.swift */; };
+		2654FD27C8B6B1CEC6AAB3F6082A1C18 /* SwiftyButton+ResizableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4792A26DEA52E1B7D740B13BBD2358 /* SwiftyButton+ResizableImage.swift */; };
+		2B3A2644B5C61D0A7CAEFB8E3F421CBA /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 127014AAEFB899379CB0F13980443DB6 /* ALView+PureLayout.m */; };
+		37DAB6C028914CFDE33682F9AD70438D /* SwiftyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFC825B1CFF30BBCCC1CD448AE71253 /* SwiftyButton.swift */; };
+		409225923444FCE86493C3571C65A33B /* NSLayoutConstraint+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = F8638A5A45DBCBDC1B6BFFA0A5802410 /* NSLayoutConstraint+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		45B28CDACD362CEF2CA6012BA0015DB6 /* OnboardingViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DBCA91B4848733CB7F2B4E1A66482B3A /* OnboardingViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4AADE8E67970C8E4014C1F76D237D8D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E84C999ABBE32F73727284A89F246F05 /* Foundation.framework */; };
+		4AE71AAD2E1C854E417899DB3676D95C /* HoshiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA746934B0E77ACA2BE406345AAEB7C0 /* HoshiTextField.swift */; };
+		528C6CEAF2FB7794D3C8E69B15F48848 /* SwiftyCustomContentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2108029C85229A17EEE94311001033 /* SwiftyCustomContentButton.swift */; };
+		601876EFF358C032D62A717CDC7E904E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E84C999ABBE32F73727284A89F246F05 /* Foundation.framework */; };
+		6157AD608B941AA8D79893A4FA22E31C /* PureLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97A8E6F2390013F549A6646FD4BA7E2A /* PureLayout.framework */; };
+		66D256183382535782161F339746A393 /* PureLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 025079173621BB5E760A7B03CF990221 /* PureLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		68601DD8D1367CD635712B9FF4797A9A /* Onboard-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D90747A9E5BA9E84D064599754EE3A /* Onboard-dummy.m */; };
+		6D183008B6B5D025FBF6B88DC5891368 /* PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 1148D3FE7E3720FCEF8B3FA7F0DC3456 /* PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7025194074B5C5AA7EC36595FCBA6033 /* JiroTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03D250C8FBEB625D7BEBCEF6370A954 /* JiroTextField.swift */; };
+		742FCDF673050312C36FC60FAED1DBB0 /* Pods-SLMS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D9938E91A3D62D761605B74A0CA965F2 /* Pods-SLMS-dummy.m */; };
+		7CEFEA526205643F8E1AF44DB9159BD0 /* SwiftyButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C99AE4C34AF6110499DADB60172D6C6C /* SwiftyButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		86BA959299BECF7B0314ECC08EC0614F /* OnboardingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B13EA1311E7025C5DD651E1BD2D35129 /* OnboardingViewController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		873BAF5855308E533764077671DB748C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E84C999ABBE32F73727284A89F246F05 /* Foundation.framework */; };
+		8889DEE5671B48884A74E4C4CACC1E63 /* YokoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5815562E275E29C50C96B752B5D5F8A1 /* YokoTextField.swift */; };
+		8BAD0D09C65322A0648F91B3777D2178 /* NSArray+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 127B9DA417901B4332AAE1A5B5A107D1 /* NSArray+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E55107B59A92876B44B690F74B121E7 /* Onboard-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FB1A7EB4CC80AFF230E9B1B319553D06 /* Onboard-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		948188E17D4D615BA4CBBF1058A7E428 /* TextFieldEffects-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 75705978B5BAF75620F4211E9732F185 /* TextFieldEffects-dummy.m */; };
+		A118DAEF31A4D54C77B1FB2C5581E8EE /* PureLayout+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C89426EA06D35AD1FCE9CC62D4D5225 /* PureLayout+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A125F9B95E0B7A89BDDC0127F283B974 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E84C999ABBE32F73727284A89F246F05 /* Foundation.framework */; };
+		ADFF5BF5633DD6432DAF767E133B8297 /* AkiraTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CAB97D83FD59DFFFAEF5B16E43F08F /* AkiraTextField.swift */; };
+		C6E011EAC995523734C90C4B3362D037 /* OnboardingContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE58177CBCC6A0006185E990F279D0F9 /* OnboardingContentViewController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		C7AB5A6FA9E4C6F7C673408470CA8E63 /* Pods-SLMS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DA5B52EE158C24CAF50F37502BB3E86D /* Pods-SLMS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4D48B343DB08629147D7F746EB97786 /* IsaoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9C03E54551424156E0D7E0E53F2448 /* IsaoTextField.swift */; };
+		DBA84D8BE20C279817604A175648D55D /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D6F1AD231134B8C5CE508E775C705C /* NSLayoutConstraint+PureLayout.m */; };
+		DD714A0A99DC26B3E210C155EF2E5E5F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3A1F00BB831BDCC0822ED44F90857E3 /* UIKit.framework */; };
+		DE37E55BF8454DDCD2D62094683F05DB /* PureLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B239B94DF7F7625385A104FF4647DB11 /* PureLayout-dummy.m */; };
+		E0134BE5D8CD54C2F0B3BCA071C74999 /* TextFieldEffects-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DA819A0D00B37BA286403549C0F1DF0A /* TextFieldEffects-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E06A2409618B7A40B1EB114F7A703602 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E84C999ABBE32F73727284A89F246F05 /* Foundation.framework */; };
+		E9B66580922F28FBBCB145008EF1CA30 /* KaedeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8955D320828A38D8D3CA8EAEF32A2DC4 /* KaedeTextField.swift */; };
+		EBB9534179EB0DEDE85FF15DEE2F26B2 /* PureLayoutDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DFBC0F183ABDD92E7B0A44C3975E207 /* PureLayoutDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF4066B0EEC6CF4D847A4C6810886BDA /* OnboardingContentViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A36E9C66E57B223C184CE949E6080EFD /* OnboardingContentViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F9AB96ED819D8B5E390BB7C7F07153E3 /* MinoruTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B64ED51E6C44A3AA44EA1AE9A58139 /* MinoruTextField.swift */; };
+		FFBE158AFA89E543B4E4B44EBA6C222A /* SwiftyButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C59B72F6590F76CE605B524BECDD36 /* SwiftyButton-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5B2F84A06C3FB4D220BF65FAB35436E0 /* PBXContainerItemProxy */ = {
+		56222764FE99F35EEE1B90FCA4434A83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A4E3B1DFBEF75510101B932256F6202;
+			remoteInfo = SwiftyButton;
+		};
+		75E68CD9E2B6C437F356C6A2B169B227 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9749A27F76202B0335809E70944A2070;
+			remoteInfo = PureLayout;
+		};
+		80DB1644E08F4E821631D142083F6772 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D7FF48F3092783E4E42B336F0DEF2D1A;
 			remoteInfo = Onboard;
 		};
+		B0C028CC4AB3DC81617F404D90652395 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A1765B7F5A79FCB50B8B6F0E56E2985D;
+			remoteInfo = TextFieldEffects;
+		};
+		DEB38C4D00029492199B8B77D041C668 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9749A27F76202B0335809E70944A2070;
+			remoteInfo = PureLayout;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00DBD032BAC37DD6B350B4916C49EC38 /* speex_stereo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = speex_stereo.h; path = "SDK/lib/speex-1.2rc2/include/speex_stereo.h"; sourceTree = "<group>"; };
+		019D511517776E9E716C77E128E722BC /* GeoCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GeoCategory.h; path = SDK/lib/backendless/include/GeoCategory.h; sourceTree = "<group>"; };
+		01B69C4CAF5A87D5ECDB795229AA5242 /* BackendlessUser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BackendlessUser.h; path = SDK/lib/backendless/include/BackendlessUser.h; sourceTree = "<group>"; };
+		025079173621BB5E760A7B03CF990221 /* PureLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PureLayout-umbrella.h"; sourceTree = "<group>"; };
+		02D903F16D8E0A6693D5F9275D75AA3F /* attributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = attributes.h; path = "SDK/lib/libav-11.4/include/libavutil/attributes.h"; sourceTree = "<group>"; };
 		0472CC3A96BB06DF3061362507051FC4 /* Pods-SLMS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SLMS.release.xcconfig"; sourceTree = "<group>"; };
-		04AEC11E15707683B04899BC95767D0A /* frame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = frame.h; path = "SDK/lib/libav-11.4/include/libavutil/frame.h"; sourceTree = "<group>"; };
-		04B820469C196C8A4DD8AB4494990252 /* buffersink.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = buffersink.h; path = "SDK/lib/libav-11.4/include/libavfilter/buffersink.h"; sourceTree = "<group>"; };
-		04DB32175793DDC775E911859E03E433 /* intreadwrite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = intreadwrite.h; path = "SDK/lib/libav-11.4/include/libavutil/intreadwrite.h"; sourceTree = "<group>"; };
-		085503C1CA750F69BB9AFED9E65F2F4B /* avstring.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = avstring.h; path = "SDK/lib/libav-11.4/include/libavutil/avstring.h"; sourceTree = "<group>"; };
-		08D917E4B9F17603F82920956C98E6F5 /* CustomService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CustomService.h; path = SDK/lib/backendless/include/CustomService.h; sourceTree = "<group>"; };
-		0B66CC089FD5127D2FAD556E9CC91A0E /* BackendlessUser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BackendlessUser.h; path = SDK/lib/backendless/include/BackendlessUser.h; sourceTree = "<group>"; };
-		0BB48A476B094C42031134D8C9F68D02 /* xtea.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xtea.h; path = "SDK/lib/libav-11.4/include/libavutil/xtea.h"; sourceTree = "<group>"; };
-		0BFE11C1A9213E52FADAE669F7D34934 /* ProtectedBackendlessGeoQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ProtectedBackendlessGeoQuery.h; path = SDK/lib/backendless/include/ProtectedBackendlessGeoQuery.h; sourceTree = "<group>"; };
-		0C956B9E9321D581E40585E498516D3B /* GeoCluster.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GeoCluster.h; path = SDK/lib/backendless/include/GeoCluster.h; sourceTree = "<group>"; };
-		1096E0247BF8A1F65A87B1FAED8B3789 /* speex_config_types.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = speex_config_types.h; path = "SDK/lib/speex-1.2rc2/include/speex_config_types.h"; sourceTree = "<group>"; };
-		115EC2226CDD73D2B673D30E12217D47 /* GeoPoint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GeoPoint.h; path = SDK/lib/backendless/include/GeoPoint.h; sourceTree = "<group>"; };
-		13974C0CCFB229B4F2B8325ABEEB3513 /* QueryOptions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QueryOptions.h; path = SDK/lib/backendless/include/QueryOptions.h; sourceTree = "<group>"; };
-		165D3A97A4B4DCBD34E05FC8A726CFD6 /* Responder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Responder.h; path = SDK/lib/CommLibiOS/include/Responder.h; sourceTree = "<group>"; };
-		18164DA33F15B274CD77734C71B3A1EF /* OnboardingContentViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OnboardingContentViewController.h; path = Source/OnboardingContentViewController.h; sourceTree = "<group>"; };
-		195B65350D7F3C5BB27B288EE43D9C86 /* AtomicCountersFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AtomicCountersFactory.h; path = SDK/lib/backendless/include/AtomicCountersFactory.h; sourceTree = "<group>"; };
-		19DBBA32A8F0483E407CEC44F76D3CB0 /* blowfish.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = blowfish.h; path = "SDK/lib/libav-11.4/include/libavutil/blowfish.h"; sourceTree = "<group>"; };
-		1CA58E8FF3FEB19FD66068FBAA370DC1 /* log.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = log.h; path = "SDK/lib/libav-11.4/include/libavutil/log.h"; sourceTree = "<group>"; };
-		1DE8F8A14D154DDFEBCF65C5503C2A69 /* MPMediaEncoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPMediaEncoder.h; path = SDK/lib/MediaLibiOS3x/include/MPMediaEncoder.h; sourceTree = "<group>"; };
-		1F04AEEA0867AD3BF5582FF31BB82DEE /* UserService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UserService.h; path = SDK/lib/backendless/include/UserService.h; sourceTree = "<group>"; };
-		203A882FE2A2E421263D5C2C1A08F5DD /* replaygain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = replaygain.h; path = "SDK/lib/libav-11.4/include/libavutil/replaygain.h"; sourceTree = "<group>"; };
-		20A9BB3C5267BE8DC14B3B316507AF08 /* avfft.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = avfft.h; path = "SDK/lib/libav-11.4/include/libavcodec/avfft.h"; sourceTree = "<group>"; };
-		20BC66DB8C6F6A0D178F4362810A36A7 /* cpu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cpu.h; path = "SDK/lib/libav-11.4/include/libavutil/cpu.h"; sourceTree = "<group>"; };
-		21EDB228527CC39F6AAD84F159D32796 /* avdevice.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = avdevice.h; path = "SDK/lib/libav-11.4/include/libavdevice/avdevice.h"; sourceTree = "<group>"; };
-		2307015DA3F4B5CB9D9ECC2A3BF6D3CD /* hmac.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = hmac.h; path = "SDK/lib/libav-11.4/include/libavutil/hmac.h"; sourceTree = "<group>"; };
-		237F044152B8733DDBE5E9479A67B6F8 /* IAttributeStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IAttributeStore.h; path = SDK/lib/CommLibiOS/include/IAttributeStore.h; sourceTree = "<group>"; };
-		23DEE59E4E3D2C4B82982BE2CFB63F0D /* file.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = file.h; path = "SDK/lib/libav-11.4/include/libavutil/file.h"; sourceTree = "<group>"; };
-		24317955ED96813618D40E6BEAF44CE5 /* pixdesc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pixdesc.h; path = "SDK/lib/libav-11.4/include/libavutil/pixdesc.h"; sourceTree = "<group>"; };
-		24E54DCD39B80FD427030AB6A65B8FAA /* IAtomicCounters.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IAtomicCounters.h; path = SDK/lib/backendless/include/IAtomicCounters.h; sourceTree = "<group>"; };
-		298B19B33884DB490E9BECE5377D5446 /* version.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = version.h; path = "SDK/lib/libav-11.4/include/libavcodec/version.h"; sourceTree = "<group>"; };
-		2997B2DD40D3FF582DD4B7886E581FCD /* MemoryTicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MemoryTicker.h; path = SDK/lib/CommLibiOS/include/MemoryTicker.h; sourceTree = "<group>"; };
-		2A89E0EBD07103CC81EF97C77586F945 /* RTMPClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RTMPClient.h; path = SDK/lib/CommLibiOS/include/RTMPClient.h; sourceTree = "<group>"; };
-		2B97B8C3890CCD5301D30F98658901A6 /* buffersrc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = buffersrc.h; path = "SDK/lib/libav-11.4/include/libavfilter/buffersrc.h"; sourceTree = "<group>"; };
-		2C32C21E58A8DF54D2245C1C68F753E2 /* channel_layout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = channel_layout.h; path = "SDK/lib/libav-11.4/include/libavutil/channel_layout.h"; sourceTree = "<group>"; };
+		0581F339222D5718FC07DD3DA50A77EF /* ObjectProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ObjectProperty.h; path = SDK/lib/backendless/include/ObjectProperty.h; sourceTree = "<group>"; };
+		077C24FED87D2AAFAC81784DA9EEBD96 /* BinaryCodec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BinaryCodec.h; path = SDK/lib/CommLibiOS/include/BinaryCodec.h; sourceTree = "<group>"; };
+		08276E1E174E5DE807526A88B302C3F7 /* ProtectedBackendlessGeoQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ProtectedBackendlessGeoQuery.h; path = SDK/lib/backendless/include/ProtectedBackendlessGeoQuery.h; sourceTree = "<group>"; };
+		08791C46BEF173DE142D3EEC0EB937C3 /* Backendless-With-Media-Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Backendless-With-Media-Bridging-Header.h"; path = "SDK/lib/backendless/include/Backendless-With-Media-Bridging-Header.h"; sourceTree = "<group>"; };
+		088007A2E6453A431B85C1AF3865A8FB /* opt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = opt.h; path = "SDK/lib/libav-11.4/include/libavutil/opt.h"; sourceTree = "<group>"; };
+		08A71CA8F7E29B22D8F8393756B165E9 /* FilePermission.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FilePermission.h; path = SDK/lib/backendless/include/FilePermission.h; sourceTree = "<group>"; };
+		0A9F58E8DA52FB7D17D73B558F9423E6 /* vdpau.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = vdpau.h; path = "SDK/lib/libav-11.4/include/libavcodec/vdpau.h"; sourceTree = "<group>"; };
+		0D4A0DCA26E67244AA36C3DFA326544F /* pixdesc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pixdesc.h; path = "SDK/lib/libav-11.4/include/libavutil/pixdesc.h"; sourceTree = "<group>"; };
+		0D533E194C54AAAFD3720D3B216E8DD5 /* UserService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UserService.h; path = SDK/lib/backendless/include/UserService.h; sourceTree = "<group>"; };
+		0DEA3FDF327E592AFBC8AFE91EE74505 /* AbstractQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AbstractQuery.h; path = SDK/lib/backendless/include/AbstractQuery.h; sourceTree = "<group>"; };
+		0E1FE9EBDD3DCA170734A3D830F0CB74 /* MediaPublishOptions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MediaPublishOptions.h; path = SDK/lib/backendless/include/MediaPublishOptions.h; sourceTree = "<group>"; };
+		0EBE0942B2562172439FA9E870271713 /* GeoService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GeoService.h; path = SDK/lib/backendless/include/GeoService.h; sourceTree = "<group>"; };
+		1148D3FE7E3720FCEF8B3FA7F0DC3456 /* PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayout.h; path = PureLayout/PureLayout/PureLayout.h; sourceTree = "<group>"; };
+		11FC378FC9733B2805407DF98D1B8705 /* file.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = file.h; path = "SDK/lib/libav-11.4/include/libavutil/file.h"; sourceTree = "<group>"; };
+		127014AAEFB899379CB0F13980443DB6 /* ALView+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ALView+PureLayout.m"; path = "PureLayout/PureLayout/ALView+PureLayout.m"; sourceTree = "<group>"; };
+		127B9DA417901B4332AAE1A5B5A107D1 /* NSArray+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+PureLayout.h"; path = "PureLayout/PureLayout/NSArray+PureLayout.h"; sourceTree = "<group>"; };
+		12D90747A9E5BA9E84D064599754EE3A /* Onboard-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Onboard-dummy.m"; sourceTree = "<group>"; };
+		14C59B72F6590F76CE605B524BECDD36 /* SwiftyButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyButton-dummy.m"; sourceTree = "<group>"; };
+		14D268EC749057C1BE7778B7237DB93E /* Onboard.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Onboard.xcconfig; sourceTree = "<group>"; };
+		189F935CDFB0300387D145517068988A /* MPMediaData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPMediaData.h; path = SDK/lib/MediaLibiOS3x/include/MPMediaData.h; sourceTree = "<group>"; };
+		1D7E0479EAD07FAA4F7E6FF478CF7415 /* avconfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = avconfig.h; path = "SDK/lib/libav-11.4/include/libavutil/avconfig.h"; sourceTree = "<group>"; };
+		1D941B6F000AA324C7716A681EC5622C /* pixfmt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pixfmt.h; path = "SDK/lib/libav-11.4/include/libavutil/pixfmt.h"; sourceTree = "<group>"; };
+		1FCE0BE155046609505A3DF649FEFCCB /* BackendlessCollection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BackendlessCollection.h; path = SDK/lib/backendless/include/BackendlessCollection.h; sourceTree = "<group>"; };
+		238D5189851B8677D517D325525F1F44 /* samplefmt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = samplefmt.h; path = "SDK/lib/libav-11.4/include/libavutil/samplefmt.h"; sourceTree = "<group>"; };
+		23FC005AC65514B234D4516F5D7E4CD3 /* BEMapView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEMapView.h; path = SDK/lib/backendless/include/BEMapView.h; sourceTree = "<group>"; };
+		27538D5778A3121348B6B0E9392ED6D5 /* dxva2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = dxva2.h; path = "SDK/lib/libav-11.4/include/libavcodec/dxva2.h"; sourceTree = "<group>"; };
+		275D3D07777EE0021046014FAC3C4052 /* Types.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Types.h; path = SDK/lib/CommLibiOS/include/Types.h; sourceTree = "<group>"; };
+		2B029FEE937C96677A553F920045455A /* display.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = display.h; path = "SDK/lib/libav-11.4/include/libavutil/display.h"; sourceTree = "<group>"; };
+		2B1F32386224842CEAB6DF2B7B22B88B /* avfft.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = avfft.h; path = "SDK/lib/libav-11.4/include/libavcodec/avfft.h"; sourceTree = "<group>"; };
+		2C77314A259FC6756DA71603A82926A4 /* Onboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Onboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E7D6EE20F2BD8502D2F960D6228CD1B /* version.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = version.h; path = "SDK/lib/libav-11.4/include/libavdevice/version.h"; sourceTree = "<group>"; };
+		2F1438FBCE78BE8C1123FDAEB1B1B94C /* DeliveryOptions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DeliveryOptions.h; path = SDK/lib/backendless/include/DeliveryOptions.h; sourceTree = "<group>"; };
 		30A0CFBD28C1CF059D9D1D0189C537A5 /* Pods-SLMS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SLMS-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3144D9222619212505FAC0D7255CD494 /* audioconvert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = audioconvert.h; path = "SDK/lib/libav-11.4/include/libavutil/audioconvert.h"; sourceTree = "<group>"; };
-		3276A3C1172E094E2ABBDC91FEC3E161 /* sha.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = sha.h; path = "SDK/lib/libav-11.4/include/libavutil/sha.h"; sourceTree = "<group>"; };
+		317A37AAEC0640C21D2752A9A6A24E4D /* version.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = version.h; path = "SDK/lib/libav-11.4/include/libavcodec/version.h"; sourceTree = "<group>"; };
+		319C909A5DBC834CFF6AB315265117AD /* BroadcastStreamClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BroadcastStreamClient.h; path = SDK/lib/MediaLibiOS3x/include/BroadcastStreamClient.h; sourceTree = "<group>"; };
+		31AFCA32D111E5DE3444603A9D0EF85F /* error.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = error.h; path = "SDK/lib/libav-11.4/include/libavutil/error.h"; sourceTree = "<group>"; };
+		31C785B32318B718C634215C84EF65EA /* stereo3d.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = stereo3d.h; path = "SDK/lib/libav-11.4/include/libavutil/stereo3d.h"; sourceTree = "<group>"; };
 		32E60706E6BB27FBEEF3CC4A2D9CD423 /* Pods-SLMS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SLMS-acknowledgements.plist"; sourceTree = "<group>"; };
-		350F6F3E95A9C4F29FD100C66634B308 /* IClientSharedObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IClientSharedObject.h; path = SDK/lib/CommLibiOS/include/IClientSharedObject.h; sourceTree = "<group>"; };
-		35C837D1FA4CFE07054FBB611082AA60 /* CacheService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CacheService.h; path = SDK/lib/backendless/include/CacheService.h; sourceTree = "<group>"; };
+		33CB2B997D2C2C4F84209BD32B999CF7 /* CacheService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CacheService.h; path = SDK/lib/backendless/include/CacheService.h; sourceTree = "<group>"; };
 		37B79E36B29C287880961711BD29A362 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		39CEBA5CE12A364C28386FBCA7C2DF5B /* BEFileInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEFileInfo.h; path = SDK/lib/backendless/include/BEFileInfo.h; sourceTree = "<group>"; };
-		3A639DC6DF3B5B67B2156B6575AD5DD8 /* lfg.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = lfg.h; path = "SDK/lib/libav-11.4/include/libavutil/lfg.h"; sourceTree = "<group>"; };
-		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		4106057476CF1139AE1EEEA1B89930F4 /* GeoService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GeoService.h; path = SDK/lib/backendless/include/GeoService.h; sourceTree = "<group>"; };
-		44C0A80B36F659CA67648027BA3BCB8F /* attributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = attributes.h; path = "SDK/lib/libav-11.4/include/libavutil/attributes.h"; sourceTree = "<group>"; };
-		45AFEB3116D2C4B7E1685802092E968A /* FlashorbBinaryReader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlashorbBinaryReader.h; path = SDK/lib/CommLibiOS/include/FlashorbBinaryReader.h; sourceTree = "<group>"; };
-		46EB14C90D87A1F5D1DFAF10D3837EBF /* avcodec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = avcodec.h; path = "SDK/lib/libav-11.4/include/libavcodec/avcodec.h"; sourceTree = "<group>"; };
-		46FC30F1ED7153A5264DDA124A6C0283 /* parseutils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = parseutils.h; path = "SDK/lib/libav-11.4/include/libavutil/parseutils.h"; sourceTree = "<group>"; };
-		48123A546203D87D73510FA9DC7B4D48 /* BackendlessBeacon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BackendlessBeacon.h; path = SDK/lib/backendless/include/BackendlessBeacon.h; sourceTree = "<group>"; };
-		49AC32D852C6B7996A09D417BB52DB50 /* Pods_SLMS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SLMS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4B4C37139F6B301998EE47F415973E21 /* MessagingService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MessagingService.h; path = SDK/lib/backendless/include/MessagingService.h; sourceTree = "<group>"; };
+		3A41A5DAAC1B9F95205E50E66307C015 /* PureLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PureLayout-prefix.pch"; sourceTree = "<group>"; };
+		3A50946CC6C8E17E7327A46DC1650E12 /* dict.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = dict.h; path = "SDK/lib/libav-11.4/include/libavutil/dict.h"; sourceTree = "<group>"; };
+		3BAACB1A7AD200AA85AE525C6F687938 /* crc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crc.h; path = "SDK/lib/libav-11.4/include/libavutil/crc.h"; sourceTree = "<group>"; };
+		3DE784DDDB6B8F9481A27B43D0E1F5E3 /* vda.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = vda.h; path = "SDK/lib/libav-11.4/include/libavcodec/vda.h"; sourceTree = "<group>"; };
+		3DFBC0F183ABDD92E7B0A44C3975E207 /* PureLayoutDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayoutDefines.h; path = PureLayout/PureLayout/PureLayoutDefines.h; sourceTree = "<group>"; };
+		3FE1C56BDD03E0B5B204F9AB6DB741C3 /* TextFieldsEffects.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextFieldsEffects.swift; path = TextFieldEffects/TextFieldEffects/TextFieldsEffects.swift; sourceTree = "<group>"; };
+		40561208B51CB045BD1CAF678A863B24 /* MemoryTicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MemoryTicker.h; path = SDK/lib/CommLibiOS/include/MemoryTicker.h; sourceTree = "<group>"; };
+		41C1C9739B8F57062B52BD16A15AD59B /* FileService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FileService.h; path = SDK/lib/backendless/include/FileService.h; sourceTree = "<group>"; };
+		42B4FA62F208E36673BB96B12425C67A /* FlashorbBinaryReader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlashorbBinaryReader.h; path = SDK/lib/CommLibiOS/include/FlashorbBinaryReader.h; sourceTree = "<group>"; };
+		44726D563873716159200F3F31F31C3F /* Backendless-Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Backendless-Bridging-Header.h"; path = "SDK/lib/backendless/include/Backendless-Bridging-Header.h"; sourceTree = "<group>"; };
+		44F6505F7B42B46DD5204502BDED6AE3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45129D707B31A0237F51B1CF1BD617FF /* mem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mem.h; path = "SDK/lib/libav-11.4/include/libavutil/mem.h"; sourceTree = "<group>"; };
+		4606541EEA70F4503F0F9601448EF27C /* version.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = version.h; path = "SDK/lib/libav-11.4/include/libavutil/version.h"; sourceTree = "<group>"; };
+		47A9FAC746A8BA1AD7F30C28A8D6E801 /* intreadwrite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = intreadwrite.h; path = "SDK/lib/libav-11.4/include/libavutil/intreadwrite.h"; sourceTree = "<group>"; };
+		4AD98FB6B6359732EDA2619F0EB74E5F /* MPMediaDecoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPMediaDecoder.h; path = SDK/lib/MediaLibiOS3x/include/MPMediaDecoder.h; sourceTree = "<group>"; };
 		4BA3C7FB4086913385AEFBC59A8BDA2F /* Pods-SLMS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SLMS-frameworks.sh"; sourceTree = "<group>"; };
-		51E79685B1C9DC3A3C4B996249753E65 /* IPresenceListener.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IPresenceListener.h; path = SDK/lib/backendless/include/IPresenceListener.h; sourceTree = "<group>"; };
-		5231DE19937C57B2312185F9B191EF77 /* BEMapView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEMapView.h; path = SDK/lib/backendless/include/BEMapView.h; sourceTree = "<group>"; };
-		535A08B19FE5654977740CA5E4EB0572 /* Onboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Onboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		54B5832AF1BA970D115C4128E27D2CEA /* BESubscription.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BESubscription.h; path = SDK/lib/backendless/include/BESubscription.h; sourceTree = "<group>"; };
-		553C68E2FAE1706D88261946F83CA316 /* random_seed.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = random_seed.h; path = "SDK/lib/libav-11.4/include/libavutil/random_seed.h"; sourceTree = "<group>"; };
-		5562DC60D30A360EE066B2E260929372 /* IRTMProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRTMProtocol.h; path = SDK/lib/CommLibiOS/include/IRTMProtocol.h; sourceTree = "<group>"; };
-		5738CE9ABCC3CB3EAAF676E60AB15BF4 /* BECollectionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BECollectionView.h; path = SDK/lib/backendless/include/BECollectionView.h; sourceTree = "<group>"; };
-		5970716444C73F6874E915687F8B721A /* FilePermission.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FilePermission.h; path = SDK/lib/backendless/include/FilePermission.h; sourceTree = "<group>"; };
-		5B0AC8575910E409D211DB8902CBDF9F /* IClientSharedObjectDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IClientSharedObjectDelegate.h; path = SDK/lib/CommLibiOS/include/IClientSharedObjectDelegate.h; sourceTree = "<group>"; };
-		5B3CD65911FB34EB86C1A01389945670 /* opt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = opt.h; path = "SDK/lib/libav-11.4/include/libavutil/opt.h"; sourceTree = "<group>"; };
-		5CDBD52EDDB306E516F54E8D3112D4DC /* BackendlessCollection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BackendlessCollection.h; path = SDK/lib/backendless/include/BackendlessCollection.h; sourceTree = "<group>"; };
-		5E0891B794B9C7907845220F4351F8DF /* Onboard-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Onboard-dummy.m"; sourceTree = "<group>"; };
-		5E255B3A241DB07D9DBA231C8F2C6162 /* MediaPlaybackOptions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MediaPlaybackOptions.h; path = SDK/lib/backendless/include/MediaPlaybackOptions.h; sourceTree = "<group>"; };
-		5EB4E5BC3246902567615CA54ED4A5B1 /* rational.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = rational.h; path = "SDK/lib/libav-11.4/include/libavutil/rational.h"; sourceTree = "<group>"; };
-		61C368135EA199C3B45A7516F82986A5 /* common.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = common.h; path = "SDK/lib/libav-11.4/include/libavutil/common.h"; sourceTree = "<group>"; };
-		63697C594EC8D2C682488C5697D9B2FA /* DEBUG.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DEBUG.h; path = SDK/lib/CommLibiOS/include/DEBUG.h; sourceTree = "<group>"; };
-		639BF1217582AF766A469DEBB87B6EE5 /* BackendlessDataQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BackendlessDataQuery.h; path = SDK/lib/backendless/include/BackendlessDataQuery.h; sourceTree = "<group>"; };
-		63A64E7094103ADC0DB02A020127E267 /* base64.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = base64.h; path = "SDK/lib/libav-11.4/include/libavutil/base64.h"; sourceTree = "<group>"; };
-		64CC97D61B30725924A9419BCF538CB7 /* FileService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FileService.h; path = SDK/lib/backendless/include/FileService.h; sourceTree = "<group>"; };
-		650C66F7A563A731D8B77671E02BAD06 /* audio_fifo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = audio_fifo.h; path = "SDK/lib/libav-11.4/include/libavutil/audio_fifo.h"; sourceTree = "<group>"; };
-		651B92541B24194B7A59BAAB625BF235 /* Backendless-Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Backendless-Bridging-Header.h"; path = "SDK/lib/backendless/include/Backendless-Bridging-Header.h"; sourceTree = "<group>"; };
-		66822BA94763A32823AA702F2EC46834 /* ICallback.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ICallback.h; path = SDK/lib/backendless/include/ICallback.h; sourceTree = "<group>"; };
-		66B90A6F8E988A37896DC97907F5E70C /* Backendless-With-Media-Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Backendless-With-Media-Bridging-Header.h"; path = "SDK/lib/backendless/include/Backendless-With-Media-Bridging-Header.h"; sourceTree = "<group>"; };
-		699294076AADA12E9A666894DC10C516 /* VideoPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VideoPlayer.h; path = SDK/lib/MediaLibiOS3x/include/VideoPlayer.h; sourceTree = "<group>"; };
-		6ABE927819BB61A79B5F3D16DB4A326F /* IPersistable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IPersistable.h; path = SDK/lib/CommLibiOS/include/IPersistable.h; sourceTree = "<group>"; };
-		6B8418CC31593A484DE445FA8B04CBDB /* Backendless.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Backendless.h; path = SDK/lib/backendless/include/Backendless.h; sourceTree = "<group>"; };
-		6D671D6957F4D502C38E784175262F99 /* x264.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = x264.h; path = SDK/lib/x264/include/x264.h; sourceTree = "<group>"; };
-		6FAF29FDB7EBCD7E45B1B1071E019DF8 /* macros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = macros.h; path = "SDK/lib/libav-11.4/include/libavutil/macros.h"; sourceTree = "<group>"; };
-		7286BC44C7860E1C4EEC6DD2F4389AF1 /* BETableView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BETableView.h; path = SDK/lib/backendless/include/BETableView.h; sourceTree = "<group>"; };
-		75B7FAA6ED196ED7842ECD3CA034EFAF /* MediaPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MediaPlayer.h; path = SDK/lib/backendless/include/MediaPlayer.h; sourceTree = "<group>"; };
-		77B416B417685F191E2B7CE021CA63F1 /* avfiltergraph.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = avfiltergraph.h; path = "SDK/lib/libav-11.4/include/libavfilter/avfiltergraph.h"; sourceTree = "<group>"; };
-		78266A01F53918B610028E5CC50DB2E1 /* aes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = aes.h; path = "SDK/lib/libav-11.4/include/libavutil/aes.h"; sourceTree = "<group>"; };
-		794F7FFB80235CCAC758B66F50304E11 /* fifo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = fifo.h; path = "SDK/lib/libav-11.4/include/libavutil/fifo.h"; sourceTree = "<group>"; };
-		79D66174E91027A376C00A84AFCFBE3D /* MPMediaData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPMediaData.h; path = SDK/lib/MediaLibiOS3x/include/MPMediaData.h; sourceTree = "<group>"; };
-		7A3D9961181EE6D903D91AFFC2A8747A /* IServiceCall.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IServiceCall.h; path = SDK/lib/CommLibiOS/include/IServiceCall.h; sourceTree = "<group>"; };
-		7B109A16893D7DADCE606854498B687A /* SubscriptionOptions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SubscriptionOptions.h; path = SDK/lib/backendless/include/SubscriptionOptions.h; sourceTree = "<group>"; };
-		7BE9EB850D18DDA7774D1400B3955FE2 /* OnboardingViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OnboardingViewController.m; path = Source/OnboardingViewController.m; sourceTree = "<group>"; };
+		4C2108029C85229A17EEE94311001033 /* SwiftyCustomContentButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyCustomContentButton.swift; path = SwiftyButton/SwiftyCustomContentButton.swift; sourceTree = "<group>"; };
+		4CEB601F306FC77227F950BA81924D40 /* MediaService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MediaService.h; path = SDK/lib/backendless/include/MediaService.h; sourceTree = "<group>"; };
+		4CF9F16D5C653332CA1E816F8BE14804 /* cpu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cpu.h; path = "SDK/lib/libav-11.4/include/libavutil/cpu.h"; sourceTree = "<group>"; };
+		4D00C685D7D0DF8BD8FDDAD33DE5436E /* rational.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = rational.h; path = "SDK/lib/libav-11.4/include/libavutil/rational.h"; sourceTree = "<group>"; };
+		4EE46CCBA465089249D6AF30BE506BC5 /* speex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = speex.h; path = "SDK/lib/speex-1.2rc2/include/speex.h"; sourceTree = "<group>"; };
+		52E2FE6E20358E824ABC14F0AB8EBBB9 /* fifo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = fifo.h; path = "SDK/lib/libav-11.4/include/libavutil/fifo.h"; sourceTree = "<group>"; };
+		532CFA86006243C3D14C97CF2C89AF74 /* speex_config_types.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = speex_config_types.h; path = "SDK/lib/speex-1.2rc2/include/speex_config_types.h"; sourceTree = "<group>"; };
+		53E2798B6E1C5EFCD621BA713A95ED62 /* ISharedObjectListener.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISharedObjectListener.h; path = SDK/lib/CommLibiOS/include/ISharedObjectListener.h; sourceTree = "<group>"; };
+		54A949B6CB3324C210690DAEF17630DF /* BackendlessSimpleQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BackendlessSimpleQuery.h; path = SDK/lib/backendless/include/BackendlessSimpleQuery.h; sourceTree = "<group>"; };
+		54E68C6A751EA4D2CFAB2AA22AF34E72 /* BackendlessBeacon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BackendlessBeacon.h; path = SDK/lib/backendless/include/BackendlessBeacon.h; sourceTree = "<group>"; };
+		56A816C5ADC7D443A032B84703D6DF2D /* LocationTracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LocationTracker.h; path = SDK/lib/backendless/include/LocationTracker.h; sourceTree = "<group>"; };
+		5815562E275E29C50C96B752B5D5F8A1 /* YokoTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YokoTextField.swift; path = TextFieldEffects/TextFieldEffects/YokoTextField.swift; sourceTree = "<group>"; };
+		58512246C57C0765F7F9552072CAB4F3 /* SubscriptionOptions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SubscriptionOptions.h; path = SDK/lib/backendless/include/SubscriptionOptions.h; sourceTree = "<group>"; };
+		5C3313573FC13558EF68F6CFB6860AF3 /* Logging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Logging.h; path = SDK/lib/backendless/include/Logging.h; sourceTree = "<group>"; };
+		5CCAB02B21DC49819136A0E7EE09982E /* replaygain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = replaygain.h; path = "SDK/lib/libav-11.4/include/libavutil/replaygain.h"; sourceTree = "<group>"; };
+		5E49FD86C59941D8044FA9CD18E64F58 /* avassert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = avassert.h; path = "SDK/lib/libav-11.4/include/libavutil/avassert.h"; sourceTree = "<group>"; };
+		5F962A9101BCC40B3BDC1B9798F1212F /* GeoCluster.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GeoCluster.h; path = SDK/lib/backendless/include/GeoCluster.h; sourceTree = "<group>"; };
+		603E2FEBFB83CED662A6EFB4EF6005CE /* BackendlessGeoQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BackendlessGeoQuery.h; path = SDK/lib/backendless/include/BackendlessGeoQuery.h; sourceTree = "<group>"; };
+		609644199771836D8BC7DE52F96C2C93 /* eval.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = eval.h; path = "SDK/lib/libav-11.4/include/libavutil/eval.h"; sourceTree = "<group>"; };
+		619DA57A0902410E1CB2432B93DD8274 /* TextFieldEffects.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TextFieldEffects.xcconfig; sourceTree = "<group>"; };
+		627AC2CD30591D9AED63B3EA5AB63326 /* BETableView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BETableView.h; path = SDK/lib/backendless/include/BETableView.h; sourceTree = "<group>"; };
+		63C7500BE883EEE3BF630A676C0A04B5 /* PersistenceService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PersistenceService.h; path = SDK/lib/backendless/include/PersistenceService.h; sourceTree = "<group>"; };
+		63F2A9B9DF9B8B968E73A6C185CF732A /* DeviceRegistration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DeviceRegistration.h; path = SDK/lib/backendless/include/DeviceRegistration.h; sourceTree = "<group>"; };
+		66B45C8FCED79B3217A7272D1A62CC64 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		680F576143F3E1ECFC1AE891A72C46F1 /* mathematics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mathematics.h; path = "SDK/lib/libav-11.4/include/libavutil/mathematics.h"; sourceTree = "<group>"; };
+		683F29BA99D8641E29FD3B6F8029B3C7 /* IPresenceListener.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IPresenceListener.h; path = SDK/lib/backendless/include/IPresenceListener.h; sourceTree = "<group>"; };
+		68D6F1AD231134B8C5CE508E775C705C /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+PureLayout.m"; path = "PureLayout/PureLayout/NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
+		692F8AD688EE06F7ED3460B7A3224014 /* AtomicCountersFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AtomicCountersFactory.h; path = SDK/lib/backendless/include/AtomicCountersFactory.h; sourceTree = "<group>"; };
+		697CB99F71229043CDC394E5F7EE9077 /* avdevice.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = avdevice.h; path = "SDK/lib/libav-11.4/include/libavdevice/avdevice.h"; sourceTree = "<group>"; };
+		6AA0CB7B759509663094181F89F09841 /* speex_callbacks.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = speex_callbacks.h; path = "SDK/lib/speex-1.2rc2/include/speex_callbacks.h"; sourceTree = "<group>"; };
+		6B1E0BE8A500EE1CD26CEB7CE0E6A574 /* PureLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PureLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B3E9A72E674C39BCDC4B14E21F9A1FC /* SwiftyButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyButton-prefix.pch"; sourceTree = "<group>"; };
+		6B4DD4B6D19F226CEDAEAF3E82C3903F /* bswap.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = bswap.h; path = "SDK/lib/libav-11.4/include/libavutil/bswap.h"; sourceTree = "<group>"; };
+		6DA972C55170CB0846CF39B6DEA55330 /* IClientSharedObjectDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IClientSharedObjectDelegate.h; path = SDK/lib/CommLibiOS/include/IClientSharedObjectDelegate.h; sourceTree = "<group>"; };
+		6DFC825B1CFF30BBCCC1CD448AE71253 /* SwiftyButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyButton.swift; path = SwiftyButton/SwiftyButton.swift; sourceTree = "<group>"; };
+		6F3A7E17C134563D67F0B68A6271E190 /* speex_stereo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = speex_stereo.h; path = "SDK/lib/speex-1.2rc2/include/speex_stereo.h"; sourceTree = "<group>"; };
+		7130673F696A0C675901D742C072123A /* IRTMProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRTMProtocol.h; path = SDK/lib/CommLibiOS/include/IRTMProtocol.h; sourceTree = "<group>"; };
+		71825FBDB50620C6C26C9939B8847D28 /* avfilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = avfilter.h; path = "SDK/lib/libav-11.4/include/libavfilter/avfilter.h"; sourceTree = "<group>"; };
+		728831D1F609CC2C6163348752AFB7D4 /* ICacheService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ICacheService.h; path = SDK/lib/backendless/include/ICacheService.h; sourceTree = "<group>"; };
+		72CFBB60E14D2512AC82BE50443AB16E /* avstring.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = avstring.h; path = "SDK/lib/libav-11.4/include/libavutil/avstring.h"; sourceTree = "<group>"; };
+		75705978B5BAF75620F4211E9732F185 /* TextFieldEffects-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TextFieldEffects-dummy.m"; sourceTree = "<group>"; };
+		7720D24A0A072F01E75405FA016E3287 /* MediaPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MediaPlayer.h; path = SDK/lib/backendless/include/MediaPlayer.h; sourceTree = "<group>"; };
+		7870768306F902AF3FCF8C2C19F3F6E6 /* DataStoreFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DataStoreFactory.h; path = SDK/lib/backendless/include/DataStoreFactory.h; sourceTree = "<group>"; };
+		78B70800ECA068180BB29E8BCA7289B7 /* YoshikoTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YoshikoTextField.swift; path = TextFieldEffects/TextFieldEffects/YoshikoTextField.swift; sourceTree = "<group>"; };
+		78B7F8F2D41ACB8BBADF140E24A0835D /* avcodec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = avcodec.h; path = "SDK/lib/libav-11.4/include/libavcodec/avcodec.h"; sourceTree = "<group>"; };
+		7A4792A26DEA52E1B7D740B13BBD2358 /* SwiftyButton+ResizableImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwiftyButton+ResizableImage.swift"; path = "SwiftyButton/SwiftyButton+ResizableImage.swift"; sourceTree = "<group>"; };
+		7AC3430C9542E4108860802BC3BB394D /* random_seed.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = random_seed.h; path = "SDK/lib/libav-11.4/include/libavutil/random_seed.h"; sourceTree = "<group>"; };
+		7AFF76F18100BDB36488848EC0448814 /* BESubscription.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BESubscription.h; path = SDK/lib/backendless/include/BESubscription.h; sourceTree = "<group>"; };
 		7C4518B4EF184F05CD9C1D4DF6E96582 /* Pods-SLMS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SLMS.modulemap"; sourceTree = "<group>"; };
-		7CABA14AF1CE6A72651EDC81EDB2F958 /* MediaPublishOptions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MediaPublishOptions.h; path = SDK/lib/backendless/include/MediaPublishOptions.h; sourceTree = "<group>"; };
-		7E780CCD99662E96134ECAC178A3F16E /* version.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = version.h; path = "SDK/lib/libav-11.4/include/libavresample/version.h"; sourceTree = "<group>"; };
-		7F0B6342F94B632855E992762B7CABE3 /* ISharedObjectListener.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISharedObjectListener.h; path = SDK/lib/CommLibiOS/include/ISharedObjectListener.h; sourceTree = "<group>"; };
-		819ABB36C58A964CDD53818F297A6743 /* Logger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Logger.h; path = SDK/lib/backendless/include/Logger.h; sourceTree = "<group>"; };
-		82367613EEE4764F438124C1142C6353 /* dxva2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = dxva2.h; path = "SDK/lib/libav-11.4/include/libavcodec/dxva2.h"; sourceTree = "<group>"; };
-		841A3700B6B5295BB278E64F1442C228 /* PublishOptions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PublishOptions.h; path = SDK/lib/backendless/include/PublishOptions.h; sourceTree = "<group>"; };
-		863FF3C93AFBA91E71F0E13547C15156 /* IMediaStreamer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IMediaStreamer.h; path = SDK/lib/backendless/include/IMediaStreamer.h; sourceTree = "<group>"; };
-		86C6353BDEF052ECCFC25C902A0AB1A4 /* BackendlessCachePolicy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BackendlessCachePolicy.h; path = SDK/lib/backendless/include/BackendlessCachePolicy.h; sourceTree = "<group>"; };
-		890E2C507ADA401F9DBD7632946F2294 /* version.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = version.h; path = "SDK/lib/libav-11.4/include/libavformat/version.h"; sourceTree = "<group>"; };
-		89252DEC82EA0FDD690BCEEF2E6068EF /* version.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = version.h; path = "SDK/lib/libav-11.4/include/libavutil/version.h"; sourceTree = "<group>"; };
-		8983BF4AC0C8147347161146E458D98D /* version.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = version.h; path = "SDK/lib/libav-11.4/include/libavfilter/version.h"; sourceTree = "<group>"; };
+		7F6184E61564B30E430A19223C8F2E67 /* PureLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PureLayout.xcconfig; sourceTree = "<group>"; };
+		7F7C4AE42DCCCE427CD967E54452CA24 /* x264.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = x264.h; path = SDK/lib/x264/include/x264.h; sourceTree = "<group>"; };
+		7F89215C0BB62F547616E939C65A633A /* sha.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = sha.h; path = "SDK/lib/libav-11.4/include/libavutil/sha.h"; sourceTree = "<group>"; };
+		809201D7117A351A866047999687F637 /* macros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = macros.h; path = "SDK/lib/libav-11.4/include/libavutil/macros.h"; sourceTree = "<group>"; };
+		825A5F033D8DC02E200D8710D0A896F3 /* xvmc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xvmc.h; path = "SDK/lib/libav-11.4/include/libavcodec/xvmc.h"; sourceTree = "<group>"; };
+		8273038E574D47C65F211AEA42E2828F /* parseutils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = parseutils.h; path = "SDK/lib/libav-11.4/include/libavutil/parseutils.h"; sourceTree = "<group>"; };
+		84164E3FB936DABBC6826EA69AA1D90D /* BackendlessDataQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BackendlessDataQuery.h; path = SDK/lib/backendless/include/BackendlessDataQuery.h; sourceTree = "<group>"; };
+		84B64ED51E6C44A3AA44EA1AE9A58139 /* MinoruTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MinoruTextField.swift; path = TextFieldEffects/TextFieldEffects/MinoruTextField.swift; sourceTree = "<group>"; };
+		84F1205CF8363603D82C1FCCDECFB8B8 /* version.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = version.h; path = "SDK/lib/libav-11.4/include/libavfilter/version.h"; sourceTree = "<group>"; };
+		8546F379C3DCFD193F6156910D0E6946 /* common.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = common.h; path = "SDK/lib/libav-11.4/include/libavutil/common.h"; sourceTree = "<group>"; };
+		85A098C62DDA2FD0DE0A9D39EE11311F /* SwiftyButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyButton.xcconfig; sourceTree = "<group>"; };
+		862A9D82CAF278322B6E665A4F62EF70 /* AbstractProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AbstractProperty.h; path = SDK/lib/backendless/include/AbstractProperty.h; sourceTree = "<group>"; };
+		8955D320828A38D8D3CA8EAEF32A2DC4 /* KaedeTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KaedeTextField.swift; path = TextFieldEffects/TextFieldEffects/KaedeTextField.swift; sourceTree = "<group>"; };
 		8A46919F6D00801775872B5B355B292E /* Pods-SLMS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SLMS.debug.xcconfig"; sourceTree = "<group>"; };
-		8B9AB703BDCA7C3A2CFB2B90104053C1 /* BackendlessGeoQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BackendlessGeoQuery.h; path = SDK/lib/backendless/include/BackendlessGeoQuery.h; sourceTree = "<group>"; };
-		8C26A93C8808A060F5EEB8FBCC08062D /* HashMap.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HashMap.h; path = SDK/lib/backendless/include/HashMap.h; sourceTree = "<group>"; };
-		92B364C4C0F422EB8DDA8513A15D49C4 /* IPendingServiceCallback.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IPendingServiceCallback.h; path = SDK/lib/CommLibiOS/include/IPendingServiceCallback.h; sourceTree = "<group>"; };
-		92C51CD3862B229B9C13DD56719620CA /* error.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = error.h; path = "SDK/lib/libav-11.4/include/libavutil/error.h"; sourceTree = "<group>"; };
-		940522C06B100B903271E4FCA4CF079A /* avio.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = avio.h; path = "SDK/lib/libav-11.4/include/libavformat/avio.h"; sourceTree = "<group>"; };
-		940E483722EDA4B2C006B4245C368619 /* AMFSerializer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMFSerializer.h; path = SDK/lib/CommLibiOS/include/AMFSerializer.h; sourceTree = "<group>"; };
-		98ED950AC9D10EE3C5EB2CCFB660F964 /* speex_header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = speex_header.h; path = "SDK/lib/speex-1.2rc2/include/speex_header.h"; sourceTree = "<group>"; };
-		98F85AB5AB3688DD789715E8DB608106 /* speex_callbacks.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = speex_callbacks.h; path = "SDK/lib/speex-1.2rc2/include/speex_callbacks.h"; sourceTree = "<group>"; };
-		98FDAA13502EA9E2AD594AB419FE230C /* Onboard-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Onboard-prefix.pch"; sourceTree = "<group>"; };
-		9C382239B1EADC4CB8C0DF2DE729066B /* Presence.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Presence.h; path = SDK/lib/backendless/include/Presence.h; sourceTree = "<group>"; };
-		9F16D8A7CCB53A9CFF75D40465CE578D /* MediaStreamPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MediaStreamPlayer.h; path = SDK/lib/MediaLibiOS3x/include/MediaStreamPlayer.h; sourceTree = "<group>"; };
-		A1F2D7290E35E39B080D3E6FA53F09ED /* dv_profile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = dv_profile.h; path = "SDK/lib/libav-11.4/include/libavcodec/dv_profile.h"; sourceTree = "<group>"; };
-		A209C9B51C18B7EAC94CCF9624E46000 /* old_pix_fmts.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = old_pix_fmts.h; path = "SDK/lib/libav-11.4/include/libavutil/old_pix_fmts.h"; sourceTree = "<group>"; };
-		A2C08570BC3496E75059D5CB984A96B8 /* PersistenceService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PersistenceService.h; path = SDK/lib/backendless/include/PersistenceService.h; sourceTree = "<group>"; };
-		A2E424F685634AE47A64ADDCFACB613F /* BackendlessFile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BackendlessFile.h; path = SDK/lib/backendless/include/BackendlessFile.h; sourceTree = "<group>"; };
-		A2ECFDD15340E551B4A1A3B62A7D9DB5 /* vaapi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = vaapi.h; path = "SDK/lib/libav-11.4/include/libavcodec/vaapi.h"; sourceTree = "<group>"; };
-		A4839DF2379272C930F806F984A4DFF5 /* AbstractQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AbstractQuery.h; path = SDK/lib/backendless/include/AbstractQuery.h; sourceTree = "<group>"; };
-		A66547C24F47036D672A981B977E2482 /* avfilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = avfilter.h; path = "SDK/lib/libav-11.4/include/libavfilter/avfilter.h"; sourceTree = "<group>"; };
-		A72B90457F8812277EF85DD9841E4CCE /* vdpau.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = vdpau.h; path = "SDK/lib/libav-11.4/include/libavcodec/vdpau.h"; sourceTree = "<group>"; };
-		A7F8330782441CCC8D4DA4CDF1294804 /* downmix_info.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = downmix_info.h; path = "SDK/lib/libav-11.4/include/libavutil/downmix_info.h"; sourceTree = "<group>"; };
-		A8AC4BB1B40A204AB550CE94F7FA8D18 /* GeoFence.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GeoFence.h; path = SDK/lib/backendless/include/GeoFence.h; sourceTree = "<group>"; };
-		A9D6E13A921CD799121A0A1B54052C9B /* BEAnnotation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEAnnotation.h; path = SDK/lib/backendless/include/BEAnnotation.h; sourceTree = "<group>"; };
-		AA65483E977DF8EA8B2501E3CA5CEA67 /* DeviceRegistration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DeviceRegistration.h; path = SDK/lib/backendless/include/DeviceRegistration.h; sourceTree = "<group>"; };
-		AA9E1A9C3FD93A3415B755FDE0678B0B /* buffer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = buffer.h; path = "SDK/lib/libav-11.4/include/libavutil/buffer.h"; sourceTree = "<group>"; };
-		AACA2ACC9FB5561EBFB1BA643DA65BE4 /* adler32.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = adler32.h; path = "SDK/lib/libav-11.4/include/libavutil/adler32.h"; sourceTree = "<group>"; };
-		AACC1D5BD65036E2BB7CA52BB7283C15 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AAE08CE65E88073FF6ECE0D8DE3F00AA /* samplefmt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = samplefmt.h; path = "SDK/lib/libav-11.4/include/libavutil/samplefmt.h"; sourceTree = "<group>"; };
-		AAE8152618C70E3AB0BAE1EC689FE13F /* OnboardingContentViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OnboardingContentViewController.m; path = Source/OnboardingContentViewController.m; sourceTree = "<group>"; };
-		ABBE2D67B949E4DF6E60D365752B4CFB /* BackendlessCacheProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BackendlessCacheProtocol.h; path = SDK/lib/backendless/include/BackendlessCacheProtocol.h; sourceTree = "<group>"; };
-		ADC66245B47671173A3DE11943A1ED27 /* ObjectProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ObjectProperty.h; path = SDK/lib/backendless/include/ObjectProperty.h; sourceTree = "<group>"; };
-		AEE8AD1EE028DA3A24DF169DBED0ABC2 /* imgutils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imgutils.h; path = "SDK/lib/libav-11.4/include/libavutil/imgutils.h"; sourceTree = "<group>"; };
-		B1A097F1BD04C21A4E7E072B23461492 /* vda.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = vda.h; path = "SDK/lib/libav-11.4/include/libavcodec/vda.h"; sourceTree = "<group>"; };
-		B1CF05FEFE45AC85B9509824B6E6A817 /* eval.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = eval.h; path = "SDK/lib/libav-11.4/include/libavutil/eval.h"; sourceTree = "<group>"; };
-		B210E622944826F95BB50B31FB5E356F /* DataStoreFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DataStoreFactory.h; path = SDK/lib/backendless/include/DataStoreFactory.h; sourceTree = "<group>"; };
-		B76253767D120DEDB3FCBE070245CE3D /* dict.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = dict.h; path = "SDK/lib/libav-11.4/include/libavutil/dict.h"; sourceTree = "<group>"; };
-		B7D46CEFE1C461EBA2B49C449AA97810 /* BackendlessEntity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BackendlessEntity.h; path = SDK/lib/backendless/include/BackendlessEntity.h; sourceTree = "<group>"; };
+		8A761EBF78BD06E0F3F2955686DD6C9C /* avfiltergraph.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = avfiltergraph.h; path = "SDK/lib/libav-11.4/include/libavfilter/avfiltergraph.h"; sourceTree = "<group>"; };
+		8B5737DBD377BDAA4C3B413083E00EA9 /* audioconvert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = audioconvert.h; path = "SDK/lib/libav-11.4/include/libavutil/audioconvert.h"; sourceTree = "<group>"; };
+		8B7560B9063464A54C831DD1DAC3FB32 /* TextFieldEffects-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TextFieldEffects-prefix.pch"; sourceTree = "<group>"; };
+		8D69C9EBE9F4763D23ADB8D2BCA7A9A6 /* SwiftyButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyButton.modulemap; sourceTree = "<group>"; };
+		8DB6159222920025D0E2D0AB05A74A0D /* Onboard-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Onboard-prefix.pch"; sourceTree = "<group>"; };
+		8DB928AD597631C14B26902C48DDD518 /* BEAnnotation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEAnnotation.h; path = SDK/lib/backendless/include/BEAnnotation.h; sourceTree = "<group>"; };
+		8DF3596624BEA97DB194BDE4C485A8F4 /* TextFieldEffects.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = TextFieldEffects.modulemap; sourceTree = "<group>"; };
+		8EE402988D50A6D3F08B57F30CD936C4 /* Backendless.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Backendless.h; path = SDK/lib/backendless/include/Backendless.h; sourceTree = "<group>"; };
+		91C64A34D9A166A54106F54D4C333EAB /* x264_config.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = x264_config.h; path = SDK/lib/x264/include/x264_config.h; sourceTree = "<group>"; };
+		92189BC07F71C301FA777968115442C4 /* MessagingService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MessagingService.h; path = SDK/lib/backendless/include/MessagingService.h; sourceTree = "<group>"; };
+		930D7F933EEE90D28BFEE31BC10C2BCD /* swscale.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = swscale.h; path = "SDK/lib/libav-11.4/include/libswscale/swscale.h"; sourceTree = "<group>"; };
+		93D18C51F36CD7C13129645053034DE9 /* IAttributeStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IAttributeStore.h; path = SDK/lib/CommLibiOS/include/IAttributeStore.h; sourceTree = "<group>"; };
+		941CF1DA6CFFE6B023F03ADF23DDB87A /* avformat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = avformat.h; path = "SDK/lib/libav-11.4/include/libavformat/avformat.h"; sourceTree = "<group>"; };
+		94C1B69CB234A0A9C2256DF452C2C4AE /* xtea.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xtea.h; path = "SDK/lib/libav-11.4/include/libavutil/xtea.h"; sourceTree = "<group>"; };
+		950CD7D5742EE1B57658651EAC5A3641 /* MPMediaEncoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPMediaEncoder.h; path = SDK/lib/MediaLibiOS3x/include/MPMediaEncoder.h; sourceTree = "<group>"; };
+		958772891DA53EF5A82ED1CE1C2CE726 /* BackendlessCacheProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BackendlessCacheProtocol.h; path = SDK/lib/backendless/include/BackendlessCacheProtocol.h; sourceTree = "<group>"; };
+		95930D1442051CAA6163AD7B55F0EBCA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95EF5666F4CD2C9DCBB8F553C685219C /* Pods_SLMS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SLMS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97A8E6F2390013F549A6646FD4BA7E2A /* PureLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PureLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		98917C53AAC195F948750EA104E5DD31 /* buffersink.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = buffersink.h; path = "SDK/lib/libav-11.4/include/libavfilter/buffersink.h"; sourceTree = "<group>"; };
+		9899BA01F0A20113322A610D5E3377E2 /* version.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = version.h; path = "SDK/lib/libav-11.4/include/libavformat/version.h"; sourceTree = "<group>"; };
+		98BFEF8D15FE5859525492FE54C2DC30 /* FlashorbBinaryWriter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlashorbBinaryWriter.h; path = SDK/lib/CommLibiOS/include/FlashorbBinaryWriter.h; sourceTree = "<group>"; };
+		9C89426EA06D35AD1FCE9CC62D4D5225 /* PureLayout+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PureLayout+Internal.h"; path = "PureLayout/PureLayout/PureLayout+Internal.h"; sourceTree = "<group>"; };
+		9CA656334022447F4233F52D05B532F9 /* BackendlessCachePolicy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BackendlessCachePolicy.h; path = SDK/lib/backendless/include/BackendlessCachePolicy.h; sourceTree = "<group>"; };
+		9CC0B168941C8BF0CCF1A9A5C476C79C /* PublishOptions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PublishOptions.h; path = SDK/lib/backendless/include/PublishOptions.h; sourceTree = "<group>"; };
+		A2D80E6E8FB96C843E9EEA32D7544BDE /* Presence.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Presence.h; path = SDK/lib/backendless/include/Presence.h; sourceTree = "<group>"; };
+		A36E9C66E57B223C184CE949E6080EFD /* OnboardingContentViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OnboardingContentViewController.h; path = Source/OnboardingContentViewController.h; sourceTree = "<group>"; };
+		A4F175E30D3BDA9BB0047D923DE5ECB2 /* speex_types.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = speex_types.h; path = "SDK/lib/speex-1.2rc2/include/speex_types.h"; sourceTree = "<group>"; };
+		A5559698A8E7B8394DAD2E68977E4E28 /* log.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = log.h; path = "SDK/lib/libav-11.4/include/libavutil/log.h"; sourceTree = "<group>"; };
+		A6EF834A07390C0C94FA9E006614FD5E /* buffer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = buffer.h; path = "SDK/lib/libav-11.4/include/libavutil/buffer.h"; sourceTree = "<group>"; };
+		A7B97B8DD85C6348445A5808C0DA8CDF /* WeborbClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WeborbClient.h; path = SDK/lib/CommLibiOS/include/WeborbClient.h; sourceTree = "<group>"; };
+		A960435C93F192A446D14C63F2C0785D /* IDataStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IDataStore.h; path = SDK/lib/backendless/include/IDataStore.h; sourceTree = "<group>"; };
+		A9F9556811CC02513D84F6CA9376C2F7 /* RTMPClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RTMPClient.h; path = SDK/lib/CommLibiOS/include/RTMPClient.h; sourceTree = "<group>"; };
+		AA746934B0E77ACA2BE406345AAEB7C0 /* HoshiTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HoshiTextField.swift; path = TextFieldEffects/TextFieldEffects/HoshiTextField.swift; sourceTree = "<group>"; };
+		AA98650B98030FFAED798161A7083299 /* avio.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = avio.h; path = "SDK/lib/libav-11.4/include/libavformat/avio.h"; sourceTree = "<group>"; };
+		ADEE0B487D2DBD476A68EF524DB89271 /* BinaryStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BinaryStream.h; path = SDK/lib/CommLibiOS/include/BinaryStream.h; sourceTree = "<group>"; };
+		AFADCE11161D7E3DAD244F0127014263 /* Logger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Logger.h; path = SDK/lib/backendless/include/Logger.h; sourceTree = "<group>"; };
+		B0FE1E8505401ECF825A99EB2065D52B /* DEBUG.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DEBUG.h; path = SDK/lib/CommLibiOS/include/DEBUG.h; sourceTree = "<group>"; };
+		B13EA1311E7025C5DD651E1BD2D35129 /* OnboardingViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OnboardingViewController.m; path = Source/OnboardingViewController.m; sourceTree = "<group>"; };
+		B1E4F41520501D098878E172C9E51DEA /* hmac.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = hmac.h; path = "SDK/lib/libav-11.4/include/libavutil/hmac.h"; sourceTree = "<group>"; };
+		B1E761AC7D508A7079289FE7BCFAB73F /* MessageStatus.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MessageStatus.h; path = SDK/lib/backendless/include/MessageStatus.h; sourceTree = "<group>"; };
+		B239B94DF7F7625385A104FF4647DB11 /* PureLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PureLayout-dummy.m"; sourceTree = "<group>"; };
+		B8155D3A785E17D2C2A293A2AA69C305 /* IAtomicCounters.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IAtomicCounters.h; path = SDK/lib/backendless/include/IAtomicCounters.h; sourceTree = "<group>"; };
+		B885B80532566CC9E57104DF15849414 /* frame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = frame.h; path = "SDK/lib/libav-11.4/include/libavutil/frame.h"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BA72BA87404E6D0E09EF3F5E52448826 /* UserProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UserProperty.h; path = SDK/lib/backendless/include/UserProperty.h; sourceTree = "<group>"; };
-		BCF68527F65DE6B9303C48288699A1EF /* Types.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Types.h; path = SDK/lib/CommLibiOS/include/Types.h; sourceTree = "<group>"; };
-		BD4B827E30067FFF6A7354216AD9F057 /* LocationTracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LocationTracker.h; path = SDK/lib/backendless/include/LocationTracker.h; sourceTree = "<group>"; };
-		BF67B95411D624D54B6608D2F0EB33EB /* speex_bits.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = speex_bits.h; path = "SDK/lib/speex-1.2rc2/include/speex_bits.h"; sourceTree = "<group>"; };
-		C08F314F3236A39D5829C5B6728ED604 /* FlashorbBinaryWriter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlashorbBinaryWriter.h; path = SDK/lib/CommLibiOS/include/FlashorbBinaryWriter.h; sourceTree = "<group>"; };
-		C1B56637D0831F7717715E0D8DBA168E /* avresample.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = avresample.h; path = "SDK/lib/libav-11.4/include/libavresample/avresample.h"; sourceTree = "<group>"; };
-		C218AACCE5A0DA745D1562EDCBBC0405 /* Message.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Message.h; path = SDK/lib/backendless/include/Message.h; sourceTree = "<group>"; };
-		C21EEE85951A1ABD33A3942939607763 /* ICacheService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ICacheService.h; path = SDK/lib/backendless/include/ICacheService.h; sourceTree = "<group>"; };
-		C517C9BD5F99BE8D0548EA8DEE864217 /* DataPermission.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DataPermission.h; path = SDK/lib/backendless/include/DataPermission.h; sourceTree = "<group>"; };
-		C6DCED2777B955F35E1C3C7302DB0E52 /* CacheFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CacheFactory.h; path = SDK/lib/backendless/include/CacheFactory.h; sourceTree = "<group>"; };
-		C9B4B156FA2B7A829DC23B9D3A15D05C /* AtomicCounters.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AtomicCounters.h; path = SDK/lib/backendless/include/AtomicCounters.h; sourceTree = "<group>"; };
-		CB13EAFE07D44643255439F6387CF7D8 /* bswap.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = bswap.h; path = "SDK/lib/libav-11.4/include/libavutil/bswap.h"; sourceTree = "<group>"; };
-		CC0D5148E3B8FEBC20A95A5EA468EAEF /* BinaryStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BinaryStream.h; path = SDK/lib/CommLibiOS/include/BinaryStream.h; sourceTree = "<group>"; };
-		CD5E70D619C8BBD6F660B83D8290A1A0 /* mathematics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mathematics.h; path = "SDK/lib/libav-11.4/include/libavutil/mathematics.h"; sourceTree = "<group>"; };
-		CF4B79694C822135B705545737120295 /* MediaService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MediaService.h; path = SDK/lib/backendless/include/MediaService.h; sourceTree = "<group>"; };
-		CF5FCF598A755DAD8BE4FBDB7C4C62F5 /* intfloat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = intfloat.h; path = "SDK/lib/libav-11.4/include/libavutil/intfloat.h"; sourceTree = "<group>"; };
-		D072BE8CAAADD43CB52BD3A2D27FDCFE /* Onboard-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Onboard-umbrella.h"; sourceTree = "<group>"; };
-		D2EDFAC1E73F86BA6635A02AC5019C5F /* version.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = version.h; path = "SDK/lib/libav-11.4/include/libswscale/version.h"; sourceTree = "<group>"; };
-		D50113BA2B298415317BBD6FD1A375E4 /* MediaPublisher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MediaPublisher.h; path = SDK/lib/backendless/include/MediaPublisher.h; sourceTree = "<group>"; };
-		D625052EA333346C2B19243965B7FFAF /* BinaryCodec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BinaryCodec.h; path = SDK/lib/CommLibiOS/include/BinaryCodec.h; sourceTree = "<group>"; };
-		D635D892497BB082B3CF098DC0BD4529 /* AbstractProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AbstractProperty.h; path = SDK/lib/backendless/include/AbstractProperty.h; sourceTree = "<group>"; };
+		BB9006662FCF1F264486FB03D7E061DE /* GeoFence.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GeoFence.h; path = SDK/lib/backendless/include/GeoFence.h; sourceTree = "<group>"; };
+		BC48F641176C97A5CFDC395293222F0F /* VideoPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VideoPlayer.h; path = SDK/lib/MediaLibiOS3x/include/VideoPlayer.h; sourceTree = "<group>"; };
+		BECD497F993B7E2A842B0872412B4C70 /* TextFieldEffects.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TextFieldEffects.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C03D250C8FBEB625D7BEBCEF6370A954 /* JiroTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JiroTextField.swift; path = TextFieldEffects/TextFieldEffects/JiroTextField.swift; sourceTree = "<group>"; };
+		C1158E3B9D18EC6946683E5BEFA49EDE /* imgutils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imgutils.h; path = "SDK/lib/libav-11.4/include/libavutil/imgutils.h"; sourceTree = "<group>"; };
+		C172E8CD33881026E6465EB402D65FB2 /* speex_header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = speex_header.h; path = "SDK/lib/speex-1.2rc2/include/speex_header.h"; sourceTree = "<group>"; };
+		C1D375CD4354CAF76F61B46BDA70372E /* IPendingServiceCallback.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IPendingServiceCallback.h; path = SDK/lib/CommLibiOS/include/IPendingServiceCallback.h; sourceTree = "<group>"; };
+		C243CE435C63FA82A7ED7BD960038F19 /* BackendlessEntity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BackendlessEntity.h; path = SDK/lib/backendless/include/BackendlessEntity.h; sourceTree = "<group>"; };
+		C35976B2546DE4878E9E4EF5F2CEA00F /* SwiftyButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3B4C3B01AE75FF3DBA54803A2E326F4 /* old_pix_fmts.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = old_pix_fmts.h; path = "SDK/lib/libav-11.4/include/libavutil/old_pix_fmts.h"; sourceTree = "<group>"; };
+		C4CAB97D83FD59DFFFAEF5B16E43F08F /* AkiraTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AkiraTextField.swift; path = TextFieldEffects/TextFieldEffects/AkiraTextField.swift; sourceTree = "<group>"; };
+		C54632FBE1FAD0C2B55D6A68D60F763E /* version.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = version.h; path = "SDK/lib/libav-11.4/include/libavresample/version.h"; sourceTree = "<group>"; };
+		C561E5F27A896546AC9A0B14AC70D27C /* Responder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Responder.h; path = SDK/lib/CommLibiOS/include/Responder.h; sourceTree = "<group>"; };
+		C5BF9D457B7650C56A0BB8923E47041C /* md5.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = md5.h; path = "SDK/lib/libav-11.4/include/libavutil/md5.h"; sourceTree = "<group>"; };
+		C63BE11A40C33AC2BCF0CB5C34A369D1 /* audio_fifo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = audio_fifo.h; path = "SDK/lib/libav-11.4/include/libavutil/audio_fifo.h"; sourceTree = "<group>"; };
+		C6AC84B3CF3A0F18FFDD13E4D4A03785 /* MediaStreamPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MediaStreamPlayer.h; path = SDK/lib/MediaLibiOS3x/include/MediaStreamPlayer.h; sourceTree = "<group>"; };
+		C8D9E1169882316A25551061C5E0A77F /* Events.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Events.h; path = SDK/lib/backendless/include/Events.h; sourceTree = "<group>"; };
+		C99AE4C34AF6110499DADB60172D6C6C /* SwiftyButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyButton-umbrella.h"; sourceTree = "<group>"; };
+		CAFDC4FD32941C2BBABAEF076D198034 /* base64.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = base64.h; path = "SDK/lib/libav-11.4/include/libavutil/base64.h"; sourceTree = "<group>"; };
+		CD13B61C7D9E80E52377C76E25DD5D44 /* IServiceCall.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IServiceCall.h; path = SDK/lib/CommLibiOS/include/IServiceCall.h; sourceTree = "<group>"; };
+		D1ADADACA063DD586CEB7DDF611C7A6E /* buffersrc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = buffersrc.h; path = "SDK/lib/libav-11.4/include/libavfilter/buffersrc.h"; sourceTree = "<group>"; };
+		D2F2A4F207C21F57E56790A037A8607E /* AtomicCounters.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AtomicCounters.h; path = SDK/lib/backendless/include/AtomicCounters.h; sourceTree = "<group>"; };
+		D390B085B43858AE9564CCBBF8073D26 /* speex_bits.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = speex_bits.h; path = "SDK/lib/speex-1.2rc2/include/speex_bits.h"; sourceTree = "<group>"; };
+		D507CF0E6AFF951F456A5C4703BBF0B8 /* CustomService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CustomService.h; path = SDK/lib/backendless/include/CustomService.h; sourceTree = "<group>"; };
 		D9938E91A3D62D761605B74A0CA965F2 /* Pods-SLMS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SLMS-dummy.m"; sourceTree = "<group>"; };
-		DA38B0670659748E295AE3A3400590C4 /* GeoCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GeoCategory.h; path = SDK/lib/backendless/include/GeoCategory.h; sourceTree = "<group>"; };
 		DA5B52EE158C24CAF50F37502BB3E86D /* Pods-SLMS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SLMS-umbrella.h"; sourceTree = "<group>"; };
-		DAE0054FA943F323297B929A71A645A5 /* BackendlessSimpleQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BackendlessSimpleQuery.h; path = SDK/lib/backendless/include/BackendlessSimpleQuery.h; sourceTree = "<group>"; };
-		DB4BAF74B430C9858065022E5D468F47 /* avconfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = avconfig.h; path = "SDK/lib/libav-11.4/include/libavutil/avconfig.h"; sourceTree = "<group>"; };
-		DBE3705192FF75381B61834382A0330D /* BroadcastStreamClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BroadcastStreamClient.h; path = SDK/lib/MediaLibiOS3x/include/BroadcastStreamClient.h; sourceTree = "<group>"; };
-		DEDF69316170A5AF84C6269EFBC79AC1 /* avassert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = avassert.h; path = "SDK/lib/libav-11.4/include/libavutil/avassert.h"; sourceTree = "<group>"; };
-		E05AA6A962CB372BDCB9B59C63D40014 /* pixfmt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pixfmt.h; path = "SDK/lib/libav-11.4/include/libavutil/pixfmt.h"; sourceTree = "<group>"; };
-		E1436897ECF2FB41A642327EBCC7E1E0 /* avformat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = avformat.h; path = "SDK/lib/libav-11.4/include/libavformat/avformat.h"; sourceTree = "<group>"; };
-		E1D77B18CFA8E3242375426D1BA23F3F /* version.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = version.h; path = "SDK/lib/libav-11.4/include/libavdevice/version.h"; sourceTree = "<group>"; };
-		E204A11B04A68805518AA33D74868F75 /* stereo3d.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = stereo3d.h; path = "SDK/lib/libav-11.4/include/libavutil/stereo3d.h"; sourceTree = "<group>"; };
-		E2226DC217FDB15235A8F4C1B96C1956 /* OnboardingViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OnboardingViewController.h; path = Source/OnboardingViewController.h; sourceTree = "<group>"; };
-		E5E4418031582A8A1E6A3EF510DC6352 /* IDataStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IDataStore.h; path = SDK/lib/backendless/include/IDataStore.h; sourceTree = "<group>"; };
-		E60BBB0D669DDE20F8BFD76BC4015577 /* DeliveryOptions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DeliveryOptions.h; path = SDK/lib/backendless/include/DeliveryOptions.h; sourceTree = "<group>"; };
-		E76F7C416B35B4F545BE51DE804E41D0 /* Events.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Events.h; path = SDK/lib/backendless/include/Events.h; sourceTree = "<group>"; };
-		E8495D2545555A333CA1AAA47767A4AF /* MPMediaDecoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPMediaDecoder.h; path = SDK/lib/MediaLibiOS3x/include/MPMediaDecoder.h; sourceTree = "<group>"; };
-		EB74B728CBEBCB68AAF734B4E3E903C4 /* swscale.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = swscale.h; path = "SDK/lib/libav-11.4/include/libswscale/swscale.h"; sourceTree = "<group>"; };
-		EBD01DC082CB4EE687279E91D3DE7305 /* WeborbClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WeborbClient.h; path = SDK/lib/CommLibiOS/include/WeborbClient.h; sourceTree = "<group>"; };
-		ECE53B29871320BC8BBE8EABFB0635AC /* Onboard.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Onboard.modulemap; sourceTree = "<group>"; };
-		ED50B656B1CA675CDC7E6528B38D9DD1 /* speex_types.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = speex_types.h; path = "SDK/lib/speex-1.2rc2/include/speex_types.h"; sourceTree = "<group>"; };
-		F1F0DD581BDC762EF3B75B43F36F98D0 /* avutil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = avutil.h; path = "SDK/lib/libav-11.4/include/libavutil/avutil.h"; sourceTree = "<group>"; };
-		F2CBD4798AF84860844EE031B28F1493 /* Onboard.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Onboard.xcconfig; sourceTree = "<group>"; };
-		F2EFB636BC4E3A295A7BDC0D091AE6EF /* x264_config.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = x264_config.h; path = SDK/lib/x264/include/x264_config.h; sourceTree = "<group>"; };
-		F63F5AE3CB5E8CC74A8A7CD3283BE459 /* crc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crc.h; path = "SDK/lib/libav-11.4/include/libavutil/crc.h"; sourceTree = "<group>"; };
-		F703D0DB3079CA62FF25E7A215C6C8B4 /* xvmc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xvmc.h; path = "SDK/lib/libav-11.4/include/libavcodec/xvmc.h"; sourceTree = "<group>"; };
-		F7E1AFEBD0595F4A0278E7EA1E161B57 /* display.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = display.h; path = "SDK/lib/libav-11.4/include/libavutil/display.h"; sourceTree = "<group>"; };
+		DA819A0D00B37BA286403549C0F1DF0A /* TextFieldEffects-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TextFieldEffects-umbrella.h"; sourceTree = "<group>"; };
+		DB127C6BE45C85D0CFBAEE920128FFD3 /* adler32.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = adler32.h; path = "SDK/lib/libav-11.4/include/libavutil/adler32.h"; sourceTree = "<group>"; };
+		DBCA91B4848733CB7F2B4E1A66482B3A /* OnboardingViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OnboardingViewController.h; path = Source/OnboardingViewController.h; sourceTree = "<group>"; };
+		DBCEDC743E39A10E82F1CB8CB51FCA65 /* MediaPublisher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MediaPublisher.h; path = SDK/lib/backendless/include/MediaPublisher.h; sourceTree = "<group>"; };
+		DDBAAC85C078E5E287EFFE658D9168E4 /* blowfish.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = blowfish.h; path = "SDK/lib/libav-11.4/include/libavutil/blowfish.h"; sourceTree = "<group>"; };
+		DE43118AD76E9874111D44431A602EF4 /* version.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = version.h; path = "SDK/lib/libav-11.4/include/libswscale/version.h"; sourceTree = "<group>"; };
+		DE58177CBCC6A0006185E990F279D0F9 /* OnboardingContentViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OnboardingContentViewController.m; path = Source/OnboardingContentViewController.m; sourceTree = "<group>"; };
+		DEA208565ED3CB4F5CEFFD498CB79079 /* Message.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Message.h; path = SDK/lib/backendless/include/Message.h; sourceTree = "<group>"; };
+		DF98732BF900642BB20CCA6CAF26212F /* MediaPlaybackOptions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MediaPlaybackOptions.h; path = SDK/lib/backendless/include/MediaPlaybackOptions.h; sourceTree = "<group>"; };
+		DF9F38EAA3B4422A6081D262F2102D51 /* NSArray+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+PureLayout.m"; path = "PureLayout/PureLayout/NSArray+PureLayout.m"; sourceTree = "<group>"; };
+		DFCA1E5719294B639AA78064CC14BB22 /* downmix_info.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = downmix_info.h; path = "SDK/lib/libav-11.4/include/libavutil/downmix_info.h"; sourceTree = "<group>"; };
+		E1CEE70EFD9D921A314AF2E030A4362D /* channel_layout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = channel_layout.h; path = "SDK/lib/libav-11.4/include/libavutil/channel_layout.h"; sourceTree = "<group>"; };
+		E220051B5C3A450D7C9B3878D2440122 /* dv_profile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = dv_profile.h; path = "SDK/lib/libav-11.4/include/libavcodec/dv_profile.h"; sourceTree = "<group>"; };
+		E30201160E3288ED030EF4D6178AE614 /* QueryOptions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QueryOptions.h; path = SDK/lib/backendless/include/QueryOptions.h; sourceTree = "<group>"; };
+		E35E82DD5B9D6174ABC30FFD6C5DAB41 /* lfg.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = lfg.h; path = "SDK/lib/libav-11.4/include/libavutil/lfg.h"; sourceTree = "<group>"; };
+		E3BAD42033641DBE85CDAC9395F85141 /* HashMap.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HashMap.h; path = SDK/lib/backendless/include/HashMap.h; sourceTree = "<group>"; };
+		E5AB843DCF6E7593F2FCAE1274B59E7E /* Onboard.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Onboard.modulemap; sourceTree = "<group>"; };
+		E69C6BFCF078C707CA6D91DF92FCCA57 /* ALView+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ALView+PureLayout.h"; path = "PureLayout/PureLayout/ALView+PureLayout.h"; sourceTree = "<group>"; };
+		E715478F91DC9738109A8A3B0923AAC4 /* GeoPoint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GeoPoint.h; path = SDK/lib/backendless/include/GeoPoint.h; sourceTree = "<group>"; };
+		E76511B4BC09FB3EAEADE8D109F9E469 /* AMFSerializer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMFSerializer.h; path = SDK/lib/CommLibiOS/include/AMFSerializer.h; sourceTree = "<group>"; };
+		E84C999ABBE32F73727284A89F246F05 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		EC9C03E54551424156E0D7E0E53F2448 /* IsaoTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IsaoTextField.swift; path = TextFieldEffects/TextFieldEffects/IsaoTextField.swift; sourceTree = "<group>"; };
+		ECD13AECAC7E7D005202D4D6BE4E081F /* BEFileInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEFileInfo.h; path = SDK/lib/backendless/include/BEFileInfo.h; sourceTree = "<group>"; };
+		ED09AA131DF1E4745BDB013CB4A80B99 /* intfloat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = intfloat.h; path = "SDK/lib/libav-11.4/include/libavutil/intfloat.h"; sourceTree = "<group>"; };
+		ED27DA2FB4BBFF759BBDD2E08B13CD76 /* ICallback.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ICallback.h; path = SDK/lib/backendless/include/ICallback.h; sourceTree = "<group>"; };
+		ED98ACF0010EAF1717A42BEBFB9F105F /* BECollectionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BECollectionView.h; path = SDK/lib/backendless/include/BECollectionView.h; sourceTree = "<group>"; };
+		EF48598232D7B364848E052F266D31F4 /* DataPermission.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DataPermission.h; path = SDK/lib/backendless/include/DataPermission.h; sourceTree = "<group>"; };
+		EF6D4852E8580CD5D4355E72379ED580 /* avresample.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = avresample.h; path = "SDK/lib/libav-11.4/include/libavresample/avresample.h"; sourceTree = "<group>"; };
+		EFA1DDD1F67E6AB9B6AF0FEF0AD7ED14 /* PureLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PureLayout.modulemap; sourceTree = "<group>"; };
+		F12591C920A15E1629FE367724CAC2DB /* BackendlessFile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BackendlessFile.h; path = SDK/lib/backendless/include/BackendlessFile.h; sourceTree = "<group>"; };
+		F301402FD41F03CFAC4355D64B9D801F /* MadokaTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MadokaTextField.swift; path = TextFieldEffects/TextFieldEffects/MadokaTextField.swift; sourceTree = "<group>"; };
+		F3A1F00BB831BDCC0822ED44F90857E3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		F622EAA2AEFB51D98B6822F8201DDF1B /* aes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = aes.h; path = "SDK/lib/libav-11.4/include/libavutil/aes.h"; sourceTree = "<group>"; };
+		F65B3C4285A4993B73085980D334388D /* vaapi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = vaapi.h; path = "SDK/lib/libav-11.4/include/libavcodec/vaapi.h"; sourceTree = "<group>"; };
 		F7F1F3E63B4B90D46A0703FFF98945FB /* Pods-SLMS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SLMS-resources.sh"; sourceTree = "<group>"; };
-		F8F2134EAE205A92858D1C911FB76916 /* mem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mem.h; path = "SDK/lib/libav-11.4/include/libavutil/mem.h"; sourceTree = "<group>"; };
-		F96EAC15DF88CEB2C149A8451478BB0F /* speex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = speex.h; path = "SDK/lib/speex-1.2rc2/include/speex.h"; sourceTree = "<group>"; };
-		F9AB8E00BBAC68B0CADC6B496B7D4D19 /* MessageStatus.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MessageStatus.h; path = SDK/lib/backendless/include/MessageStatus.h; sourceTree = "<group>"; };
-		FA18248C4F321A975C488A32483DACCA /* Logging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Logging.h; path = SDK/lib/backendless/include/Logging.h; sourceTree = "<group>"; };
-		FB3F6BA70133D37EE6EEA7A0DDD61649 /* md5.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = md5.h; path = "SDK/lib/libav-11.4/include/libavutil/md5.h"; sourceTree = "<group>"; };
+		F8638A5A45DBCBDC1B6BFFA0A5802410 /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+PureLayout.h"; path = "PureLayout/PureLayout/NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
+		F976E98D685049211917949EE61A48A1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA1C37F3A57C3AD5752CE67FB8676318 /* IMediaStreamer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IMediaStreamer.h; path = SDK/lib/backendless/include/IMediaStreamer.h; sourceTree = "<group>"; };
+		FB1A7EB4CC80AFF230E9B1B319553D06 /* Onboard-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Onboard-umbrella.h"; sourceTree = "<group>"; };
+		FB1DBE462E12D9B2FE52B498401853FF /* avutil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = avutil.h; path = "SDK/lib/libav-11.4/include/libavutil/avutil.h"; sourceTree = "<group>"; };
+		FC560DBD0849BCF3623FB99AA1905AD3 /* IPersistable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IPersistable.h; path = SDK/lib/CommLibiOS/include/IPersistable.h; sourceTree = "<group>"; };
+		FC6C268F9EA04B7F2688DC0CA8ACDF76 /* IClientSharedObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IClientSharedObject.h; path = SDK/lib/CommLibiOS/include/IClientSharedObject.h; sourceTree = "<group>"; };
+		FF60FF35C27D74B497D82449AE8B48D1 /* UserProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UserProperty.h; path = SDK/lib/backendless/include/UserProperty.h; sourceTree = "<group>"; };
+		FFC21F2D2685B74551B5B973F72622FB /* CacheFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CacheFactory.h; path = SDK/lib/backendless/include/CacheFactory.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0B6B99BE53B6B0FE279AA6120E0DF414 /* Frameworks */ = {
+		0A62AF543793E89C521E23D0422E4C63 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				092D1759BB12361577794A64D581E3BE /* Foundation.framework in Frameworks */,
+				601876EFF358C032D62A717CDC7E904E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,25 +349,96 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4D04579D09CEBB1E6A0CDAE42ABA5E54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AADE8E67970C8E4014C1F76D237D8D8 /* Foundation.framework in Frameworks */,
+				6157AD608B941AA8D79893A4FA22E31C /* PureLayout.framework in Frameworks */,
+				DD714A0A99DC26B3E210C155EF2E5E5F /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B62267AD8795451ABCA11A2C4D821C98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A125F9B95E0B7A89BDDC0127F283B974 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2B9FB9641018C5D7721FB679A7C2EE4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				873BAF5855308E533764077671DB748C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		47DC41C9B617B816525C67DF8AE517F0 /* Products */ = {
+		069C739C081DDA7097AB809F2EDC85E7 /* SwiftyButton */ = {
 			isa = PBXGroup;
 			children = (
-				535A08B19FE5654977740CA5E4EB0572 /* Onboard.framework */,
-				49AC32D852C6B7996A09D417BB52DB50 /* Pods_SLMS.framework */,
+				6DFC825B1CFF30BBCCC1CD448AE71253 /* SwiftyButton.swift */,
+				7A4792A26DEA52E1B7D740B13BBD2358 /* SwiftyButton+ResizableImage.swift */,
+				B87FC1CFBA891428203BFDDE941E15ED /* CustomContent */,
+				8C38A954D28D589B7782B2E8FE53A73D /* Support Files */,
+			);
+			path = SwiftyButton;
+			sourceTree = "<group>";
+		};
+		269D47DE14933A4CD27CE4918934BCD4 /* Onboard */ = {
+			isa = PBXGroup;
+			children = (
+				A36E9C66E57B223C184CE949E6080EFD /* OnboardingContentViewController.h */,
+				DE58177CBCC6A0006185E990F279D0F9 /* OnboardingContentViewController.m */,
+				DBCA91B4848733CB7F2B4E1A66482B3A /* OnboardingViewController.h */,
+				B13EA1311E7025C5DD651E1BD2D35129 /* OnboardingViewController.m */,
+				4B0937E0FE01F361CAB702DE5708FB55 /* Support Files */,
+			);
+			path = Onboard;
+			sourceTree = "<group>";
+		};
+		378B194B6BFD3203FDD03511264C9D2D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2C77314A259FC6756DA71603A82926A4 /* Onboard.framework */,
+				95EF5666F4CD2C9DCBB8F553C685219C /* Pods_SLMS.framework */,
+				6B1E0BE8A500EE1CD26CEB7CE0E6A574 /* PureLayout.framework */,
+				C35976B2546DE4878E9E4EF5F2CEA00F /* SwiftyButton.framework */,
+				BECD497F993B7E2A842B0872412B4C70 /* TextFieldEffects.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5CCAFE6329CAB792C48A7B460B2BD7DC /* Pods */ = {
+		3994B905F1524F6F5DE46FA9EA6E42FF /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E29DDC7178983874B43A1BD6E242251E /* Backendless-ios-SDK */,
-				79372A2750E95EB3261BB347E52F4307 /* Onboard */,
+				44F6505F7B42B46DD5204502BDED6AE3 /* Info.plist */,
+				8DF3596624BEA97DB194BDE4C485A8F4 /* TextFieldEffects.modulemap */,
+				619DA57A0902410E1CB2432B93DD8274 /* TextFieldEffects.xcconfig */,
+				75705978B5BAF75620F4211E9732F185 /* TextFieldEffects-dummy.m */,
+				8B7560B9063464A54C831DD1DAC3FB32 /* TextFieldEffects-prefix.pch */,
+				DA819A0D00B37BA286403549C0F1DF0A /* TextFieldEffects-umbrella.h */,
 			);
-			name = Pods;
+			name = "Support Files";
+			path = "../Target Support Files/TextFieldEffects";
+			sourceTree = "<group>";
+		};
+		4B0937E0FE01F361CAB702DE5708FB55 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				66B45C8FCED79B3217A7272D1A62CC64 /* Info.plist */,
+				E5AB843DCF6E7593F2FCAE1274B59E7E /* Onboard.modulemap */,
+				14D268EC749057C1BE7778B7237DB93E /* Onboard.xcconfig */,
+				12D90747A9E5BA9E84D064599754EE3A /* Onboard-dummy.m */,
+				8DB6159222920025D0E2D0AB05A74A0D /* Onboard-prefix.pch */,
+				FB1A7EB4CC80AFF230E9B1B319553D06 /* Onboard-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Onboard";
 			sourceTree = "<group>";
 		};
 		7896EE496DD61E2B244F23FDF911F0DD /* Pods-SLMS */ = {
@@ -282,234 +459,293 @@
 			path = "Target Support Files/Pods-SLMS";
 			sourceTree = "<group>";
 		};
-		79372A2750E95EB3261BB347E52F4307 /* Onboard */ = {
+		7B8692115B83CF0603FBB14AC029C28F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				18164DA33F15B274CD77734C71B3A1EF /* OnboardingContentViewController.h */,
-				AAE8152618C70E3AB0BAE1EC689FE13F /* OnboardingContentViewController.m */,
-				E2226DC217FDB15235A8F4C1B96C1956 /* OnboardingViewController.h */,
-				7BE9EB850D18DDA7774D1400B3955FE2 /* OnboardingViewController.m */,
-				C354DFCE8CC82CAF1BE94645BCAFE33D /* Support Files */,
+				97A8E6F2390013F549A6646FD4BA7E2A /* PureLayout.framework */,
+				B2E7B2EF9DD0B956350A9EC6A684378D /* iOS */,
 			);
-			path = Onboard;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				5CCAFE6329CAB792C48A7B460B2BD7DC /* Pods */,
-				47DC41C9B617B816525C67DF8AE517F0 /* Products */,
+				7B8692115B83CF0603FBB14AC029C28F /* Frameworks */,
+				C4A3B0A6FEBAECD38B99532FFA22F0BF /* Pods */,
+				378B194B6BFD3203FDD03511264C9D2D /* Products */,
 				F47316A0DEB660ABF557A6EBE9470C3A /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		8BB7611CB74EC23A9591C2386EF008A7 /* TextFieldEffects */ = {
 			isa = PBXGroup;
 			children = (
-				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
+				C4CAB97D83FD59DFFFAEF5B16E43F08F /* AkiraTextField.swift */,
+				AA746934B0E77ACA2BE406345AAEB7C0 /* HoshiTextField.swift */,
+				EC9C03E54551424156E0D7E0E53F2448 /* IsaoTextField.swift */,
+				C03D250C8FBEB625D7BEBCEF6370A954 /* JiroTextField.swift */,
+				8955D320828A38D8D3CA8EAEF32A2DC4 /* KaedeTextField.swift */,
+				F301402FD41F03CFAC4355D64B9D801F /* MadokaTextField.swift */,
+				84B64ED51E6C44A3AA44EA1AE9A58139 /* MinoruTextField.swift */,
+				3FE1C56BDD03E0B5B204F9AB6DB741C3 /* TextFieldsEffects.swift */,
+				5815562E275E29C50C96B752B5D5F8A1 /* YokoTextField.swift */,
+				78B70800ECA068180BB29E8BCA7289B7 /* YoshikoTextField.swift */,
+				3994B905F1524F6F5DE46FA9EA6E42FF /* Support Files */,
 			);
-			name = Frameworks;
+			path = TextFieldEffects;
 			sourceTree = "<group>";
 		};
-		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
+		8C38A954D28D589B7782B2E8FE53A73D /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
+				95930D1442051CAA6163AD7B55F0EBCA /* Info.plist */,
+				8D69C9EBE9F4763D23ADB8D2BCA7A9A6 /* SwiftyButton.modulemap */,
+				85A098C62DDA2FD0DE0A9D39EE11311F /* SwiftyButton.xcconfig */,
+				14C59B72F6590F76CE605B524BECDD36 /* SwiftyButton-dummy.m */,
+				6B3E9A72E674C39BCDC4B14E21F9A1FC /* SwiftyButton-prefix.pch */,
+				C99AE4C34AF6110499DADB60172D6C6C /* SwiftyButton-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyButton";
+			sourceTree = "<group>";
+		};
+		A99298133584C53B47EB7D525EEEBE54 /* PureLayout */ = {
+			isa = PBXGroup;
+			children = (
+				E69C6BFCF078C707CA6D91DF92FCCA57 /* ALView+PureLayout.h */,
+				127014AAEFB899379CB0F13980443DB6 /* ALView+PureLayout.m */,
+				127B9DA417901B4332AAE1A5B5A107D1 /* NSArray+PureLayout.h */,
+				DF9F38EAA3B4422A6081D262F2102D51 /* NSArray+PureLayout.m */,
+				F8638A5A45DBCBDC1B6BFFA0A5802410 /* NSLayoutConstraint+PureLayout.h */,
+				68D6F1AD231134B8C5CE508E775C705C /* NSLayoutConstraint+PureLayout.m */,
+				1148D3FE7E3720FCEF8B3FA7F0DC3456 /* PureLayout.h */,
+				9C89426EA06D35AD1FCE9CC62D4D5225 /* PureLayout+Internal.h */,
+				3DFBC0F183ABDD92E7B0A44C3975E207 /* PureLayoutDefines.h */,
+				EEA1FBA7C1886A7B063C4F66BBE4571D /* Support Files */,
+			);
+			path = PureLayout;
+			sourceTree = "<group>";
+		};
+		B2E7B2EF9DD0B956350A9EC6A684378D /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				E84C999ABBE32F73727284A89F246F05 /* Foundation.framework */,
+				F3A1F00BB831BDCC0822ED44F90857E3 /* UIKit.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		C354DFCE8CC82CAF1BE94645BCAFE33D /* Support Files */ = {
+		B87FC1CFBA891428203BFDDE941E15ED /* CustomContent */ = {
 			isa = PBXGroup;
 			children = (
-				AACC1D5BD65036E2BB7CA52BB7283C15 /* Info.plist */,
-				ECE53B29871320BC8BBE8EABFB0635AC /* Onboard.modulemap */,
-				F2CBD4798AF84860844EE031B28F1493 /* Onboard.xcconfig */,
-				5E0891B794B9C7907845220F4351F8DF /* Onboard-dummy.m */,
-				98FDAA13502EA9E2AD594AB419FE230C /* Onboard-prefix.pch */,
-				D072BE8CAAADD43CB52BD3A2D27FDCFE /* Onboard-umbrella.h */,
+				4C2108029C85229A17EEE94311001033 /* SwiftyCustomContentButton.swift */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/Onboard";
+			name = CustomContent;
 			sourceTree = "<group>";
 		};
-		E29DDC7178983874B43A1BD6E242251E /* Backendless-ios-SDK */ = {
+		C4A3B0A6FEBAECD38B99532FFA22F0BF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D635D892497BB082B3CF098DC0BD4529 /* AbstractProperty.h */,
-				A4839DF2379272C930F806F984A4DFF5 /* AbstractQuery.h */,
-				AACA2ACC9FB5561EBFB1BA643DA65BE4 /* adler32.h */,
-				78266A01F53918B610028E5CC50DB2E1 /* aes.h */,
-				940E483722EDA4B2C006B4245C368619 /* AMFSerializer.h */,
-				C9B4B156FA2B7A829DC23B9D3A15D05C /* AtomicCounters.h */,
-				195B65350D7F3C5BB27B288EE43D9C86 /* AtomicCountersFactory.h */,
-				44C0A80B36F659CA67648027BA3BCB8F /* attributes.h */,
-				650C66F7A563A731D8B77671E02BAD06 /* audio_fifo.h */,
-				3144D9222619212505FAC0D7255CD494 /* audioconvert.h */,
-				DEDF69316170A5AF84C6269EFBC79AC1 /* avassert.h */,
-				46EB14C90D87A1F5D1DFAF10D3837EBF /* avcodec.h */,
-				DB4BAF74B430C9858065022E5D468F47 /* avconfig.h */,
-				21EDB228527CC39F6AAD84F159D32796 /* avdevice.h */,
-				20A9BB3C5267BE8DC14B3B316507AF08 /* avfft.h */,
-				A66547C24F47036D672A981B977E2482 /* avfilter.h */,
-				77B416B417685F191E2B7CE021CA63F1 /* avfiltergraph.h */,
-				E1436897ECF2FB41A642327EBCC7E1E0 /* avformat.h */,
-				940522C06B100B903271E4FCA4CF079A /* avio.h */,
-				C1B56637D0831F7717715E0D8DBA168E /* avresample.h */,
-				085503C1CA750F69BB9AFED9E65F2F4B /* avstring.h */,
-				F1F0DD581BDC762EF3B75B43F36F98D0 /* avutil.h */,
-				6B8418CC31593A484DE445FA8B04CBDB /* Backendless.h */,
-				651B92541B24194B7A59BAAB625BF235 /* Backendless-Bridging-Header.h */,
-				66B90A6F8E988A37896DC97907F5E70C /* Backendless-With-Media-Bridging-Header.h */,
-				48123A546203D87D73510FA9DC7B4D48 /* BackendlessBeacon.h */,
-				86C6353BDEF052ECCFC25C902A0AB1A4 /* BackendlessCachePolicy.h */,
-				ABBE2D67B949E4DF6E60D365752B4CFB /* BackendlessCacheProtocol.h */,
-				5CDBD52EDDB306E516F54E8D3112D4DC /* BackendlessCollection.h */,
-				639BF1217582AF766A469DEBB87B6EE5 /* BackendlessDataQuery.h */,
-				B7D46CEFE1C461EBA2B49C449AA97810 /* BackendlessEntity.h */,
-				A2E424F685634AE47A64ADDCFACB613F /* BackendlessFile.h */,
-				8B9AB703BDCA7C3A2CFB2B90104053C1 /* BackendlessGeoQuery.h */,
-				DAE0054FA943F323297B929A71A645A5 /* BackendlessSimpleQuery.h */,
-				0B66CC089FD5127D2FAD556E9CC91A0E /* BackendlessUser.h */,
-				63A64E7094103ADC0DB02A020127E267 /* base64.h */,
-				A9D6E13A921CD799121A0A1B54052C9B /* BEAnnotation.h */,
-				5738CE9ABCC3CB3EAAF676E60AB15BF4 /* BECollectionView.h */,
-				39CEBA5CE12A364C28386FBCA7C2DF5B /* BEFileInfo.h */,
-				5231DE19937C57B2312185F9B191EF77 /* BEMapView.h */,
-				54B5832AF1BA970D115C4128E27D2CEA /* BESubscription.h */,
-				7286BC44C7860E1C4EEC6DD2F4389AF1 /* BETableView.h */,
-				D625052EA333346C2B19243965B7FFAF /* BinaryCodec.h */,
-				CC0D5148E3B8FEBC20A95A5EA468EAEF /* BinaryStream.h */,
-				19DBBA32A8F0483E407CEC44F76D3CB0 /* blowfish.h */,
-				DBE3705192FF75381B61834382A0330D /* BroadcastStreamClient.h */,
-				CB13EAFE07D44643255439F6387CF7D8 /* bswap.h */,
-				AA9E1A9C3FD93A3415B755FDE0678B0B /* buffer.h */,
-				04B820469C196C8A4DD8AB4494990252 /* buffersink.h */,
-				2B97B8C3890CCD5301D30F98658901A6 /* buffersrc.h */,
-				C6DCED2777B955F35E1C3C7302DB0E52 /* CacheFactory.h */,
-				35C837D1FA4CFE07054FBB611082AA60 /* CacheService.h */,
-				2C32C21E58A8DF54D2245C1C68F753E2 /* channel_layout.h */,
-				61C368135EA199C3B45A7516F82986A5 /* common.h */,
-				20BC66DB8C6F6A0D178F4362810A36A7 /* cpu.h */,
-				F63F5AE3CB5E8CC74A8A7CD3283BE459 /* crc.h */,
-				08D917E4B9F17603F82920956C98E6F5 /* CustomService.h */,
-				C517C9BD5F99BE8D0548EA8DEE864217 /* DataPermission.h */,
-				B210E622944826F95BB50B31FB5E356F /* DataStoreFactory.h */,
-				63697C594EC8D2C682488C5697D9B2FA /* DEBUG.h */,
-				E60BBB0D669DDE20F8BFD76BC4015577 /* DeliveryOptions.h */,
-				AA65483E977DF8EA8B2501E3CA5CEA67 /* DeviceRegistration.h */,
-				B76253767D120DEDB3FCBE070245CE3D /* dict.h */,
-				F7E1AFEBD0595F4A0278E7EA1E161B57 /* display.h */,
-				A7F8330782441CCC8D4DA4CDF1294804 /* downmix_info.h */,
-				A1F2D7290E35E39B080D3E6FA53F09ED /* dv_profile.h */,
-				82367613EEE4764F438124C1142C6353 /* dxva2.h */,
-				92C51CD3862B229B9C13DD56719620CA /* error.h */,
-				B1CF05FEFE45AC85B9509824B6E6A817 /* eval.h */,
-				E76F7C416B35B4F545BE51DE804E41D0 /* Events.h */,
-				794F7FFB80235CCAC758B66F50304E11 /* fifo.h */,
-				23DEE59E4E3D2C4B82982BE2CFB63F0D /* file.h */,
-				5970716444C73F6874E915687F8B721A /* FilePermission.h */,
-				64CC97D61B30725924A9419BCF538CB7 /* FileService.h */,
-				45AFEB3116D2C4B7E1685802092E968A /* FlashorbBinaryReader.h */,
-				C08F314F3236A39D5829C5B6728ED604 /* FlashorbBinaryWriter.h */,
-				04AEC11E15707683B04899BC95767D0A /* frame.h */,
-				DA38B0670659748E295AE3A3400590C4 /* GeoCategory.h */,
-				0C956B9E9321D581E40585E498516D3B /* GeoCluster.h */,
-				A8AC4BB1B40A204AB550CE94F7FA8D18 /* GeoFence.h */,
-				115EC2226CDD73D2B673D30E12217D47 /* GeoPoint.h */,
-				4106057476CF1139AE1EEEA1B89930F4 /* GeoService.h */,
-				8C26A93C8808A060F5EEB8FBCC08062D /* HashMap.h */,
-				2307015DA3F4B5CB9D9ECC2A3BF6D3CD /* hmac.h */,
-				24E54DCD39B80FD427030AB6A65B8FAA /* IAtomicCounters.h */,
-				237F044152B8733DDBE5E9479A67B6F8 /* IAttributeStore.h */,
-				C21EEE85951A1ABD33A3942939607763 /* ICacheService.h */,
-				66822BA94763A32823AA702F2EC46834 /* ICallback.h */,
-				350F6F3E95A9C4F29FD100C66634B308 /* IClientSharedObject.h */,
-				5B0AC8575910E409D211DB8902CBDF9F /* IClientSharedObjectDelegate.h */,
-				E5E4418031582A8A1E6A3EF510DC6352 /* IDataStore.h */,
-				863FF3C93AFBA91E71F0E13547C15156 /* IMediaStreamer.h */,
-				AEE8AD1EE028DA3A24DF169DBED0ABC2 /* imgutils.h */,
-				CF5FCF598A755DAD8BE4FBDB7C4C62F5 /* intfloat.h */,
-				04DB32175793DDC775E911859E03E433 /* intreadwrite.h */,
-				92B364C4C0F422EB8DDA8513A15D49C4 /* IPendingServiceCallback.h */,
-				6ABE927819BB61A79B5F3D16DB4A326F /* IPersistable.h */,
-				51E79685B1C9DC3A3C4B996249753E65 /* IPresenceListener.h */,
-				5562DC60D30A360EE066B2E260929372 /* IRTMProtocol.h */,
-				7A3D9961181EE6D903D91AFFC2A8747A /* IServiceCall.h */,
-				7F0B6342F94B632855E992762B7CABE3 /* ISharedObjectListener.h */,
-				3A639DC6DF3B5B67B2156B6575AD5DD8 /* lfg.h */,
-				BD4B827E30067FFF6A7354216AD9F057 /* LocationTracker.h */,
-				1CA58E8FF3FEB19FD66068FBAA370DC1 /* log.h */,
-				819ABB36C58A964CDD53818F297A6743 /* Logger.h */,
-				FA18248C4F321A975C488A32483DACCA /* Logging.h */,
-				6FAF29FDB7EBCD7E45B1B1071E019DF8 /* macros.h */,
-				CD5E70D619C8BBD6F660B83D8290A1A0 /* mathematics.h */,
-				FB3F6BA70133D37EE6EEA7A0DDD61649 /* md5.h */,
-				5E255B3A241DB07D9DBA231C8F2C6162 /* MediaPlaybackOptions.h */,
-				75B7FAA6ED196ED7842ECD3CA034EFAF /* MediaPlayer.h */,
-				D50113BA2B298415317BBD6FD1A375E4 /* MediaPublisher.h */,
-				7CABA14AF1CE6A72651EDC81EDB2F958 /* MediaPublishOptions.h */,
-				CF4B79694C822135B705545737120295 /* MediaService.h */,
-				9F16D8A7CCB53A9CFF75D40465CE578D /* MediaStreamPlayer.h */,
-				F8F2134EAE205A92858D1C911FB76916 /* mem.h */,
-				2997B2DD40D3FF582DD4B7886E581FCD /* MemoryTicker.h */,
-				C218AACCE5A0DA745D1562EDCBBC0405 /* Message.h */,
-				F9AB8E00BBAC68B0CADC6B496B7D4D19 /* MessageStatus.h */,
-				4B4C37139F6B301998EE47F415973E21 /* MessagingService.h */,
-				79D66174E91027A376C00A84AFCFBE3D /* MPMediaData.h */,
-				E8495D2545555A333CA1AAA47767A4AF /* MPMediaDecoder.h */,
-				1DE8F8A14D154DDFEBCF65C5503C2A69 /* MPMediaEncoder.h */,
-				ADC66245B47671173A3DE11943A1ED27 /* ObjectProperty.h */,
-				A209C9B51C18B7EAC94CCF9624E46000 /* old_pix_fmts.h */,
-				5B3CD65911FB34EB86C1A01389945670 /* opt.h */,
-				46FC30F1ED7153A5264DDA124A6C0283 /* parseutils.h */,
-				A2C08570BC3496E75059D5CB984A96B8 /* PersistenceService.h */,
-				24317955ED96813618D40E6BEAF44CE5 /* pixdesc.h */,
-				E05AA6A962CB372BDCB9B59C63D40014 /* pixfmt.h */,
-				9C382239B1EADC4CB8C0DF2DE729066B /* Presence.h */,
-				0BFE11C1A9213E52FADAE669F7D34934 /* ProtectedBackendlessGeoQuery.h */,
-				841A3700B6B5295BB278E64F1442C228 /* PublishOptions.h */,
-				13974C0CCFB229B4F2B8325ABEEB3513 /* QueryOptions.h */,
-				553C68E2FAE1706D88261946F83CA316 /* random_seed.h */,
-				5EB4E5BC3246902567615CA54ED4A5B1 /* rational.h */,
-				203A882FE2A2E421263D5C2C1A08F5DD /* replaygain.h */,
-				165D3A97A4B4DCBD34E05FC8A726CFD6 /* Responder.h */,
-				2A89E0EBD07103CC81EF97C77586F945 /* RTMPClient.h */,
-				AAE08CE65E88073FF6ECE0D8DE3F00AA /* samplefmt.h */,
-				3276A3C1172E094E2ABBDC91FEC3E161 /* sha.h */,
-				F96EAC15DF88CEB2C149A8451478BB0F /* speex.h */,
-				BF67B95411D624D54B6608D2F0EB33EB /* speex_bits.h */,
-				98F85AB5AB3688DD789715E8DB608106 /* speex_callbacks.h */,
-				1096E0247BF8A1F65A87B1FAED8B3789 /* speex_config_types.h */,
-				98ED950AC9D10EE3C5EB2CCFB660F964 /* speex_header.h */,
-				00DBD032BAC37DD6B350B4916C49EC38 /* speex_stereo.h */,
-				ED50B656B1CA675CDC7E6528B38D9DD1 /* speex_types.h */,
-				E204A11B04A68805518AA33D74868F75 /* stereo3d.h */,
-				7B109A16893D7DADCE606854498B687A /* SubscriptionOptions.h */,
-				EB74B728CBEBCB68AAF734B4E3E903C4 /* swscale.h */,
-				BCF68527F65DE6B9303C48288699A1EF /* Types.h */,
-				BA72BA87404E6D0E09EF3F5E52448826 /* UserProperty.h */,
-				1F04AEEA0867AD3BF5582FF31BB82DEE /* UserService.h */,
-				A2ECFDD15340E551B4A1A3B62A7D9DB5 /* vaapi.h */,
-				B1A097F1BD04C21A4E7E072B23461492 /* vda.h */,
-				A72B90457F8812277EF85DD9841E4CCE /* vdpau.h */,
-				7E780CCD99662E96134ECAC178A3F16E /* version.h */,
-				D2EDFAC1E73F86BA6635A02AC5019C5F /* version.h */,
-				E1D77B18CFA8E3242375426D1BA23F3F /* version.h */,
-				890E2C507ADA401F9DBD7632946F2294 /* version.h */,
-				89252DEC82EA0FDD690BCEEF2E6068EF /* version.h */,
-				298B19B33884DB490E9BECE5377D5446 /* version.h */,
-				8983BF4AC0C8147347161146E458D98D /* version.h */,
-				699294076AADA12E9A666894DC10C516 /* VideoPlayer.h */,
-				EBD01DC082CB4EE687279E91D3DE7305 /* WeborbClient.h */,
-				6D671D6957F4D502C38E784175262F99 /* x264.h */,
-				F2EFB636BC4E3A295A7BDC0D091AE6EF /* x264_config.h */,
-				0BB48A476B094C42031134D8C9F68D02 /* xtea.h */,
-				F703D0DB3079CA62FF25E7A215C6C8B4 /* xvmc.h */,
+				DB53C506D8EDE870C23D2EC4C1651ABB /* Backendless-ios-SDK */,
+				269D47DE14933A4CD27CE4918934BCD4 /* Onboard */,
+				A99298133584C53B47EB7D525EEEBE54 /* PureLayout */,
+				069C739C081DDA7097AB809F2EDC85E7 /* SwiftyButton */,
+				8BB7611CB74EC23A9591C2386EF008A7 /* TextFieldEffects */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DB53C506D8EDE870C23D2EC4C1651ABB /* Backendless-ios-SDK */ = {
+			isa = PBXGroup;
+			children = (
+				862A9D82CAF278322B6E665A4F62EF70 /* AbstractProperty.h */,
+				0DEA3FDF327E592AFBC8AFE91EE74505 /* AbstractQuery.h */,
+				DB127C6BE45C85D0CFBAEE920128FFD3 /* adler32.h */,
+				F622EAA2AEFB51D98B6822F8201DDF1B /* aes.h */,
+				E76511B4BC09FB3EAEADE8D109F9E469 /* AMFSerializer.h */,
+				D2F2A4F207C21F57E56790A037A8607E /* AtomicCounters.h */,
+				692F8AD688EE06F7ED3460B7A3224014 /* AtomicCountersFactory.h */,
+				02D903F16D8E0A6693D5F9275D75AA3F /* attributes.h */,
+				C63BE11A40C33AC2BCF0CB5C34A369D1 /* audio_fifo.h */,
+				8B5737DBD377BDAA4C3B413083E00EA9 /* audioconvert.h */,
+				5E49FD86C59941D8044FA9CD18E64F58 /* avassert.h */,
+				78B7F8F2D41ACB8BBADF140E24A0835D /* avcodec.h */,
+				1D7E0479EAD07FAA4F7E6FF478CF7415 /* avconfig.h */,
+				697CB99F71229043CDC394E5F7EE9077 /* avdevice.h */,
+				2B1F32386224842CEAB6DF2B7B22B88B /* avfft.h */,
+				71825FBDB50620C6C26C9939B8847D28 /* avfilter.h */,
+				8A761EBF78BD06E0F3F2955686DD6C9C /* avfiltergraph.h */,
+				941CF1DA6CFFE6B023F03ADF23DDB87A /* avformat.h */,
+				AA98650B98030FFAED798161A7083299 /* avio.h */,
+				EF6D4852E8580CD5D4355E72379ED580 /* avresample.h */,
+				72CFBB60E14D2512AC82BE50443AB16E /* avstring.h */,
+				FB1DBE462E12D9B2FE52B498401853FF /* avutil.h */,
+				8EE402988D50A6D3F08B57F30CD936C4 /* Backendless.h */,
+				44726D563873716159200F3F31F31C3F /* Backendless-Bridging-Header.h */,
+				08791C46BEF173DE142D3EEC0EB937C3 /* Backendless-With-Media-Bridging-Header.h */,
+				54E68C6A751EA4D2CFAB2AA22AF34E72 /* BackendlessBeacon.h */,
+				9CA656334022447F4233F52D05B532F9 /* BackendlessCachePolicy.h */,
+				958772891DA53EF5A82ED1CE1C2CE726 /* BackendlessCacheProtocol.h */,
+				1FCE0BE155046609505A3DF649FEFCCB /* BackendlessCollection.h */,
+				84164E3FB936DABBC6826EA69AA1D90D /* BackendlessDataQuery.h */,
+				C243CE435C63FA82A7ED7BD960038F19 /* BackendlessEntity.h */,
+				F12591C920A15E1629FE367724CAC2DB /* BackendlessFile.h */,
+				603E2FEBFB83CED662A6EFB4EF6005CE /* BackendlessGeoQuery.h */,
+				54A949B6CB3324C210690DAEF17630DF /* BackendlessSimpleQuery.h */,
+				01B69C4CAF5A87D5ECDB795229AA5242 /* BackendlessUser.h */,
+				CAFDC4FD32941C2BBABAEF076D198034 /* base64.h */,
+				8DB928AD597631C14B26902C48DDD518 /* BEAnnotation.h */,
+				ED98ACF0010EAF1717A42BEBFB9F105F /* BECollectionView.h */,
+				ECD13AECAC7E7D005202D4D6BE4E081F /* BEFileInfo.h */,
+				23FC005AC65514B234D4516F5D7E4CD3 /* BEMapView.h */,
+				7AFF76F18100BDB36488848EC0448814 /* BESubscription.h */,
+				627AC2CD30591D9AED63B3EA5AB63326 /* BETableView.h */,
+				077C24FED87D2AAFAC81784DA9EEBD96 /* BinaryCodec.h */,
+				ADEE0B487D2DBD476A68EF524DB89271 /* BinaryStream.h */,
+				DDBAAC85C078E5E287EFFE658D9168E4 /* blowfish.h */,
+				319C909A5DBC834CFF6AB315265117AD /* BroadcastStreamClient.h */,
+				6B4DD4B6D19F226CEDAEAF3E82C3903F /* bswap.h */,
+				A6EF834A07390C0C94FA9E006614FD5E /* buffer.h */,
+				98917C53AAC195F948750EA104E5DD31 /* buffersink.h */,
+				D1ADADACA063DD586CEB7DDF611C7A6E /* buffersrc.h */,
+				FFC21F2D2685B74551B5B973F72622FB /* CacheFactory.h */,
+				33CB2B997D2C2C4F84209BD32B999CF7 /* CacheService.h */,
+				E1CEE70EFD9D921A314AF2E030A4362D /* channel_layout.h */,
+				8546F379C3DCFD193F6156910D0E6946 /* common.h */,
+				4CF9F16D5C653332CA1E816F8BE14804 /* cpu.h */,
+				3BAACB1A7AD200AA85AE525C6F687938 /* crc.h */,
+				D507CF0E6AFF951F456A5C4703BBF0B8 /* CustomService.h */,
+				EF48598232D7B364848E052F266D31F4 /* DataPermission.h */,
+				7870768306F902AF3FCF8C2C19F3F6E6 /* DataStoreFactory.h */,
+				B0FE1E8505401ECF825A99EB2065D52B /* DEBUG.h */,
+				2F1438FBCE78BE8C1123FDAEB1B1B94C /* DeliveryOptions.h */,
+				63F2A9B9DF9B8B968E73A6C185CF732A /* DeviceRegistration.h */,
+				3A50946CC6C8E17E7327A46DC1650E12 /* dict.h */,
+				2B029FEE937C96677A553F920045455A /* display.h */,
+				DFCA1E5719294B639AA78064CC14BB22 /* downmix_info.h */,
+				E220051B5C3A450D7C9B3878D2440122 /* dv_profile.h */,
+				27538D5778A3121348B6B0E9392ED6D5 /* dxva2.h */,
+				31AFCA32D111E5DE3444603A9D0EF85F /* error.h */,
+				609644199771836D8BC7DE52F96C2C93 /* eval.h */,
+				C8D9E1169882316A25551061C5E0A77F /* Events.h */,
+				52E2FE6E20358E824ABC14F0AB8EBBB9 /* fifo.h */,
+				11FC378FC9733B2805407DF98D1B8705 /* file.h */,
+				08A71CA8F7E29B22D8F8393756B165E9 /* FilePermission.h */,
+				41C1C9739B8F57062B52BD16A15AD59B /* FileService.h */,
+				42B4FA62F208E36673BB96B12425C67A /* FlashorbBinaryReader.h */,
+				98BFEF8D15FE5859525492FE54C2DC30 /* FlashorbBinaryWriter.h */,
+				B885B80532566CC9E57104DF15849414 /* frame.h */,
+				019D511517776E9E716C77E128E722BC /* GeoCategory.h */,
+				5F962A9101BCC40B3BDC1B9798F1212F /* GeoCluster.h */,
+				BB9006662FCF1F264486FB03D7E061DE /* GeoFence.h */,
+				E715478F91DC9738109A8A3B0923AAC4 /* GeoPoint.h */,
+				0EBE0942B2562172439FA9E870271713 /* GeoService.h */,
+				E3BAD42033641DBE85CDAC9395F85141 /* HashMap.h */,
+				B1E4F41520501D098878E172C9E51DEA /* hmac.h */,
+				B8155D3A785E17D2C2A293A2AA69C305 /* IAtomicCounters.h */,
+				93D18C51F36CD7C13129645053034DE9 /* IAttributeStore.h */,
+				728831D1F609CC2C6163348752AFB7D4 /* ICacheService.h */,
+				ED27DA2FB4BBFF759BBDD2E08B13CD76 /* ICallback.h */,
+				FC6C268F9EA04B7F2688DC0CA8ACDF76 /* IClientSharedObject.h */,
+				6DA972C55170CB0846CF39B6DEA55330 /* IClientSharedObjectDelegate.h */,
+				A960435C93F192A446D14C63F2C0785D /* IDataStore.h */,
+				FA1C37F3A57C3AD5752CE67FB8676318 /* IMediaStreamer.h */,
+				C1158E3B9D18EC6946683E5BEFA49EDE /* imgutils.h */,
+				ED09AA131DF1E4745BDB013CB4A80B99 /* intfloat.h */,
+				47A9FAC746A8BA1AD7F30C28A8D6E801 /* intreadwrite.h */,
+				C1D375CD4354CAF76F61B46BDA70372E /* IPendingServiceCallback.h */,
+				FC560DBD0849BCF3623FB99AA1905AD3 /* IPersistable.h */,
+				683F29BA99D8641E29FD3B6F8029B3C7 /* IPresenceListener.h */,
+				7130673F696A0C675901D742C072123A /* IRTMProtocol.h */,
+				CD13B61C7D9E80E52377C76E25DD5D44 /* IServiceCall.h */,
+				53E2798B6E1C5EFCD621BA713A95ED62 /* ISharedObjectListener.h */,
+				E35E82DD5B9D6174ABC30FFD6C5DAB41 /* lfg.h */,
+				56A816C5ADC7D443A032B84703D6DF2D /* LocationTracker.h */,
+				A5559698A8E7B8394DAD2E68977E4E28 /* log.h */,
+				AFADCE11161D7E3DAD244F0127014263 /* Logger.h */,
+				5C3313573FC13558EF68F6CFB6860AF3 /* Logging.h */,
+				809201D7117A351A866047999687F637 /* macros.h */,
+				680F576143F3E1ECFC1AE891A72C46F1 /* mathematics.h */,
+				C5BF9D457B7650C56A0BB8923E47041C /* md5.h */,
+				DF98732BF900642BB20CCA6CAF26212F /* MediaPlaybackOptions.h */,
+				7720D24A0A072F01E75405FA016E3287 /* MediaPlayer.h */,
+				DBCEDC743E39A10E82F1CB8CB51FCA65 /* MediaPublisher.h */,
+				0E1FE9EBDD3DCA170734A3D830F0CB74 /* MediaPublishOptions.h */,
+				4CEB601F306FC77227F950BA81924D40 /* MediaService.h */,
+				C6AC84B3CF3A0F18FFDD13E4D4A03785 /* MediaStreamPlayer.h */,
+				45129D707B31A0237F51B1CF1BD617FF /* mem.h */,
+				40561208B51CB045BD1CAF678A863B24 /* MemoryTicker.h */,
+				DEA208565ED3CB4F5CEFFD498CB79079 /* Message.h */,
+				B1E761AC7D508A7079289FE7BCFAB73F /* MessageStatus.h */,
+				92189BC07F71C301FA777968115442C4 /* MessagingService.h */,
+				189F935CDFB0300387D145517068988A /* MPMediaData.h */,
+				4AD98FB6B6359732EDA2619F0EB74E5F /* MPMediaDecoder.h */,
+				950CD7D5742EE1B57658651EAC5A3641 /* MPMediaEncoder.h */,
+				0581F339222D5718FC07DD3DA50A77EF /* ObjectProperty.h */,
+				C3B4C3B01AE75FF3DBA54803A2E326F4 /* old_pix_fmts.h */,
+				088007A2E6453A431B85C1AF3865A8FB /* opt.h */,
+				8273038E574D47C65F211AEA42E2828F /* parseutils.h */,
+				63C7500BE883EEE3BF630A676C0A04B5 /* PersistenceService.h */,
+				0D4A0DCA26E67244AA36C3DFA326544F /* pixdesc.h */,
+				1D941B6F000AA324C7716A681EC5622C /* pixfmt.h */,
+				A2D80E6E8FB96C843E9EEA32D7544BDE /* Presence.h */,
+				08276E1E174E5DE807526A88B302C3F7 /* ProtectedBackendlessGeoQuery.h */,
+				9CC0B168941C8BF0CCF1A9A5C476C79C /* PublishOptions.h */,
+				E30201160E3288ED030EF4D6178AE614 /* QueryOptions.h */,
+				7AC3430C9542E4108860802BC3BB394D /* random_seed.h */,
+				4D00C685D7D0DF8BD8FDDAD33DE5436E /* rational.h */,
+				5CCAB02B21DC49819136A0E7EE09982E /* replaygain.h */,
+				C561E5F27A896546AC9A0B14AC70D27C /* Responder.h */,
+				A9F9556811CC02513D84F6CA9376C2F7 /* RTMPClient.h */,
+				238D5189851B8677D517D325525F1F44 /* samplefmt.h */,
+				7F89215C0BB62F547616E939C65A633A /* sha.h */,
+				4EE46CCBA465089249D6AF30BE506BC5 /* speex.h */,
+				D390B085B43858AE9564CCBBF8073D26 /* speex_bits.h */,
+				6AA0CB7B759509663094181F89F09841 /* speex_callbacks.h */,
+				532CFA86006243C3D14C97CF2C89AF74 /* speex_config_types.h */,
+				C172E8CD33881026E6465EB402D65FB2 /* speex_header.h */,
+				6F3A7E17C134563D67F0B68A6271E190 /* speex_stereo.h */,
+				A4F175E30D3BDA9BB0047D923DE5ECB2 /* speex_types.h */,
+				31C785B32318B718C634215C84EF65EA /* stereo3d.h */,
+				58512246C57C0765F7F9552072CAB4F3 /* SubscriptionOptions.h */,
+				930D7F933EEE90D28BFEE31BC10C2BCD /* swscale.h */,
+				275D3D07777EE0021046014FAC3C4052 /* Types.h */,
+				FF60FF35C27D74B497D82449AE8B48D1 /* UserProperty.h */,
+				0D533E194C54AAAFD3720D3B216E8DD5 /* UserService.h */,
+				F65B3C4285A4993B73085980D334388D /* vaapi.h */,
+				3DE784DDDB6B8F9481A27B43D0E1F5E3 /* vda.h */,
+				0A9F58E8DA52FB7D17D73B558F9423E6 /* vdpau.h */,
+				C54632FBE1FAD0C2B55D6A68D60F763E /* version.h */,
+				DE43118AD76E9874111D44431A602EF4 /* version.h */,
+				2E7D6EE20F2BD8502D2F960D6228CD1B /* version.h */,
+				9899BA01F0A20113322A610D5E3377E2 /* version.h */,
+				4606541EEA70F4503F0F9601448EF27C /* version.h */,
+				317A37AAEC0640C21D2752A9A6A24E4D /* version.h */,
+				84F1205CF8363603D82C1FCCDECFB8B8 /* version.h */,
+				BC48F641176C97A5CFDC395293222F0F /* VideoPlayer.h */,
+				A7B97B8DD85C6348445A5808C0DA8CDF /* WeborbClient.h */,
+				7F7C4AE42DCCCE427CD967E54452CA24 /* x264.h */,
+				91C64A34D9A166A54106F54D4C333EAB /* x264_config.h */,
+				94C1B69CB234A0A9C2256DF452C2C4AE /* xtea.h */,
+				825A5F033D8DC02E200D8710D0A896F3 /* xvmc.h */,
 			);
 			path = "Backendless-ios-SDK";
+			sourceTree = "<group>";
+		};
+		EEA1FBA7C1886A7B063C4F66BBE4571D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F976E98D685049211917949EE61A48A1 /* Info.plist */,
+				EFA1DDD1F67E6AB9B6AF0FEF0AD7ED14 /* PureLayout.modulemap */,
+				7F6184E61564B30E430A19223C8F2E67 /* PureLayout.xcconfig */,
+				B239B94DF7F7625385A104FF4647DB11 /* PureLayout-dummy.m */,
+				3A41A5DAAC1B9F95205E50E66307C015 /* PureLayout-prefix.pch */,
+				025079173621BB5E760A7B03CF990221 /* PureLayout-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PureLayout";
 			sourceTree = "<group>";
 		};
 		F47316A0DEB660ABF557A6EBE9470C3A /* Targets Support Files */ = {
@@ -523,6 +759,36 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		0DF5EFCDC8060180C23F7389534B62F6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CEFEA526205643F8E1AF44DB9159BD0 /* SwiftyButton-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D650CD017B00EC4B58ECBC9799736AD2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06CB067DCC7B12413506079EDAAE8535 /* ALView+PureLayout.h in Headers */,
+				8BAD0D09C65322A0648F91B3777D2178 /* NSArray+PureLayout.h in Headers */,
+				409225923444FCE86493C3571C65A33B /* NSLayoutConstraint+PureLayout.h in Headers */,
+				A118DAEF31A4D54C77B1FB2C5581E8EE /* PureLayout+Internal.h in Headers */,
+				66D256183382535782161F339746A393 /* PureLayout-umbrella.h in Headers */,
+				6D183008B6B5D025FBF6B88DC5891368 /* PureLayout.h in Headers */,
+				EBB9534179EB0DEDE85FF15DEE2F26B2 /* PureLayoutDefines.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D66D4FB672BD87CC7529870E3D617486 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0134BE5D8CD54C2F0B3BCA071C74999 /* TextFieldEffects-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DD8D1A1E3CD8E497AC51AF94060F1931 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -533,33 +799,88 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F36202922C5C24593D40C9947E1E871E /* Headers */ = {
+		E230B535A5270FD39712FD8DB98C7319 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				651705BE6AD16FBEFBAFE2621679E677 /* Pods-SLMS-umbrella.h in Headers */,
+				C7AB5A6FA9E4C6F7C673408470CA8E63 /* Pods-SLMS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		C4D34502C28F0E84E7575D9450F05DF5 /* Pods-SLMS */ = {
+		3A4E3B1DFBEF75510101B932256F6202 /* SwiftyButton */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2A4A90CD61709E0E282916A78DE7E6AB /* Build configuration list for PBXNativeTarget "Pods-SLMS" */;
+			buildConfigurationList = 79E3EDCD4E5EF9F15E14B5BCB9232DE7 /* Build configuration list for PBXNativeTarget "SwiftyButton" */;
 			buildPhases = (
-				119AD61C452AE932BFF58A8541B15CB5 /* Sources */,
-				0B6B99BE53B6B0FE279AA6120E0DF414 /* Frameworks */,
-				F36202922C5C24593D40C9947E1E871E /* Headers */,
+				4F1E0280D97572C7D1839BF83247252B /* Sources */,
+				4D04579D09CEBB1E6A0CDAE42ABA5E54 /* Frameworks */,
+				0DF5EFCDC8060180C23F7389534B62F6 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9B53165D5DAAB698C63A36420E463558 /* PBXTargetDependency */,
+				3ED1BB970997B92C484D95A735C93FCC /* PBXTargetDependency */,
+			);
+			name = SwiftyButton;
+			productName = SwiftyButton;
+			productReference = C35976B2546DE4878E9E4EF5F2CEA00F /* SwiftyButton.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9749A27F76202B0335809E70944A2070 /* PureLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 680AC6ACD050727DA7577A89982A7092 /* Build configuration list for PBXNativeTarget "PureLayout" */;
+			buildPhases = (
+				ED7823F7084420E67E012E0335E9FE66 /* Sources */,
+				C2B9FB9641018C5D7721FB679A7C2EE4 /* Frameworks */,
+				D650CD017B00EC4B58ECBC9799736AD2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PureLayout;
+			productName = PureLayout;
+			productReference = 6B1E0BE8A500EE1CD26CEB7CE0E6A574 /* PureLayout.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A1765B7F5A79FCB50B8B6F0E56E2985D /* TextFieldEffects */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B6CFBFA001A26E25947962573F7B803 /* Build configuration list for PBXNativeTarget "TextFieldEffects" */;
+			buildPhases = (
+				4CDCE664DFAE0CEE4611A190AAE8B2C3 /* Sources */,
+				B62267AD8795451ABCA11A2C4D821C98 /* Frameworks */,
+				D66D4FB672BD87CC7529870E3D617486 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TextFieldEffects;
+			productName = TextFieldEffects;
+			productReference = BECD497F993B7E2A842B0872412B4C70 /* TextFieldEffects.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CFEB1EA05C3BEB412631DB81FBA8464F /* Pods-SLMS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BBB6F47A63F69C7FF27183C4F75B14A /* Build configuration list for PBXNativeTarget "Pods-SLMS" */;
+			buildPhases = (
+				8E36C3F5BCCA01DCBD4ECA2BEE9B1F0E /* Sources */,
+				0A62AF543793E89C521E23D0422E4C63 /* Frameworks */,
+				E230B535A5270FD39712FD8DB98C7319 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E5D364955AB928E5C465E1E98600751E /* PBXTargetDependency */,
+				380ED68069D974D1A6C06121302F931B /* PBXTargetDependency */,
+				E10E421B2A53A60B51813444B670B5BD /* PBXTargetDependency */,
+				97DA5976A9624E9DD23B69B4F2FB12E8 /* PBXTargetDependency */,
 			);
 			name = "Pods-SLMS";
 			productName = "Pods-SLMS";
-			productReference = 49AC32D852C6B7996A09D417BB52DB50 /* Pods_SLMS.framework */;
+			productReference = 95EF5666F4CD2C9DCBB8F553C685219C /* Pods_SLMS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D7FF48F3092783E4E42B336F0DEF2D1A /* Onboard */ = {
@@ -576,7 +897,7 @@
 			);
 			name = Onboard;
 			productName = Onboard;
-			productReference = 535A08B19FE5654977740CA5E4EB0572 /* Onboard.framework */;
+			productReference = 2C77314A259FC6756DA71603A82926A4 /* Onboard.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -596,12 +917,15 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 47DC41C9B617B816525C67DF8AE517F0 /* Products */;
+			productRefGroup = 378B194B6BFD3203FDD03511264C9D2D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				D7FF48F3092783E4E42B336F0DEF2D1A /* Onboard */,
-				C4D34502C28F0E84E7575D9450F05DF5 /* Pods-SLMS */,
+				CFEB1EA05C3BEB412631DB81FBA8464F /* Pods-SLMS */,
+				9749A27F76202B0335809E70944A2070 /* PureLayout */,
+				3A4E3B1DFBEF75510101B932256F6202 /* SwiftyButton */,
+				A1765B7F5A79FCB50B8B6F0E56E2985D /* TextFieldEffects */,
 			);
 		};
 /* End PBXProject section */
@@ -617,26 +941,233 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		119AD61C452AE932BFF58A8541B15CB5 /* Sources */ = {
+		4CDCE664DFAE0CEE4611A190AAE8B2C3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C07FA6F0515E6A868A018F341EEB811 /* Pods-SLMS-dummy.m in Sources */,
+				ADFF5BF5633DD6432DAF767E133B8297 /* AkiraTextField.swift in Sources */,
+				4AE71AAD2E1C854E417899DB3676D95C /* HoshiTextField.swift in Sources */,
+				D4D48B343DB08629147D7F746EB97786 /* IsaoTextField.swift in Sources */,
+				7025194074B5C5AA7EC36595FCBA6033 /* JiroTextField.swift in Sources */,
+				E9B66580922F28FBBCB145008EF1CA30 /* KaedeTextField.swift in Sources */,
+				0CFAD1D2AFB3E532C35998D3147F09C1 /* MadokaTextField.swift in Sources */,
+				F9AB96ED819D8B5E390BB7C7F07153E3 /* MinoruTextField.swift in Sources */,
+				948188E17D4D615BA4CBBF1058A7E428 /* TextFieldEffects-dummy.m in Sources */,
+				16DB70D373A452BC458524D86D3704A7 /* TextFieldsEffects.swift in Sources */,
+				8889DEE5671B48884A74E4C4CACC1E63 /* YokoTextField.swift in Sources */,
+				16D44A2F35E17EFDC5C041782FA8FD2B /* YoshikoTextField.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F1E0280D97572C7D1839BF83247252B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2654FD27C8B6B1CEC6AAB3F6082A1C18 /* SwiftyButton+ResizableImage.swift in Sources */,
+				FFBE158AFA89E543B4E4B44EBA6C222A /* SwiftyButton-dummy.m in Sources */,
+				37DAB6C028914CFDE33682F9AD70438D /* SwiftyButton.swift in Sources */,
+				528C6CEAF2FB7794D3C8E69B15F48848 /* SwiftyCustomContentButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E36C3F5BCCA01DCBD4ECA2BEE9B1F0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				742FCDF673050312C36FC60FAED1DBB0 /* Pods-SLMS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED7823F7084420E67E012E0335E9FE66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B3A2644B5C61D0A7CAEFB8E3F421CBA /* ALView+PureLayout.m in Sources */,
+				00C6D684D928D3DF2028C860518EFF55 /* NSArray+PureLayout.m in Sources */,
+				DBA84D8BE20C279817604A175648D55D /* NSLayoutConstraint+PureLayout.m in Sources */,
+				DE37E55BF8454DDCD2D62094683F05DB /* PureLayout-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9B53165D5DAAB698C63A36420E463558 /* PBXTargetDependency */ = {
+		380ED68069D974D1A6C06121302F931B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PureLayout;
+			target = 9749A27F76202B0335809E70944A2070 /* PureLayout */;
+			targetProxy = DEB38C4D00029492199B8B77D041C668 /* PBXContainerItemProxy */;
+		};
+		3ED1BB970997B92C484D95A735C93FCC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PureLayout;
+			target = 9749A27F76202B0335809E70944A2070 /* PureLayout */;
+			targetProxy = 75E68CD9E2B6C437F356C6A2B169B227 /* PBXContainerItemProxy */;
+		};
+		97DA5976A9624E9DD23B69B4F2FB12E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TextFieldEffects;
+			target = A1765B7F5A79FCB50B8B6F0E56E2985D /* TextFieldEffects */;
+			targetProxy = B0C028CC4AB3DC81617F404D90652395 /* PBXContainerItemProxy */;
+		};
+		E10E421B2A53A60B51813444B670B5BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyButton;
+			target = 3A4E3B1DFBEF75510101B932256F6202 /* SwiftyButton */;
+			targetProxy = 56222764FE99F35EEE1B90FCA4434A83 /* PBXContainerItemProxy */;
+		};
+		E5D364955AB928E5C465E1E98600751E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Onboard;
 			target = D7FF48F3092783E4E42B336F0DEF2D1A /* Onboard */;
-			targetProxy = 5B2F84A06C3FB4D220BF65FAB35436E0 /* PBXContainerItemProxy */;
+			targetProxy = 80DB1644E08F4E821631D142083F6772 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		0D8D1E7E6A8F35307B91BFD40BDE6435 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0472CC3A96BB06DF3061362507051FC4 /* Pods-SLMS.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SLMS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SLMS/Pods-SLMS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_SLMS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		164FA8951398C9DECF1B11937F7B89F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85A098C62DDA2FD0DE0A9D39EE11311F /* SwiftyButton.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyButton/SwiftyButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyButton/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyButton/SwiftyButton.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftyButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		204D81B53B2E9372565BB543BE90CAAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A46919F6D00801775872B5B355B292E /* Pods-SLMS.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SLMS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SLMS/Pods-SLMS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_SLMS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		428999321CC2A73D5C087987F4308712 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F6184E61564B30E430A19223C8F2E67 /* PureLayout.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PureLayout/PureLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PureLayout/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PureLayout/PureLayout.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = PureLayout;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		50139BC06FFAD7C072D1D94131AD77FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 619DA57A0902410E1CB2432B93DD8274 /* TextFieldEffects.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TextFieldEffects/TextFieldEffects-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TextFieldEffects/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TextFieldEffects/TextFieldEffects.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = TextFieldEffects;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -676,9 +1207,9 @@
 			};
 			name = Debug;
 		};
-		6D578D6CD32C14A923BC8858156C761D /* Release */ = {
+		5D07037EB7CF70E7D85D1EEE84AD4E95 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0472CC3A96BB06DF3061362507051FC4 /* Pods-SLMS.release.xcconfig */;
+			baseConfigurationReference = 7F6184E61564B30E430A19223C8F2E67 /* PureLayout.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -687,17 +1218,41 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-SLMS/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/PureLayout/PureLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PureLayout/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SLMS/Pods-SLMS.modulemap";
+				MODULEMAP_FILE = "Target Support Files/PureLayout/PureLayout.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_SLMS;
+				PRODUCT_NAME = PureLayout;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5F29E2FA51D7DB41A53C9232B05A6A58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85A098C62DDA2FD0DE0A9D39EE11311F /* SwiftyButton.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyButton/SwiftyButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyButton/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyButton/SwiftyButton.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftyButton;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -742,7 +1297,7 @@
 		};
 		B8A44D35C421DF53BD03CF0DA8C5AE06 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F2CBD4798AF84860844EE031B28F1493 /* Onboard.xcconfig */;
+			baseConfigurationReference = 14D268EC749057C1BE7778B7237DB93E /* Onboard.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -767,9 +1322,37 @@
 			};
 			name = Release;
 		};
+		C5D5916C4233EB197317FB00143F748A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 619DA57A0902410E1CB2432B93DD8274 /* TextFieldEffects.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TextFieldEffects/TextFieldEffects-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TextFieldEffects/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TextFieldEffects/TextFieldEffects.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = TextFieldEffects;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		DF4A99573603FF32CF144E4C2ADE94F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F2CBD4798AF84860844EE031B28F1493 /* Onboard.xcconfig */;
+			baseConfigurationReference = 14D268EC749057C1BE7778B7237DB93E /* Onboard.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -794,36 +1377,6 @@
 			};
 			name = Debug;
 		};
-		ECBD6F645C3A5AAB83C89278D20A6EE4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8A46919F6D00801775872B5B355B292E /* Pods-SLMS.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-SLMS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SLMS/Pods-SLMS.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_SLMS;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -836,11 +1389,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2A4A90CD61709E0E282916A78DE7E6AB /* Build configuration list for PBXNativeTarget "Pods-SLMS" */ = {
+		1B6CFBFA001A26E25947962573F7B803 /* Build configuration list for PBXNativeTarget "TextFieldEffects" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ECBD6F645C3A5AAB83C89278D20A6EE4 /* Debug */,
-				6D578D6CD32C14A923BC8858156C761D /* Release */,
+				C5D5916C4233EB197317FB00143F748A /* Debug */,
+				50139BC06FFAD7C072D1D94131AD77FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -850,6 +1403,33 @@
 			buildConfigurations = (
 				5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */,
 				74857149DC1E0D599B8A01A78349A926 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		680AC6ACD050727DA7577A89982A7092 /* Build configuration list for PBXNativeTarget "PureLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				428999321CC2A73D5C087987F4308712 /* Debug */,
+				5D07037EB7CF70E7D85D1EEE84AD4E95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79E3EDCD4E5EF9F15E14B5BCB9232DE7 /* Build configuration list for PBXNativeTarget "SwiftyButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				164FA8951398C9DECF1B11937F7B89F9 /* Debug */,
+				5F29E2FA51D7DB41A53C9232B05A6A58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BBB6F47A63F69C7FF27183C4F75B14A /* Build configuration list for PBXNativeTarget "Pods-SLMS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				204D81B53B2E9372565BB543BE90CAAF /* Debug */,
+				0D8D1E7E6A8F35307B91BFD40BDE6435 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
