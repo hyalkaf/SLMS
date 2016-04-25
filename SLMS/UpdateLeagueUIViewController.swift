@@ -34,7 +34,11 @@ class UpdateLeagueUIViewController: UIViewController, BackendlessDataDelegate {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.leagueToUpdate = beAction.getLeagueByIdSync(String(self.leagueToUpdate.objectId!))!
+        
+        if let lea = beAction.getLeagueByIdSync(String(self.leagueToUpdate.objectId!)) as? League!
+        {
+            self.leagueToUpdate = lea;
+        }
     }
     
     func BackendlessDataDelegateError(fault: Fault!) {

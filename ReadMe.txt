@@ -8,3 +8,7 @@ Requirements:
 How to run:
   Just download it as a zip file  and then go 'SLMS.xcworkspace' folder
   and open it in xcode and run.
+
+
+Notes:
+  It may be slow sometimes due to network problem.

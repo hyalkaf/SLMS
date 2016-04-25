@@ -130,6 +130,13 @@ class AddGameUITableViewController: UITableViewController, BackendlessDataDelega
             
             self.league.addToGames(game)
             backendActions.saveLeagueSync(self.league)
+        } else{
+            // create the alert
+            let alert = UIAlertController(title: "", message: "Make sure, you select, all fields[home team, away team, field, referee, date]", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
+            // show the alert
+            self.presentViewController(alert, animated: true, completion: nil)
         }
     }
     
@@ -141,10 +148,13 @@ class AddGameUITableViewController: UITableViewController, BackendlessDataDelega
         {
             cell = tableView.dequeueReusableCellWithIdentifier("gameHomeTeamCell", forIndexPath: indexPath)
             
-            let team = self.league.teams?.objectAtIndex(indexPath.row) as! Team
-            cell.textLabel?.text = (team.name!) as String
-            cell.contentView.layer.borderWidth = 3
-            cell.contentView.layer.borderColor = UIColor.blackColor().CGColor
+            if let team = self.league.teams?.objectAtIndex(indexPath.row) as? Team
+            {
+                cell.textLabel?.text = (team.name!) as String
+                cell.contentView.layer.borderWidth = 3
+                cell.contentView.layer.borderColor = UIColor.blackColor().CGColor
+            }
+           
             
             return cell
         }
@@ -152,11 +162,13 @@ class AddGameUITableViewController: UITableViewController, BackendlessDataDelega
         if indexPath.section == 1
         {
             cell = tableView.dequeueReusableCellWithIdentifier("gameAwayTeamCell", forIndexPath: indexPath)
-            let team = self.league.teams?.objectAtIndex(indexPath.row) as! Team
 
-            cell.textLabel?.text = (team.name!) as String
-            cell.contentView.layer.borderWidth = 3
-            cell.contentView.layer.borderColor = UIColor.blackColor().CGColor
+            if let team = self.league.teams?.objectAtIndex(indexPath.row) as? Team
+            {
+                cell.textLabel?.text = (team.name!) as String
+                cell.contentView.layer.borderWidth = 3
+                cell.contentView.layer.borderColor = UIColor.blackColor().CGColor
+            }
             
             return cell
             
@@ -165,25 +177,28 @@ class AddGameUITableViewController: UITableViewController, BackendlessDataDelega
         if indexPath.section == 2
         {
             cell = tableView.dequeueReusableCellWithIdentifier("gameFieldCell", forIndexPath: indexPath)
-            let field = self.league.fields?.objectAtIndex(indexPath.row) as! Field
-
-            cell.textLabel?.text = (field.name!) as String
-            cell.contentView.layer.borderWidth = 3
-            cell.contentView.layer.borderColor = UIColor.blackColor().CGColor
+            if let field = self.league.fields?.objectAtIndex(indexPath.row) as? Field
+            {
+                cell.textLabel?.text = (field.name!) as String
+                cell.contentView.layer.borderWidth = 3
+                cell.contentView.layer.borderColor = UIColor.blackColor().CGColor
+            }
             
             return cell
-            
         }
      
         if indexPath.section == 3
         {
             cell = tableView.dequeueReusableCellWithIdentifier("gameRefereeCell", forIndexPath: indexPath)
-            let referee = self.league.referees?.objectAtIndex(indexPath.row) as! Referee
 
-            cell.textLabel?.text = ((referee.personalInfo!.fname as String) + " " + (referee.personalInfo!.lname as String)) as String
-            
-            cell.contentView.layer.borderWidth = 3
-            cell.contentView.layer.borderColor = UIColor.blackColor().CGColor
+            if let referee = self.league.referees?.objectAtIndex(indexPath.row) as? Referee
+            {
+                cell.textLabel?.text = ((referee.personalInfo!.fname as String) + " " + (referee.personalInfo!.lname as String)) as String
+                
+                cell.contentView.layer.borderWidth = 3
+                cell.contentView.layer.borderColor = UIColor.blackColor().CGColor
+            }
+      
             
             return cell
         }
