@@ -28,6 +28,12 @@ class UpdateGameStatTableViewController: UITableViewController, BackendlessDataD
     override func viewDidLoad() {
         super.viewDidLoad()
         self.backendActions.delegate = self
+        if let homeTS = self.game.gameStats?.homeTeamScore{
+            homeTeamScoreTextField.text = String(homeTS)
+        }
+        if let awayTS = self.game.gameStats?.homeTeamScore{
+            awayTeamScoreTextField.text = String(awayTS)
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
